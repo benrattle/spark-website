@@ -1,0 +1,177 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/solar-panels",
+      "destination": "/solar-and-battery.html",
+      "permanent": true
+    },
+    {
+      "source": "/solar-panels/",
+      "destination": "/solar-and-battery.html",
+      "permanent": true
+    },
+    {
+      "source": "/solar-battery-storage",
+      "destination": "/solar-and-battery.html",
+      "permanent": true
+    },
+    {
+      "source": "/battery-storage",
+      "destination": "/solar-and-battery.html",
+      "permanent": true
+    },
+    {
+      "source": "/ev-chargers",
+      "destination": "/ev-chargers.html",
+      "permanent": true
+    },
+    {
+      "source": "/ev-charging",
+      "destination": "/ev-chargers.html",
+      "permanent": true
+    },
+    {
+      "source": "/heat-pumps",
+      "destination": "/heat-pumps.html",
+      "permanent": true
+    },
+    {
+      "source": "/commercial",
+      "destination": "/commercial.html",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-solar",
+      "destination": "/commercial.html",
+      "permanent": true
+    },
+    {
+      "source": "/finance",
+      "destination": "/savings-and-finance.html",
+      "permanent": true
+    },
+    {
+      "source": "/solar-finance",
+      "destination": "/savings-and-finance.html",
+      "permanent": true
+    },
+    {
+      "source": "/savings",
+      "destination": "/savings-and-finance.html",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/reviews",
+      "destination": "/reviews.html",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/reviews.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/get-a-quote.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/get-a-quote.html",
+      "permanent": true
+    },
+    {
+      "source": "/quote",
+      "destination": "/get-a-quote.html",
+      "permanent": true
+    },
+    {
+      "source": "/get-a-quote",
+      "destination": "/get-a-quote.html",
+      "permanent": true
+    },
+    {
+      "source": "/spark-for-schools",
+      "destination": "/spark-for-schools.html",
+      "permanent": true
+    },
+    {
+      "source": "/schools",
+      "destination": "/spark-for-schools.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations",
+      "destination": "/locations.html",
+      "permanent": true
+    },
+    {
+      "source": "/areas-we-cover",
+      "destination": "/locations.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/resources.html",
+      "permanent": true
+    },
+    {
+      "source": "/guides",
+      "destination": "/resources.html",
+      "permanent": true
+    },
+    {
+      "source": "/resources",
+      "destination": "/resources.html",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html",
+      "permanent": true
+    },
+    {
+      "source": "/terms-and-conditions",
+      "destination": "/terms.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy.html",
+      "permanent": true
+    },
+    {
+      "source": "/complaints",
+      "destination": "/complaints.html",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
