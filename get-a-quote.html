@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,12 +9,17 @@
 <meta property="og:description" content="Get a free, no-obligation solar &amp; battery quote from Spark. Book a home visit or online consultation, or just get your quote by email.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://sparkhome.co.uk/og-image.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="canonical" href="https://sparkhome.co.uk/get-a-quote.html">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin: 0; background: #F4F4F2; -webkit-font-smoothing: antialiased; }
@@ -39,195 +44,524 @@
   .has-dd { position: relative; }
   .has-dd .dd-menu { display: none; position: absolute; top: 100%; left: 0; padding-top: 8px; }
   .has-dd:hover .dd-menu { display: block; }
-
-
+  @keyframes sparkspin { to { transform: rotate(360deg); } }
 </style>
+<script>
+(function(){
+  function init(){
+    if(document.getElementById('spark-mnav-btn'))return;
+    var css=document.createElement('style');
+    css.textContent='@media(min-width:881px){#spark-mnav-btn,#spark-mnav{display:none!important}}#spark-mnav-btn{position:fixed;top:13px;right:14px;z-index:200;width:44px;height:44px;border-radius:11px;background:#161C2E;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}#spark-mnav{position:fixed;inset:0;z-index:199;background:rgba(15,19,34,.6);display:none}#spark-mnav.open{display:block}#spark-mnav-p{position:absolute;top:0;right:0;bottom:0;width:80%;max-width:320px;background:#fff;padding:20px 20px 28px;display:flex;flex-direction:column;gap:2px;overflow-y:auto;box-shadow:-12px 0 40px rgba(0,0,0,.2)}#spark-mnav a{padding:14px 12px;border-radius:10px;font:600 16px/1.2 Hanken Grotesk,sans-serif;color:#1B2135;text-decoration:none;border-bottom:1px solid rgba(27,33,53,.06)}#spark-mnav a.cta{margin-top:14px;background:#F60F00;color:#fff;text-align:center;font-weight:700;border:none}#spark-mnav-x{align-self:flex-end;width:38px;height:38px;border:none;background:#F4F4F2;border-radius:9px;font-size:22px;color:#1B2135;cursor:pointer;margin-bottom:6px}';
+    document.head.appendChild(css);
+    var btn=document.createElement('button');btn.id='spark-mnav-btn';btn.setAttribute('aria-label','Open menu');
+    btn.innerHTML='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>';
+    var ov=document.createElement('div');ov.id='spark-mnav';
+    ov.innerHTML='<div id="spark-mnav-p"><button id="spark-mnav-x" aria-label="Close">&times;</button>'+
+      '<a href="solar-and-battery.html">Solar &amp; Battery</a>'+
+      '<a href="ev-chargers.html">EV Chargers</a>'+
+      '<a href="heat-pumps.html">Heat Pumps</a>'+
+      '<a href="commercial.html">Commercial</a>'+
+      '<a href="savings-and-finance.html">Savings &amp; Finance</a>'+
+      '<a href="resources.html">Guides</a>'+
+      '<a href="about.html">About</a>'+
+      '<a href="reviews.html">Reviews</a>'+
+      '<a href="locations.html">Locations</a>'+
+      '<a class="cta" href="get-a-quote.html">Get my free quote</a></div>';
+    function close(){ov.classList.remove('open');}
+    btn.addEventListener('click',function(){ov.classList.add('open');});
+    ov.addEventListener('click',function(e){if(e.target===ov||e.target.id==='spark-mnav-x'||e.target.closest('a'))close();});
+    document.body.appendChild(btn);document.body.appendChild(ov);
+  }
+  if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+</helmet>
 
-</head>
-<body>
-<div class="sc-host" data-sc-name="get-a-quote"><div data-dc-tpl="6" data-r="wrap" style="font-family: &quot;Hanken Grotesk&quot;, sans-serif; color: rgb(27, 33, 53); background: rgb(244, 244, 242); overflow-x: hidden;">
+<div data-r="wrap" style="font-family:'Hanken Grotesk',sans-serif;color:#1B2135;background:#F4F4F2;overflow-x:hidden">
 
-  
-  <div data-dc-tpl="7" style="background: rgb(22, 28, 46); color: rgb(196, 203, 218); font-size: 13px;">
-    <div data-dc-tpl="8" style="max-width: 1180px; margin: 0px auto; padding: 9px 24px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between;">
-      <div data-dc-tpl="9" style="display: flex; align-items: center; gap: 8px; font-weight: 500;">
-        <span data-dc-tpl="10" style="color: rgb(246, 15, 0); letter-spacing: 0.5px; font-weight: 700;">★ 4.7/5</span>
-        <span data-dc-tpl="11" style="opacity: 0.45;">·</span>
-        <span data-dc-tpl="12">Rated Excellent on Trustpilot from 420+ reviews</span>
+  <!-- ===== UTILITY BAR ===== -->
+  <div style="background:#161C2E;color:#C4CBDA;font-size:13px">
+    <div style="max-width:1180px;margin:0 auto;padding:9px 24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:8px;font-weight:500">
+        <span style="color:#F60F00;letter-spacing:0.5px;font-weight:700">★ 4.7/5</span>
+        <span style="opacity:.45">·</span>
+        <span>Rated Excellent on Trustpilot from 420+ reviews</span>
       </div>
-      <div data-dc-tpl="13" style="display: flex; align-items: center; gap: 18px; font-weight: 500;">
-        <span data-dc-tpl="14" style="opacity: 0.8;">UK-based support · Mon–Sat</span>
-        <a data-dc-tpl="15" href="#quote" style="color: rgb(255, 255, 255); text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.35); padding-bottom: 1px;">Request a callback</a>
+      <div style="display:flex;align-items:center;gap:18px;font-weight:500">
+        <span style="opacity:.8">UK-based support · Mon&ndash;Sat</span>
+        <a href="#quote" style="color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:1px">Request a callback</a>
       </div>
     </div>
   </div>
 
-  
-  <header data-dc-tpl="16" style="position: sticky; top: 0px; z-index: 50; background: rgba(244, 244, 242, 0.88); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(27, 33, 53, 0.08);">
-    <div data-dc-tpl="17" style="max-width: 1180px; margin: 0px auto; padding: 15px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
-      <a data-dc-tpl="18" href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-        <img data-dc-tpl="19" src="assets/spark-logo-navy.webp" alt="Spark" style="height: 40px; width: auto; display: block;">
+  <!-- ===== HEADER ===== -->
+  <header style="position:sticky;top:0;z-index:50;background:rgba(244,244,242,0.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(27,33,53,0.08)">
+    <div style="max-width:1180px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="index.html" style="display:flex;align-items:center;text-decoration:none">
+        <img src="assets/spark-logo-navy.png" alt="Spark" style="height:40px;width:auto;display:block">
       </a>
-      <nav data-dc-tpl="20" data-r="nav" style="display: flex; align-items: center; gap: 28px;">
-        <div data-dc-tpl="21" class="has-dd"><span data-dc-tpl="22" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); cursor: pointer; display: inline-flex; align-items: center; gap: 5px;">Products <svg data-dc-tpl="23" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9098A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline data-dc-tpl="24" points="6 9 12 15 18 9"></polyline></svg></span><div data-dc-tpl="25" class="dd-menu"><div data-dc-tpl="26" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 12px; box-shadow: 0 18px 44px -14px rgba(27,33,53,0.4); padding: 8px; width: 210px;"><a data-dc-tpl="27" href="solar-and-battery.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">Solar &amp; Battery</a><a data-dc-tpl="28" href="ev-chargers.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">EV Chargers</a><a data-dc-tpl="29" href="heat-pumps.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">Heat Pumps</a><a data-dc-tpl="30" href="commercial.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">Commercial</a></div></div></div>
-        <a data-dc-tpl="31" href="savings-and-finance.html" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); text-decoration: none;">Savings &amp; Finance</a>
-        <a data-dc-tpl="32" href="about.html" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); text-decoration: none;">About</a>
-        <a data-dc-tpl="33" href="reviews.html" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); text-decoration: none;">Reviews</a>
+      <nav data-r="nav" style="display:flex;align-items:center;gap:28px">
+        <div class="has-dd"><span style="font-size:15px;font-weight:600;color:#3C4658;cursor:pointer;display:inline-flex;align-items:center;gap:5px">Products <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9098A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span><div class="dd-menu"><div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:12px;box-shadow:0 18px 44px -14px rgba(27,33,53,0.4);padding:8px;width:210px"><a href="solar-and-battery.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Solar &amp; Battery</a><a href="ev-chargers.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">EV Chargers</a><a href="heat-pumps.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Heat Pumps</a><a href="commercial.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Commercial</a></div></div></div>
+        <a href="savings-and-finance.html" style="font-size:15px;font-weight:600;color:#3C4658;text-decoration:none">Savings &amp; Finance</a>
+        <a href="about.html" style="font-size:15px;font-weight:600;color:#3C4658;text-decoration:none">About</a>
+        <a href="reviews.html" style="font-size:15px;font-weight:600;color:#3C4658;text-decoration:none">Reviews</a>
       </nav>
-      <div data-dc-tpl="34" style="display: flex; align-items: center; gap: 20px;">
-        <a data-dc-tpl="35" data-r="hdr-phone" href="tel:03308187273" style="display: inline-flex; align-items: center; gap: 9px; text-decoration: none;">
-          <span data-dc-tpl="36" style="width: 36px; height: 36px; border-radius: 9px; background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.12); display: inline-flex; align-items: center; justify-content: center;"><svg data-dc-tpl="37" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F60F00" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path data-dc-tpl="38" d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7 11.1a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"></path></svg></span>
-          <span data-dc-tpl="39" style="display: flex; flex-direction: column; line-height: 1.15;">
-            <span data-dc-tpl="40" style="font-size: 11px; font-weight: 600; color: rgb(124, 132, 147); letter-spacing: 0.02em;">Call our team</span>
-            <span data-dc-tpl="41" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 16px; color: rgb(27, 33, 53);"><span class="sc-interp">0330 818 7273</span></span>
+      <div style="display:flex;align-items:center;gap:20px">
+        <a data-r="hdr-phone" href="{{ phoneHref }}" style="display:inline-flex;align-items:center;gap:9px;text-decoration:none">
+          <span style="width:36px;height:36px;border-radius:9px;background:#fff;border:1px solid rgba(27,33,53,0.12);display:inline-flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F60F00" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7 11.1a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg></span>
+          <span style="display:flex;flex-direction:column;line-height:1.15">
+            <span style="font-size:11px;font-weight:600;color:#7C8493;letter-spacing:0.02em">Call our team</span>
+            <span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:16px;color:#1B2135">{{ phone }}</span>
           </span>
         </a>
-        <a data-dc-tpl="42" data-r="hdr-cta" href="#quote" style="display: inline-flex; align-items: center; gap: 8px; background: rgb(246, 15, 0); color: rgb(255, 255, 255); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; padding: 12px 22px; border-radius: 10px; text-decoration: none; white-space: nowrap; box-shadow: 0 6px 16px rgba(246,15,0,0.25);" class="scp1">Get my free quote</a>
+        <a data-r="hdr-cta" href="#quote" style="display:inline-flex;align-items:center;gap:8px;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:12px 22px;border-radius:10px;text-decoration:none;white-space:nowrap;box-shadow:0 6px 16px rgba(246,15,0,0.25)" style-hover="background:#D00C00">Get my free quote</a>
       </div>
     </div>
   </header>
 
-  
-  <section data-dc-tpl="43" id="quote" style="padding: 48px 24px 72px;">
-    <div data-dc-tpl="44" data-r="2col" style="max-width: 1180px; margin: 0px auto; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: start;">
+  <!-- ===== QUOTE ===== -->
+  <section id="quote" style="padding:48px 24px 72px">
+    <div data-r="2col" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:start">
 
-      
-      <div data-dc-tpl="45" id="quote-card" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 22px; box-shadow: 0 18px 44px rgba(27,33,53,0.08);">
-        
-        
-        
-          <div data-dc-tpl="117">
-            
-            <div data-dc-tpl="118" style="display: flex; align-items: center; gap: 8px; margin-bottom: 26px;">
-              
-                <div data-dc-tpl="120" style="flex: 1 1 0%; height: 6px; border-radius: 99px; background: rgb(246, 15, 0);"></div>
-              
-                <div data-dc-tpl="120" style="flex: 1 1 0%; height: 6px; border-radius: 99px; background: rgb(230, 230, 226);"></div>
-              
-                <div data-dc-tpl="120" style="flex: 1 1 0%; height: 6px; border-radius: 99px; background: rgb(230, 230, 226);"></div>
-              
-            </div>
-            <div data-dc-tpl="121" style="font-size: 13px; font-weight: 700; color: rgb(246, 15, 0); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 8px;">Step <span class="sc-interp">1</span> of 3</div>
-            <h2 data-dc-tpl="122" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; letter-spacing: -0.02em; margin: 0px 0px 6px;"><span class="sc-interp">About your home</span></h2>
-            <p data-dc-tpl="123" style="font-size: 16px; line-height: 1.55; color: rgb(124, 132, 147); margin: 0px 0px 26px;"><span class="sc-interp">First, a couple of quick details about your property.</span></p>
-
-            
-            
-              <div data-dc-tpl="125">
-                <div data-dc-tpl="126" style="font-size: 14px; font-weight: 600; color: rgb(60, 70, 88); margin-bottom: 12px;">What type of property is it?</div>
-                <div data-dc-tpl="127" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 26px;">
-                  
-                    <button data-dc-tpl="129" style="text-align: left; background: rgb(251, 250, 248); border: 1.5px solid rgba(27, 33, 53, 0.12); border-radius: 12px; padding: 15px 16px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15.5px; color: rgb(27, 33, 53);"><span class="sc-interp">Detached</span></button>
-                  
-                    <button data-dc-tpl="129" style="text-align: left; background: rgb(251, 250, 248); border: 1.5px solid rgba(27, 33, 53, 0.12); border-radius: 12px; padding: 15px 16px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15.5px; color: rgb(27, 33, 53);"><span class="sc-interp">Semi-detached</span></button>
-                  
-                    <button data-dc-tpl="129" style="text-align: left; background: rgb(251, 250, 248); border: 1.5px solid rgba(27, 33, 53, 0.12); border-radius: 12px; padding: 15px 16px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15.5px; color: rgb(27, 33, 53);"><span class="sc-interp">Terraced</span></button>
-                  
-                    <button data-dc-tpl="129" style="text-align: left; background: rgb(251, 250, 248); border: 1.5px solid rgba(27, 33, 53, 0.12); border-radius: 12px; padding: 15px 16px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15.5px; color: rgb(27, 33, 53);"><span class="sc-interp">Bungalow</span></button>
-                  
-                </div>
-                <div data-dc-tpl="130" style="font-size: 14px; font-weight: 600; color: rgb(60, 70, 88); margin-bottom: 12px;">Do you own the property?</div>
-                <div data-dc-tpl="131" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                  
-                    <button data-dc-tpl="133" style="text-align: center; background: rgb(251, 250, 248); border: 1.5px solid rgba(27, 33, 53, 0.12); border-radius: 12px; padding: 14px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15.5px; color: rgb(27, 33, 53);"><span class="sc-interp">Yes, I own it</span></button>
-                  
-                    <button data-dc-tpl="133" style="text-align: center; background: rgb(251, 250, 248); border: 1.5px solid rgba(27, 33, 53, 0.12); border-radius: 12px; padding: 14px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15.5px; color: rgb(27, 33, 53);"><span class="sc-interp">No</span></button>
-                  
-                </div>
-                
-              </div>
-            
-
-            
-            
-
-            
-            
-
-            
-            <div data-dc-tpl="167" style="display: flex; gap: 12px; margin-top: 30px;">
-              
-              <button data-dc-tpl="170" style="flex: 1 1 0%; background: rgb(246, 15, 0); color: rgb(255, 255, 255); border: medium; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 16px; padding: 15px; border-radius: 11px; cursor: pointer; box-shadow: 0 8px 18px rgba(246,15,0,0.20);"><span class="sc-interp">Continue</span></button>
+      <!-- FORM CARD -->
+      <div style="background:#fff;border:1px solid rgba(27,33,53,0.10);border-radius:22px;padding:clamp(26px,4vw,42px);box-shadow:0 18px 44px rgba(27,33,53,0.08)">
+                <sc-if value="{{ stageLoading }}" hint-placeholder-val="{{ false }}">
+          <div style="text-align:center;padding:44px 10px">
+            <div style="width:54px;height:54px;border-radius:50%;border:5px solid #FCE3DE;border-top-color:#F60F00;margin:0 auto 26px;animation:sparkspin 0.8s linear infinite"></div>
+            <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(22px,2.6vw,28px);letter-spacing:-0.02em;margin:0 0 12px;color:#1B2135">{{ loadingTitle }}</h2>
+            <p style="font-size:16.5px;line-height:1.55;color:#51607A;margin:0 auto 22px;max-width:400px">{{ loadingBody }}</p>
+            <div style="display:flex;flex-direction:column;gap:12px;max-width:340px;margin:0 auto;text-align:left">
+              <div style="display:flex;gap:11px;align-items:flex-start"><span style="color:#0E9E63;font-weight:800;font-size:16px">✓</span><span style="font-size:15px;line-height:1.45;color:#3C4658"><strong style="color:#1B2135">A real expert calls you back</strong> &mdash; UK-based, never outsourced.</span></div>
+              <div style="display:flex;gap:11px;align-items:flex-start"><span style="color:#0E9E63;font-weight:800;font-size:16px">✓</span><span style="font-size:15px;line-height:1.45;color:#3C4658"><strong style="color:#1B2135">EPVS-validated savings</strong> &mdash; independently checked.</span></div>
+              <div style="display:flex;gap:11px;align-items:flex-start"><span style="color:#0E9E63;font-weight:800;font-size:16px">✓</span><span style="font-size:15px;line-height:1.45;color:#3C4658"><strong style="color:#1B2135">Finance from 0%</strong> &mdash; an option to suit your budget.</span></div>
             </div>
           </div>
-        
+        </sc-if>
+        <sc-if value="{{ stageChoose }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+              <span style="width:40px;height:40px;border-radius:50%;background:#E9F7F0;display:flex;align-items:center;justify-content:center;flex:none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E9E63" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12.5 10 17.5 19 7"/></svg></span>
+              <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(21px,2.5vw,27px);letter-spacing:-0.02em;margin:0">Thanks {{ firstName }} &mdash; how would you like to proceed?</h2>
+            </div>
+            <p style="font-size:15.5px;line-height:1.55;color:#7C8493;margin:0 0 22px">Choose the journey that suits you. Add your address so we can show availability near you.</p>
+
+            <div style="font-size:14px;font-weight:600;color:#3C4658;margin-bottom:8px">Find your address</div>
+            <div style="display:flex;gap:10px;margin-bottom:12px">
+              <input value="{{ address }}" onInput="{{ setAddress }}" placeholder="Enter your postcode" style="flex:1;font-family:'Hanken Grotesk',sans-serif;font-size:16px;padding:14px 16px;border:1.5px solid rgba(27,33,53,0.14);border-radius:11px;background:#FBFAF8;color:#1B2135">
+              <button onClick="{{ findAddress }}" style="background:#161C2E;color:#fff;border:none;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:14px;padding:0 18px;border-radius:11px;cursor:pointer;white-space:nowrap">Find address</button>
+            </div>
+            <sc-if value="{{ showSuggestions }}" hint-placeholder-val="{{ false }}">
+              <div style="border:1.5px solid rgba(27,33,53,0.12);border-radius:11px;overflow:hidden;margin-bottom:14px">
+                <sc-for list="{{ suggestions }}" as="a" hint-placeholder-count="4">
+                  <button onClick="{{ a.select }}" style="width:100%;text-align:left;background:{{ a.bg }};border:none;border-bottom:1px solid rgba(27,33,53,0.07);padding:13px 16px;cursor:pointer;font-family:'Hanken Grotesk',sans-serif;font-size:14.5px;color:#1B2135">{{ a.label }}</button>
+                </sc-for>
+              </div>
+            </sc-if>
+            <sc-if value="{{ addrPicked }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:#0E9E63;font-weight:700;margin-bottom:12px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E9E63" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12.5 10 17.5 19 7"/></svg>{{ addrPicked }}</div>
+            </sc-if>
+            <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(27,33,53,0.1);background:#E6E6E2">
+              <iframe title="Satellite view of your property" src="{{ mapSrc }}" width="100%" height="220" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div style="font-size:12.5px;color:#9098A6;margin:8px 0 24px">Satellite view &mdash; check the pin sits on your roof.</div>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:12px">
+              <button onClick="{{ selectVisit }}" style="text-align:left;background:{{ visitBg }};border:1.5px solid {{ visitBorder }};border-radius:14px;padding:18px 16px;cursor:pointer;font-family:'Hanken Grotesk',sans-serif">
+                <span style="width:36px;height:36px;border-radius:10px;background:#161C2E;display:flex;align-items:center;justify-content:center;margin-bottom:12px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></span>
+                <span style="display:block;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:#1B2135;margin-bottom:4px">Book a home visit</span>
+                <span style="display:block;font-size:13px;line-height:1.4;color:#7C8493">A surveyor designs your system on site.</span>
+              </button>
+              <button onClick="{{ selectOnline }}" style="text-align:left;background:{{ onlineBg }};border:1.5px solid {{ onlineBorder }};border-radius:14px;padding:18px 16px;cursor:pointer;font-family:'Hanken Grotesk',sans-serif">
+                <span style="width:36px;height:36px;border-radius:10px;background:#161C2E;display:flex;align-items:center;justify-content:center;margin-bottom:12px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg></span>
+                <span style="display:block;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:#1B2135;margin-bottom:4px">Do it online</span>
+                <span style="display:block;font-size:13px;line-height:1.4;color:#7C8493">A remote video consultation, no visit needed.</span>
+              </button>
+              </button>
+            </div>
+
+            <sc-if value="{{ showSlots }}" hint-placeholder-val="{{ false }}">
+              <div style="margin-top:24px">
+                <div style="font-size:14px;font-weight:600;color:#3C4658;margin-bottom:5px">{{ slotsLabel }}</div>
+                <div style="font-size:12.5px;color:#0E9E63;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:6px"><span style="width:7px;height:7px;border-radius:50%;background:#33D17A;display:inline-block"></span>{{ slotsAvail }}</div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:10px">
+                  <sc-for list="{{ slots }}" as="s" hint-placeholder-count="3">
+                    <button onClick="{{ s.select }}" style="background:{{ s.bg }};border:1.5px solid {{ s.border }};border-radius:11px;padding:13px 10px;cursor:pointer;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:14px;color:#1B2135">{{ s.label }}</button>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ journeyChosen }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ confirm }}" style="width:100%;margin-top:24px;background:{{ confirmBg }};color:#fff;border:none;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;padding:16px;border-radius:12px;cursor:{{ confirmCursor }};box-shadow:0 8px 18px rgba(246,15,0,0.2)">{{ confirmLabel }}</button>
+            </sc-if>
+          </div>
+        </sc-if>
+        <sc-if value="{{ stageDone }}" hint-placeholder-val="{{ false }}">
+          <div style="text-align:center;padding:30px 10px">
+            <div style="width:72px;height:72px;border-radius:50%;background:#E9F7F0;display:flex;align-items:center;justify-content:center;margin:0 auto 22px"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0E9E63" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12.5 10 17.5 19 7"/></svg></div>
+            <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:30px;letter-spacing:-0.02em;margin:0 0 12px">{{ doneTitle }}</h2>
+            <p style="font-size:17px;line-height:1.6;color:#51607A;margin:0 auto;max-width:440px">{{ doneBody }}</p>
+            <div style="text-align:left;max-width:420px;margin:24px auto 0;background:#FBFAF8;border:1px solid rgba(27,33,53,0.1);border-radius:14px;padding:18px 20px">
+              <div style="font-size:12.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#909AA8;margin-bottom:8px">Your details</div>
+              <sc-for list="{{ summary }}" as="row" hint-placeholder-count="5">
+                <div style="display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px solid rgba(27,33,53,0.06);font-size:14.5px">
+                  <span style="color:#7C8493">{{ row.k }}</span>
+                  <span style="color:#1B2135;font-weight:600;text-align:right">{{ row.v }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <a href="index.html" style="display:inline-flex;margin-top:26px;align-items:center;gap:8px;background:#161C2E;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:13px 24px;border-radius:11px;text-decoration:none">Back to home</a>
+          </div>
+        </sc-if>
+        <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+          <div>
+            <!-- progress -->
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:26px">
+              <sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+                <div style="flex:1;height:6px;border-radius:99px;background:{{ s.bg }}"></div>
+              </sc-for>
+            </div>
+            <div style="font-size:13px;font-weight:700;color:#F60F00;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:8px">Step {{ stepNum }} of 3</div>
+            <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(26px,3vw,34px);letter-spacing:-0.02em;margin:0 0 6px">{{ stepTitle }}</h2>
+            <p style="font-size:16px;line-height:1.55;color:#7C8493;margin:0 0 26px">{{ stepSub }}</p>
+
+            <!-- STEP 1: property -->
+            <sc-if value="{{ isStep1 }}" hint-placeholder-val="{{ true }}">
+              <div>
+                <div style="font-size:14px;font-weight:600;color:#3C4658;margin-bottom:12px">What type of property is it?</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:26px">
+                  <sc-for list="{{ propertyOptions }}" as="p" hint-placeholder-count="4">
+                    <button onClick="{{ p.select }}" style="text-align:left;background:{{ p.bg }};border:1.5px solid {{ p.border }};border-radius:12px;padding:15px 16px;cursor:pointer;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:#1B2135">{{ p.label }}</button>
+                  </sc-for>
+                </div>
+                <div style="font-size:14px;font-weight:600;color:#3C4658;margin-bottom:12px">Do you own the property?</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+                  <sc-for list="{{ ownOptions }}" as="o" hint-placeholder-count="2">
+                    <button onClick="{{ o.select }}" style="text-align:center;background:{{ o.bg }};border:1.5px solid {{ o.border }};border-radius:12px;padding:14px;cursor:pointer;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:#1B2135">{{ o.label }}</button>
+                  </sc-for>
+                </div>
+                <sc-if value="{{ notHomeowner }}" hint-placeholder-val="{{ false }}">
+                  <div style="margin-top:18px;background:#FFF4F2;border:1px solid #F6C5BE;border-radius:12px;padding:16px 18px;display:flex;gap:12px;align-items:flex-start">
+                    <span style="width:24px;height:24px;border-radius:50%;background:#F60F00;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;flex:none;line-height:1">!</span>
+                    <div style="font-size:14.5px;line-height:1.55;color:#3C4658">Unfortunately we can only install for homeowners, so we&rsquo;re unable to proceed if you don&rsquo;t own the property. If you&rsquo;re the homeowner or a landlord acting for the property, please select <strong style="color:#1B2135">&ldquo;Yes, I own it&rdquo;</strong>. Renting? Do mention Spark to your landlord!</div>
+                  </div>
+                </sc-if>
+              </div>
+            </sc-if>
+
+            <!-- STEP 2: usage -->
+            <sc-if value="{{ isStep2 }}" hint-placeholder-val="{{ false }}">
+              <div>
+                <div style="font-size:14px;font-weight:600;color:#3C4658;margin-bottom:12px">Roughly what's your monthly electricity bill?</div>
+                <div style="background:#FBFAF8;border:1.5px solid rgba(27,33,53,0.12);border-radius:12px;padding:18px 18px 14px;margin-bottom:26px">
+                  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+                    <span style="font-size:14px;color:#7C8493">Around</span>
+                    <span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:26px;color:#F60F00;letter-spacing:-0.01em">{{ billLabel }}<span style="font-size:14px;color:#7C8493;font-weight:600"> / month</span></span>
+                  </div>
+                  <input type="range" min="40" max="400" step="5" value="{{ billValue }}" onInput="{{ setBill }}" style="width:100%;accent-color:#F60F00;height:6px;cursor:pointer">
+                  <div style="display:flex;justify-content:space-between;font-size:12px;color:#9AA0AC;margin-top:6px"><span>£40</span><span>£400+</span></div>
+                  <div style="margin-top:14px;background:#F2FAF5;border:1px solid #BFE6CF;border-radius:10px;padding:12px 14px">
+                    <div style="font-size:14px;color:#1B2135;line-height:1.5">Estimated saving: <strong style="color:#0E9E63;font-family:'Schibsted Grotesk',sans-serif">{{ savingYear }}/year</strong>, around <strong style="color:#0E9E63;font-family:'Schibsted Grotesk',sans-serif">{{ saving30 }}</strong> over 30 years.</div>
+                    <div style="font-size:11.5px;color:#7C8493;margin-top:6px;line-height:1.45">Based on a 90% bill reduction, with energy prices rising 7.02% a year in line with <a href="https://epvs.co.uk" target="_blank" rel="noopener" style="color:#7C8493">EPVS</a> guidelines. Illustrative &mdash; your validated figure is confirmed at survey.</div>
+                  </div>
+                </div>
+                <div style="font-size:14px;font-weight:600;color:#3C4658;margin-bottom:12px">How would you like to pay?</div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:10px">
+                  <sc-for list="{{ financeOptions }}" as="b" hint-placeholder-count="3">
+                    <button onClick="{{ b.select }}" style="text-align:center;background:{{ b.bg }};border:1.5px solid {{ b.border }};border-radius:12px;padding:14px 8px;cursor:pointer;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:#1B2135">{{ b.label }}</button>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+
+            <!-- STEP 3: details -->
+            <sc-if value="{{ isStep3 }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-direction:column;gap:14px">
+                <input value="{{ fFirst }}" onInput="{{ setFirst }}" placeholder="Full name" style="font-family:'Hanken Grotesk',sans-serif;font-size:16px;padding:15px 16px;border:1.5px solid rgba(27,33,53,0.14);border-radius:11px;background:#FBFAF8;color:#1B2135">
+                <input value="{{ fEmail }}" onInput="{{ setEmail }}" type="email" placeholder="Email address" style="font-family:'Hanken Grotesk',sans-serif;font-size:16px;padding:15px 16px;border:1.5px solid rgba(27,33,53,0.14);border-radius:11px;background:#FBFAF8;color:#1B2135">
+                <input value="{{ fPhone }}" onInput="{{ setPhone }}" type="tel" placeholder="Phone number" style="font-family:'Hanken Grotesk',sans-serif;font-size:16px;padding:15px 16px;border:1.5px solid rgba(27,33,53,0.14);border-radius:11px;background:#FBFAF8;color:#1B2135">
+                <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
+                  <div style="font-size:13.5px;color:#D00C00;font-weight:600">Please enter your name and a phone number so we can call you back.</div>
+                </sc-if>
+                <div style="font-size:12.5px;color:#9098A6;line-height:1.5;margin-top:2px">By submitting, you agree we may contact you about your quote. We never sell your data. See our privacy policy.</div>
+              </div>
+            </sc-if>
+
+            <!-- nav buttons -->
+            <div style="display:flex;gap:12px;margin-top:30px">
+              <button onClick="{{ next }}" style="flex:1;background:{{ nextBg }};color:#fff;border:none;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;padding:15px;border-radius:11px;cursor:{{ nextCursor }};box-shadow:0 8px 18px rgba(246,15,0,0.20)">{{ nextLabel }}</button>
+            </div>
+          </div>
+        </sc-if>
       </div>
 
-      
-      <div data-dc-tpl="171" data-r="aside" style="position: sticky; top: 96px; display: flex; flex-direction: column; gap: 20px;">
-        <div data-dc-tpl="172">
-          <h1 data-dc-tpl="173" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; margin: 0px 0px 14px;">Get your free, no-obligation quote</h1>
-          <p data-dc-tpl="174" style="font-size: 18px; line-height: 1.6; color: rgb(81, 96, 122); margin: 0px;">Tell us a little about your home and we'll design a system and savings estimate around it — then call you back to talk it through. No pressure, no pushy sales.</p>
+      <!-- ASIDE -->
+      <div data-r="aside" style="position:sticky;top:96px;display:flex;flex-direction:column;gap:20px">
+        <div>
+          <h1 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(32px,3.8vw,44px);line-height:1.05;letter-spacing:-0.03em;margin:0 0 14px">Get your free, no-obligation quote</h1>
+          <p style="font-size:18px;line-height:1.6;color:#51607A;margin:0">Tell us a little about your home and we'll design a system and savings estimate around it &mdash; then call you back to talk it through. No pressure, no pushy sales.</p>
         </div>
-        <div data-dc-tpl="175" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.08); border-radius: 16px; padding: 24px;">
-          <div data-dc-tpl="176" style="display: flex; flex-direction: column; gap: 16px;">
-            <div data-dc-tpl="177" style="display: flex; gap: 13px; align-items: flex-start;"><span data-dc-tpl="178" style="color: rgb(14, 158, 99); font-weight: 800; font-size: 17px;">✓</span><span data-dc-tpl="179" style="font-size: 15.5px; line-height: 1.5; color: rgb(60, 70, 88);"><strong data-dc-tpl="180" style="color: rgb(27, 33, 53);">A real expert calls you back</strong> — UK-based, never outsourced.</span></div>
-            <div data-dc-tpl="181" style="display: flex; gap: 13px; align-items: flex-start;"><span data-dc-tpl="182" style="color: rgb(14, 158, 99); font-weight: 800; font-size: 17px;">✓</span><span data-dc-tpl="183" style="font-size: 15.5px; line-height: 1.5; color: rgb(60, 70, 88);"><strong data-dc-tpl="184" style="color: rgb(27, 33, 53);">EPVS-validated savings</strong> — the numbers we promise are independently checked.</span></div>
-            <div data-dc-tpl="185" style="display: flex; gap: 13px; align-items: flex-start;"><span data-dc-tpl="186" style="color: rgb(14, 158, 99); font-weight: 800; font-size: 17px;">✓</span><span data-dc-tpl="187" style="font-size: 15.5px; line-height: 1.5; color: rgb(60, 70, 88);"><strong data-dc-tpl="188" style="color: rgb(27, 33, 53);">Finance from 0%</strong> — we'll find the option that suits your budget.</span></div>
+        <div style="background:#fff;border:1px solid rgba(27,33,53,0.08);border-radius:16px;padding:24px">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;gap:13px;align-items:flex-start"><span style="color:#0E9E63;font-weight:800;font-size:17px">✓</span><span style="font-size:15.5px;line-height:1.5;color:#3C4658"><strong style="color:#1B2135">A real expert calls you back</strong> &mdash; UK-based, never outsourced.</span></div>
+            <div style="display:flex;gap:13px;align-items:flex-start"><span style="color:#0E9E63;font-weight:800;font-size:17px">✓</span><span style="font-size:15.5px;line-height:1.5;color:#3C4658"><strong style="color:#1B2135">EPVS-validated savings</strong> &mdash; the numbers we promise are independently checked.</span></div>
+            <div style="display:flex;gap:13px;align-items:flex-start"><span style="color:#0E9E63;font-weight:800;font-size:17px">✓</span><span style="font-size:15.5px;line-height:1.5;color:#3C4658"><strong style="color:#1B2135">Finance from 0%</strong> &mdash; we'll find the option that suits your budget.</span></div>
           </div>
         </div>
-        <div data-dc-tpl="189" style="background: rgb(22, 28, 46); color: rgb(255, 255, 255); border-radius: 16px; padding: 24px; display: flex; align-items: center; gap: 16px;">
-          <span data-dc-tpl="190" style="width: 48px; height: 48px; border-radius: 11px; background: rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: center; flex: 0 0 auto;"><svg data-dc-tpl="191" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F60F00" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path data-dc-tpl="192" d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7 11.1a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"></path></svg></span>
-          <div data-dc-tpl="193">
-            <div data-dc-tpl="194" style="font-size: 13.5px; color: rgb(174, 183, 202); margin-bottom: 2px;">Prefer to talk now? Call us</div>
-            <a data-dc-tpl="195" href="tel:03308187273" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 22px; color: rgb(255, 255, 255); text-decoration: none; letter-spacing: -0.01em;"><span class="sc-interp">0330 818 7273</span></a>
+        <div style="background:#161C2E;color:#fff;border-radius:16px;padding:24px;display:flex;align-items:center;gap:16px">
+          <span style="width:48px;height:48px;border-radius:11px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;flex:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F60F00" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7 11.1a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg></span>
+          <div>
+            <div style="font-size:13.5px;color:#AEB7CA;margin-bottom:2px">Prefer to talk now? Call us</div>
+            <a href="{{ phoneHref }}" style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:22px;color:#fff;text-decoration:none;letter-spacing:-0.01em">{{ phone }}</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  
-  <footer data-dc-tpl="196" style="background: rgb(22, 28, 46); color: rgb(174, 183, 202); padding: 64px 24px 34px;">
-    <div data-dc-tpl="197" style="max-width: 1180px; margin: 0px auto;">
-      <div data-dc-tpl="198" style="display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-        <div data-dc-tpl="199">
-          <img data-dc-tpl="200" src="assets/spark-logo-white.webp" alt="Spark" style="height: 28px; width: auto; display: block; margin-bottom: 16px;">
-          <p data-dc-tpl="201" style="font-size: 14.5px; line-height: 1.6; margin: 0px 0px 18px; max-width: 300px;">Premium solar &amp; battery installation across mainland Great Britain. Giving you the power to save.</p>
-          <div data-dc-tpl="202" style="font-size: 13.5px; line-height: 1.7; color: rgb(196, 203, 218); margin: 0px 0px 18px;"><a data-dc-tpl="203" href="tel:03308187273" style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 700;">0330 818 7273</a><br data-dc-tpl="204"><a data-dc-tpl="205" href="mailto:hello@sparkhome.co.uk" style="color: rgb(196, 203, 218); text-decoration: none;">hello@sparkhome.co.uk</a><br data-dc-tpl="206">St Pegs Mill, Thornhills Beck Lane, Brighouse HD6 4AH</div>
-          <div data-dc-tpl="207" style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <span data-dc-tpl="208" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">MCS</span>
-            <span data-dc-tpl="209" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">HIES</span>
-            <span data-dc-tpl="210" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">EPVS</span>
-            <span data-dc-tpl="211" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">Which? Trusted Trader</span>
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:#161C2E;color:#AEB7CA;padding:64px 24px 34px">
+    <div style="max-width:1180px;margin:0 auto">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,0.1)">
+        <div>
+          <img src="assets/spark-logo-white.png" alt="Spark" style="height:28px;width:auto;display:block;margin-bottom:16px">
+          <p style="font-size:14.5px;line-height:1.6;margin:0 0 18px;max-width:300px">Premium solar &amp; battery installation across mainland Great Britain. Giving you the power to save.</p>
+          <div style="font-size:13.5px;line-height:1.7;color:#C4CBDA;margin:0 0 18px"><a href="tel:03308187273" style="color:#fff;text-decoration:none;font-weight:700">0330 818 7273</a><br><a href="mailto:hello@sparkhome.co.uk" style="color:#C4CBDA;text-decoration:none">hello@sparkhome.co.uk</a><br>St Pegs Mill, Thornhills Beck Lane, Brighouse HD6 4AH</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <span style="font-size:12px;font-weight:700;background:rgba(255,255,255,0.08);padding:5px 11px;border-radius:7px;color:#C4CBDA">MCS</span>
+            <span style="font-size:12px;font-weight:700;background:rgba(255,255,255,0.08);padding:5px 11px;border-radius:7px;color:#C4CBDA">HIES</span>
+            <span style="font-size:12px;font-weight:700;background:rgba(255,255,255,0.08);padding:5px 11px;border-radius:7px;color:#C4CBDA">EPVS</span>
+            <span style="font-size:12px;font-weight:700;background:rgba(255,255,255,0.08);padding:5px 11px;border-radius:7px;color:#C4CBDA">Which? Trusted Trader</span>
           </div>
         </div>
-        <div data-dc-tpl="212">
-          <div data-dc-tpl="213" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Products</div>
-          <div data-dc-tpl="214" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
-            <a data-dc-tpl="215" href="solar-and-battery.html" style="color: rgb(174, 183, 202); text-decoration: none;">Solar &amp; Battery</a>
-            <a data-dc-tpl="216" href="ev-chargers.html" style="color: rgb(174, 183, 202); text-decoration: none;">EV Chargers</a>
-            <a data-dc-tpl="217" href="heat-pumps.html" style="color: rgb(174, 183, 202); text-decoration: none;">Heat Pumps</a>
-            <a data-dc-tpl="218" href="commercial.html" style="color: rgb(174, 183, 202); text-decoration: none;">Commercial</a>
+        <div>
+          <div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;color:#fff;margin-bottom:16px">Products</div>
+          <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px">
+            <a href="solar-and-battery.html" style="color:#AEB7CA;text-decoration:none">Solar &amp; Battery</a>
+            <a href="ev-chargers.html" style="color:#AEB7CA;text-decoration:none">EV Chargers</a>
+            <a href="heat-pumps.html" style="color:#AEB7CA;text-decoration:none">Heat Pumps</a>
+            <a href="commercial.html" style="color:#AEB7CA;text-decoration:none">Commercial</a>
           </div>
         </div>
-        <div data-dc-tpl="219">
-          <div data-dc-tpl="220" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Learn</div>
-          <div data-dc-tpl="221" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
-            <a data-dc-tpl="222" href="savings-and-finance.html#calculator" style="color: rgb(174, 183, 202); text-decoration: none;">Savings calculator</a>
-            <a data-dc-tpl="223" href="savings-and-finance.html#finance" style="color: rgb(174, 183, 202); text-decoration: none;">Finance options</a>
-            <a data-dc-tpl="224" href="resources.html" style="color: rgb(174, 183, 202); text-decoration: none;">Guides &amp; resources</a>
-            <a data-dc-tpl="225" href="index.html#guarantee" style="color: rgb(174, 183, 202); text-decoration: none;">Our guarantees</a>
-            <a data-dc-tpl="226" href="reviews.html" style="color: rgb(174, 183, 202); text-decoration: none;">Reviews</a>
+        <div>
+          <div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;color:#fff;margin-bottom:16px">Learn</div>
+          <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px">
+            <a href="savings-and-finance.html#calculator" style="color:#AEB7CA;text-decoration:none">Savings calculator</a>
+            <a href="savings-and-finance.html#finance" style="color:#AEB7CA;text-decoration:none">Finance options</a>
+            <a href="resources.html" style="color:#AEB7CA;text-decoration:none">Guides &amp; resources</a>
+            <a href="index.html#guarantee" style="color:#AEB7CA;text-decoration:none">Our guarantees</a>
+            <a href="reviews.html" style="color:#AEB7CA;text-decoration:none">Reviews</a>
           </div>
         </div>
-        <div data-dc-tpl="227">
-          <div data-dc-tpl="228" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Company</div>
-          <div data-dc-tpl="229" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
-            <a data-dc-tpl="230" href="about.html" style="color: rgb(174, 183, 202); text-decoration: none;">About Spark</a>
-            <a data-dc-tpl="231" href="spark-for-schools.html" style="color: rgb(174, 183, 202); text-decoration: none;">Spark for Schools</a>
-            <a data-dc-tpl="232" href="locations.html" style="color: rgb(174, 183, 202); text-decoration: none;">Locations</a>
-            <a data-dc-tpl="233" href="get-a-quote.html" style="color: rgb(174, 183, 202); text-decoration: none;">Contact us</a>
+        <div>
+          <div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;color:#fff;margin-bottom:16px">Company</div>
+          <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px">
+            <a href="about.html" style="color:#AEB7CA;text-decoration:none">About Spark</a>
+            <a href="spark-for-schools.html" style="color:#AEB7CA;text-decoration:none">Spark for Schools</a>
+            <a href="locations.html" style="color:#AEB7CA;text-decoration:none">Locations</a>
+            <a href="get-a-quote.html" style="color:#AEB7CA;text-decoration:none">Contact us</a>
           </div>
         </div>
       </div>
-      <div data-dc-tpl="234" style="padding-top: 24px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; font-size: 12.5px; color: rgb(138, 147, 168);">
-        <div data-dc-tpl="235">© Spark 2026. All rights reserved. Spark is a trading name of Spark Energy UK Ltd (Company No. 14381786). Registered office: St Pegs Mill, Thornhills Beck Lane, Brighouse HD6 4AH.</div>
-        <div data-dc-tpl="236" style="display: flex; gap: 18px;"><a data-dc-tpl="237" href="terms.html" style="color: rgb(138, 147, 168); text-decoration: none;">Terms</a><a data-dc-tpl="238" href="privacy.html" style="color: rgb(138, 147, 168); text-decoration: none;">Privacy</a><a data-dc-tpl="239" href="complaints.html" style="color: rgb(138, 147, 168); text-decoration: none;">Complaints</a></div>
+      <div style="padding-top:24px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font-size:12.5px;color:#8A93A8">
+        <div>© Spark 2026. All rights reserved. Spark is a trading name of Spark Energy UK Ltd (Company No. 14381786). Registered office: St Pegs Mill, Thornhills Beck Lane, Brighouse HD6 4AH.</div>
+        <div style="display:flex;gap:18px"><a href="terms.html" style="color:#8A93A8;text-decoration:none">Terms</a><a href="privacy.html" style="color:#8A93A8;text-decoration:none">Privacy</a><a href="complaints.html" style="color:#8A93A8;text-decoration:none">Complaints</a></div>
       </div>
     </div>
-  </footer></div></div>
-<script src="app.js"></script>
-<script src="flows.js"></script>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: &quot;100%&quot;, &quot;height&quot;: 900 },
+  &quot;phoneNumber&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;0330 818 7273&quot;, &quot;tsType&quot;: &quot;string&quot; }
+}">
+class Component extends DCLogic {
+  state = {
+    step: 1,
+    property: '',
+    own: '',
+    bill: 150,
+    finance: '',
+    battery: '',
+    first: '', last: '', email: '', phone: '', postcode: '',
+    error: false,
+    stage: 'form',
+    journey: '',
+    address: '',
+    slot: '',
+    showSuggestions: false,
+    addrPicked: '',
+  };
+
+  opt(list, key) {
+    return list.map(o => {
+      const sel = this.state[key] === o.val;
+      return {
+        label: o.label,
+        bg: sel ? '#FFF4F2' : '#FBFAF8',
+        border: sel ? '#F60F00' : 'rgba(27,33,53,0.12)',
+        select: () => this.setState({ [key]: o.val }),
+      };
+    });
+  }
+
+  renderVals() {
+    const phone = this.props.phoneNumber ?? '0330 818 7273';
+    const st = this.state.step;
+
+    const titles = {
+      1: { t: 'About your home', s: "First, a couple of quick details about your property." },
+      2: { t: 'Your energy use', s: "This helps us size the right system for you." },
+      3: { t: 'Where shall we send it?', s: "Pop in your details and we'll be in touch with your quote." },
+    };
+
+    const steps = [1, 2, 3].map(n => ({
+      bg: n <= st ? '#F60F00' : '#E6E6E2',
+    }));
+
+    const back = () => this.setState(s => ({ step: Math.max(1, s.step - 1), error: false }));
+    const next = () => {
+      if (this.state.step === 1 && this.state.own === 'rent') {
+        return; // can only install for homeowners
+      }
+      if (this.state.step === 1) {
+        this.setState(s => ({ step: 2 }));
+      } else if (this.state.step === 2) {
+        this.setState({ stage: 'loading', loadMsg: 'epvs' });
+        clearTimeout(this._loadT);
+        this._loadT = setTimeout(() => this.setState({ step: 3, stage: 'form' }), 2200);
+      } else {
+        if (!this.state.first.trim() || !this.state.phone.trim()) {
+          this.setState({ error: true });
+          return;
+        }
+        this.setState({ stage: 'loading', loadMsg: 'finance' });
+        clearTimeout(this._loadT);
+        this._loadT = setTimeout(() => this.setState({ stage: 'choose' }), 2400);
+      }
+    };
+
+    const journey = this.state.journey;
+    const mapQ = encodeURIComponent((this.state.postcode || '').trim() || 'United Kingdom');
+    const slotData = journey === 'visit'
+      ? ['Tue 24 Jun · AM', 'Thu 26 Jun · PM', 'Sat 28 Jun · AM']
+      : journey === 'online' ? ['Today · 6:00pm', 'Tomorrow · 1:00pm', 'Wed · 11:00am'] : [];
+    const slots = slotData.map(s => ({
+      label: s,
+      bg: this.state.slot === s ? '#FFF4F2' : '#FBFAF8',
+      border: this.state.slot === s ? '#F60F00' : 'rgba(27,33,53,0.12)',
+      select: () => this.setState({ slot: s }),
+    }));
+    const jc = (k) => ({ bg: journey === k ? '#FFF4F2' : '#FBFAF8', border: journey === k ? '#F60F00' : 'rgba(27,33,53,0.12)' });
+    const ready = journey === 'quote' || (!!journey && !!this.state.slot);
+    const doneMap = {
+      visit: { t: 'Your home visit is booked', b: 'A Spark surveyor will visit ' + (this.state.slot ? ('on ' + this.state.slot) : 'soon') + ' to design your system and confirm your savings. We have emailed the details.' },
+      online: { t: 'Your online consultation is booked', b: 'We will video-call you ' + (this.state.slot ? ('on ' + this.state.slot) : 'soon') + ' to walk through your design and savings on screen — no need to be home.' },
+      quote: { t: 'Your quote is on its way', b: 'We will email your personalised, EPVS-validated quote shortly and follow up — no pressure, no hard sell.' },
+    };
+    const done = doneMap[journey] || doneMap.quote;
+    const pcUp = (this.state.postcode || '').toUpperCase().trim();
+    const sugLabels = ['12 Beck Lane', '14 Beck Lane', '16 Beck Lane', 'Flat 1, Beck Lane'].map(s => s + (pcUp ? ', ' + pcUp : ''));
+    const suggestions = sugLabels.map(l => ({
+      label: l,
+      bg: this.state.addrPicked === l ? '#FFF4F2' : '#fff',
+      select: () => this.setState({ addrPicked: l, address: l, showSuggestions: false }),
+    }));
+    const addrFull = (this.state.addrPicked || this.state.address || '').trim();
+    const mapQuery = encodeURIComponent((addrFull ? addrFull + ', ' : '') + (pcUp || 'United Kingdom'));
+    const propLabels = { detached: 'Detached', semi: 'Semi-detached', terraced: 'Terraced', bungalow: 'Bungalow' };
+    const finLabels = { cash: 'Pay cash', interestfree: 'Interest-free credit', monthly: 'Pay monthly', lease: 'Solar lease', unsure: 'Not sure yet' };
+    const jLabels = { visit: 'Home visit', online: 'Online consultation', quote: 'Quote by email' };
+    const summary = [
+      { k: 'Property', v: propLabels[this.state.property] || '' },
+      { k: 'Address', v: [this.state.address, (this.state.postcode || '').toUpperCase()].filter(Boolean).join(', ') },
+      { k: 'Monthly bill', v: '£' + this.state.bill },
+      { k: 'Payment preference', v: finLabels[this.state.finance] || '' },
+      { k: 'Your choice', v: jLabels[journey] || '' },
+      { k: 'Booked for', v: this.state.slot },
+    ].filter(x => x.v);
+    return {
+      summary,
+      phone,
+      notHomeowner: this.state.own === 'rent',
+      stageChoose: this.state.stage === 'choose',
+      loadingTitle: this.state.loadMsg === 'finance' ? 'Preparing your options\u2026' : 'Checking your details\u2026',
+      loadingBody: this.state.loadMsg === 'finance'
+        ? "Good news \u2014 you could spread the cost with up to 5 years\u2019 interest-free credit. We\u2019ll show you how in a moment."
+        : "Every Spark quote includes a savings figure independently validated by EPVS \u2014 so the numbers you see are real, not a sales guess.",
+      stageLoading: this.state.stage === 'loading',
+      stageDone: this.state.stage === 'done',
+      address: this.state.address,
+      setAddress: (e) => this.setState({ address: e.target.value }),
+      mapSrc: 'https://maps.google.com/maps?q=' + mapQuery + '&t=k&z=19&output=embed',
+      findAddress: () => this.setState({ showSuggestions: true }),
+      showSuggestions: this.state.showSuggestions,
+      suggestions,
+      addrPicked: this.state.addrPicked,
+      visitBg: jc('visit').bg, visitBorder: jc('visit').border,
+      onlineBg: jc('online').bg, onlineBorder: jc('online').border,
+      quoteBg: jc('quote').bg, quoteBorder: jc('quote').border,
+      selectVisit: () => this.setState({ journey: 'visit', slot: '' }),
+      selectOnline: () => this.setState({ journey: 'online', slot: '' }),
+      selectQuote: () => this.setState({ journey: 'quote', slot: '' }),
+      showSlots: journey === 'visit' || journey === 'online',
+      slots,
+      slotsLabel: journey === 'online' ? 'Choose a call time' : 'Choose a visit slot',
+      slotsAvail: journey === 'online' ? 'Experts available now' : 'Surveyor availability in your area',
+      journeyChosen: !!journey,
+      confirm: () => { if (ready) this.setState({ stage: 'done' }); },
+      confirmBg: ready ? '#F60F00' : '#C9CDD4',
+      confirmCursor: ready ? 'pointer' : 'not-allowed',
+      confirmLabel: journey === 'quote' ? 'Send me the quote' : 'Confirm booking',
+      doneTitle: done.t,
+      doneBody: done.b,
+      nextBg: (this.state.step === 1 && this.state.own === 'rent') ? '#C9CDD4' : '#F60F00',
+      nextCursor: (this.state.step === 1 && this.state.own === 'rent') ? 'not-allowed' : 'pointer',
+      phoneHref: 'tel:' + phone.replace(/[^0-9+]/g, ''),
+      showForm: this.state.stage === 'form',
+      firstName: (this.state.first.trim().split(/\s+/)[0]) || 'there',
+
+      steps,
+      stepNum: st,
+      stepTitle: titles[st].t,
+      stepSub: titles[st].s,
+      isStep1: st === 1,
+      isStep2: st === 2,
+      isStep3: st === 3,
+      canBack: st > 1,
+      nextLabel: st < 3 ? 'Continue' : 'Get my free quote',
+      next, back,
+
+      propertyOptions: this.opt([
+        { val: 'detached', label: 'Detached' },
+        { val: 'semi', label: 'Semi-detached' },
+        { val: 'terraced', label: 'Terraced' },
+        { val: 'bungalow', label: 'Bungalow' },
+      ], 'property'),
+      ownOptions: this.opt([
+        { val: 'own', label: 'Yes, I own it' },
+        { val: 'rent', label: 'No' },
+      ], 'own'),
+      billValue: this.state.bill,
+      billLabel: this.state.bill >= 400 ? '£400+' : '£' + this.state.bill,
+      setBill: (e) => this.setState({ bill: parseInt(e.target.value, 10) }),
+      savingYear: (function(a){ return '\u00a3' + Math.round(a*12*0.9).toLocaleString('en-GB'); })(this.state.bill),
+      saving30: (function(a){ var annual=a*12, g=1.0702, total=0, b=annual; for(var i=0;i<30;i++){ total+=b; b*=g; } return '\u00a3' + (Math.round(total*0.9/100)*100).toLocaleString('en-GB'); })(this.state.bill),
+      financeOptions: this.opt([
+        { val: 'cash', label: 'Pay cash' },
+        { val: 'monthly', label: 'Pay monthly' },
+        { val: 'unsure', label: 'Not sure yet' },
+      ], 'finance'),
+
+      fFirst: this.state.first, setFirst: (e) => this.setState({ first: e.target.value }),
+      fEmail: this.state.email, setEmail: (e) => this.setState({ email: e.target.value }),
+      fPhone: this.state.phone, setPhone: (e) => this.setState({ phone: e.target.value }),
+      fPostcode: this.state.postcode, setPostcode: (e) => this.setState({ postcode: e.target.value }),
+      showError: this.state.error,
+    };
+  }
+}
+</script>
 </body>
 </html>

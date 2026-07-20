@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,12 +9,17 @@
 <meta property="og:description" content="Complete your home EV charger order with Spark, pick an installation date and pay or finance online.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://sparkhome.co.uk/og-image.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="canonical" href="https://sparkhome.co.uk/ev-checkout.html">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin: 0; background: #F4F4F2; -webkit-font-smoothing: antialiased; }
@@ -27,61 +32,290 @@
   .has-dd { position: relative; }
   .has-dd .dd-menu { display: none; position: absolute; top: 100%; left: 0; padding-top: 8px; }
   .has-dd:hover .dd-menu { display: block; }
-
-
 </style>
+<script>
+(function(){
+  function init(){
+    if(document.getElementById('spark-mnav-btn'))return;
+    var css=document.createElement('style');
+    css.textContent='@media(min-width:881px){#spark-mnav-btn,#spark-mnav{display:none!important}}#spark-mnav-btn{position:fixed;top:13px;right:14px;z-index:200;width:44px;height:44px;border-radius:11px;background:#161C2E;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}#spark-mnav{position:fixed;inset:0;z-index:199;background:rgba(15,19,34,.6);display:none}#spark-mnav.open{display:block}#spark-mnav-p{position:absolute;top:0;right:0;bottom:0;width:80%;max-width:320px;background:#fff;padding:20px 20px 28px;display:flex;flex-direction:column;gap:2px;overflow-y:auto;box-shadow:-12px 0 40px rgba(0,0,0,.2)}#spark-mnav a{padding:14px 12px;border-radius:10px;font:600 16px/1.2 Hanken Grotesk,sans-serif;color:#1B2135;text-decoration:none;border-bottom:1px solid rgba(27,33,53,.06)}#spark-mnav a.cta{margin-top:14px;background:#F60F00;color:#fff;text-align:center;font-weight:700;border:none}#spark-mnav-x{align-self:flex-end;width:38px;height:38px;border:none;background:#F4F4F2;border-radius:9px;font-size:22px;color:#1B2135;cursor:pointer;margin-bottom:6px}';
+    document.head.appendChild(css);
+    var btn=document.createElement('button');btn.id='spark-mnav-btn';btn.setAttribute('aria-label','Open menu');
+    btn.innerHTML='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>';
+    var ov=document.createElement('div');ov.id='spark-mnav';
+    ov.innerHTML='<div id="spark-mnav-p"><button id="spark-mnav-x" aria-label="Close">&times;</button>'+
+      '<a href="solar-and-battery.html">Solar &amp; Battery</a>'+
+      '<a href="ev-chargers.html">EV Chargers</a>'+
+      '<a href="heat-pumps.html">Heat Pumps</a>'+
+      '<a href="commercial.html">Commercial</a>'+
+      '<a href="savings-and-finance.html">Savings &amp; Finance</a>'+
+      '<a href="resources.html">Guides</a>'+
+      '<a href="about.html">About</a>'+
+      '<a href="reviews.html">Reviews</a>'+
+      '<a href="locations.html">Locations</a>'+
+      '<a class="cta" href="get-a-quote.html">Get my free quote</a></div>';
+    function close(){ov.classList.remove('open');}
+    btn.addEventListener('click',function(){ov.classList.add('open');});
+    ov.addEventListener('click',function(e){if(e.target===ov||e.target.id==='spark-mnav-x'||e.target.closest('a'))close();});
+    document.body.appendChild(btn);document.body.appendChild(ov);
+  }
+  if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+</helmet>
 
-</head>
-<body>
-<div class="sc-host" data-sc-name="ev-checkout"><div data-dc-tpl="6" style="font-family: &quot;Hanken Grotesk&quot;, sans-serif; color: rgb(27, 33, 53); background: rgb(244, 244, 242); overflow-x: hidden;">
+<div style="font-family:'Hanken Grotesk',sans-serif;color:#1B2135;background:#F4F4F2;overflow-x:hidden">
 
-  <header data-dc-tpl="7" style="background: rgb(255, 255, 255); border-bottom: 1px solid rgba(27, 33, 53, 0.08);">
-    <div data-dc-tpl="8" style="max-width: 1180px; margin: 0px auto; padding: 15px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
-      <a data-dc-tpl="9" href="index.html" style="display: flex; align-items: center; text-decoration: none;"><img data-dc-tpl="10" src="assets/spark-logo-navy.webp" alt="Spark" style="height: 38px; width: auto; display: block;"></a>
-      <a data-dc-tpl="11" href="ev-chargers.html" style="font-size: 14.5px; font-weight: 600; color: rgb(81, 96, 122); text-decoration: none; display: inline-flex; align-items: center; gap: 7px;"><span data-dc-tpl="12" style="font-size: 17px;">←</span> Back to shop</a>
+  <header style="background:#fff;border-bottom:1px solid rgba(27,33,53,0.08)">
+    <div style="max-width:1180px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="index.html" style="display:flex;align-items:center;text-decoration:none"><img src="assets/spark-logo-navy.png" alt="Spark" style="height:38px;width:auto;display:block"></a>
+      <a href="ev-chargers.html" style="font-size:14.5px;font-weight:600;color:#51607A;text-decoration:none;display:inline-flex;align-items:center;gap:7px"><span style="font-size:17px">&larr;</span> Back to shop</a>
     </div>
   </header>
 
-  
-  <div data-dc-tpl="13" style="background: rgb(255, 255, 255); border-bottom: 1px solid rgba(27, 33, 53, 0.08);">
-    <div data-dc-tpl="14" style="max-width: 1180px; margin: 0px auto; padding: 14px 24px; display: flex; align-items: center; gap: 8px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13.5px; font-weight: 700; flex-wrap: wrap;">
-      <span data-dc-tpl="15" style="color: rgb(246, 15, 0);">1 · Your details</span><span data-dc-tpl="16" style="color: rgb(201, 205, 212);">›</span>
-      <span data-dc-tpl="17" style="color: rgb(201, 205, 212);">2 · Install date</span><span data-dc-tpl="18" style="color: rgb(201, 205, 212);">›</span>
-      <span data-dc-tpl="19" style="color: rgb(201, 205, 212);">3 · Payment</span>
+  <!-- PROGRESS -->
+  <div style="background:#fff;border-bottom:1px solid rgba(27,33,53,0.08)">
+    <div style="max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:8px;font-family:'Schibsted Grotesk',sans-serif;font-size:13.5px;font-weight:700;flex-wrap:wrap">
+      <span style="color:{{ c1 }}">1 · Your details</span><span style="color:#C9CDD4">›</span>
+      <span style="color:{{ c2 }}">2 · Install date</span><span style="color:#C9CDD4">›</span>
+      <span style="color:{{ c3 }}">3 · Payment</span>
     </div>
   </div>
 
-  <section data-dc-tpl="20" style="padding: 36px 24px 80px;">
-    <div data-dc-tpl="21" id="checkout-app" data-r="2col" style="max-width: 1180px; margin: 0px auto; display: grid; grid-template-columns: 1.4fr 0.85fr; gap: 40px; align-items: start;">
+  <section style="padding:36px 24px 80px">
+    <div data-r="2col" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 0.85fr;gap:40px;align-items:start">
 
-      
-      <div data-dc-tpl="22">
-        
-          <div data-dc-tpl="24" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 18px; padding: 48px 32px; text-align: center;">
-            <h1 data-dc-tpl="25" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 26px; margin: 0px 0px 12px;">Your basket is empty</h1>
-            <p data-dc-tpl="26" style="font-size: 16px; color: rgb(81, 96, 122); margin: 0px 0px 22px;">Add a charger to get started.</p>
-            <a data-dc-tpl="27" href="ev-chargers.html" style="display: inline-flex; background: rgb(246, 15, 0); color: rgb(255, 255, 255); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; padding: 14px 26px; border-radius: 11px; text-decoration: none;">Browse chargers</a>
+      <!-- LEFT: STEPS -->
+      <div>
+        <sc-if value="{{ isEmpty }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:18px;padding:48px 32px;text-align:center">
+            <h1 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:26px;margin:0 0 12px">Your basket is empty</h1>
+            <p style="font-size:16px;color:#51607A;margin:0 0 22px">Add a charger to get started.</p>
+            <a href="ev-chargers.html" style="display:inline-flex;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:14px 26px;border-radius:11px;text-decoration:none">Browse chargers</a>
           </div>
-        
+        </sc-if>
 
-        
-        
+        <!-- STEP 1 DETAILS -->
+        <sc-if value="{{ step1 }}" hint-placeholder-val="{{ true }}">
+          <div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:18px;padding:clamp(24px,3vw,34px)">
+            <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:23px;letter-spacing:-0.02em;margin:0 0 4px">Your details</h2>
+            <p style="font-size:15px;color:#7C8493;margin:0 0 22px">Where should we fit your charger?</p>
+            <div style="margin-bottom:13px">
+              <input value="{{ fFirst }}" onInput="{{ setFirst }}" placeholder="Full name" style="width:100%;font-family:'Hanken Grotesk',sans-serif;font-size:16px;padding:14px 16px;border:1.5px solid rgba(27,33,53,0.14);border-radius:11px;background:#FBFAF8;color:#1B2135">
+            </div>
+            <div data-r="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:13px">
+              <input value="{{ fEmail }}" onInput="{{ setEmail }}" type="email" placeholder="Email address" style="font-family:'Hanken Grotesk',sans-serif;font-size:16px;padding:14px 16px;border:1.5px solid rgba(27,33,53,0.14);border-radius:11px;background:#FBFAF8;color:#1B2135">
+              <input value="{{ fPhone }}" onInput="{{ setPhone }}" type="tel" placeholder="Phone number" style="font-family:'Hanken Grotesk',sans-serif;font-size:16px;padding:14px 16px;border:1.5px solid rgba(27,33,53,0.14);border-radius:11px;background:#FBFAF8;color:#1B2135">
+            </div>
+            <div style="display:flex;gap:10px;margin-bottom:6px">
+              <input value="{{ fPostcode }}" onInput="{{ setPostcode }}" placeholder="Postcode" style="flex:1;font-family:'Hanken Grotesk',sans-serif;font-size:16px;padding:14px 16px;border:1.5px solid rgba(27,33,53,0.14);border-radius:11px;background:#FBFAF8;color:#1B2135">
+              <button onClick="{{ findAddress }}" style="background:#161C2E;color:#fff;border:none;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:14px;padding:0 18px;border-radius:11px;cursor:pointer;white-space:nowrap">Find address</button>
+            </div>
+            <sc-if value="{{ showSuggestions }}" hint-placeholder-val="{{ false }}">
+              <div style="border:1.5px solid rgba(27,33,53,0.12);border-radius:11px;overflow:hidden;margin-top:10px">
+                <sc-for list="{{ suggestions }}" as="a" hint-placeholder-count="4">
+                  <button onClick="{{ a.select }}" style="width:100%;text-align:left;background:{{ a.bg }};border:none;border-bottom:1px solid rgba(27,33,53,0.07);padding:13px 16px;cursor:pointer;font-family:'Hanken Grotesk',sans-serif;font-size:14.5px;color:#1B2135">{{ a.label }}</button>
+                </sc-for>
+              </div>
+            </sc-if>
+            <sc-if value="{{ addrPicked }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:#0E9E63;font-weight:700;margin-top:12px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E9E63" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12.5 10 17.5 19 7"/></svg>{{ addrPicked }}</div>
+            </sc-if>
+            <sc-if value="{{ err1 }}" hint-placeholder-val="{{ false }}"><div style="font-size:13.5px;color:#D00C00;font-weight:600;margin-top:14px">Please add your name, phone and postcode to continue.</div></sc-if>
+            <button onClick="{{ next1 }}" style="width:100%;margin-top:22px;background:#F60F00;color:#fff;border:none;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;padding:16px;border-radius:12px;cursor:pointer">Continue to install date</button>
+          </div>
+        </sc-if>
 
-        
-        
+        <!-- STEP 2 DATE -->
+        <sc-if value="{{ step2 }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:18px;padding:clamp(24px,3vw,34px)">
+            <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:23px;letter-spacing:-0.02em;margin:0 0 4px">Choose your install date</h2>
+            <p style="font-size:14px;color:#0E9E63;font-weight:700;margin:0 0 20px;display:flex;align-items:center;gap:6px"><span style="width:7px;height:7px;border-radius:50%;background:#33D17A;display:inline-block"></span>Engineer availability near {{ postcodeUp }}</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px">
+              <sc-for list="{{ slots }}" as="s" hint-placeholder-count="4">
+                <button onClick="{{ s.select }}" style="text-align:left;background:{{ s.bg }};border:1.5px solid {{ s.border }};border-radius:12px;padding:16px;cursor:pointer;font-family:'Hanken Grotesk',sans-serif">
+                  <span style="display:block;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;color:#1B2135">{{ s.day }}</span>
+                  <span style="display:block;font-size:13px;color:#7C8493;margin-top:2px">{{ s.window }}</span>
+                </button>
+              </sc-for>
+            </div>
+            <div style="display:flex;gap:12px;margin-top:24px">
+              <button onClick="{{ back2 }}" style="background:#fff;border:1.5px solid rgba(27,33,53,0.16);color:#1B2135;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;padding:15px 22px;border-radius:12px;cursor:pointer">Back</button>
+              <button onClick="{{ next2 }}" style="flex:1;background:{{ next2Bg }};color:#fff;border:none;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;padding:15px;border-radius:12px;cursor:{{ next2Cursor }}">Continue to payment</button>
+            </div>
+          </div>
+        </sc-if>
 
-        
-        
+        <!-- STEP 3 PAYMENT -->
+        <sc-if value="{{ step3 }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:18px;padding:clamp(24px,3vw,34px)">
+            <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:23px;letter-spacing:-0.02em;margin:0 0 4px">How would you like to pay?</h2>
+            <p style="font-size:15px;color:#7C8493;margin:0 0 22px">Choose a payment method to complete your order.</p>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <sc-for list="{{ payOptions }}" as="p" hint-placeholder-count="3">
+                <button onClick="{{ p.select }}" style="display:flex;align-items:center;justify-content:space-between;gap:14px;text-align:left;background:{{ p.bg }};border:1.5px solid {{ p.border }};border-radius:13px;padding:18px;cursor:pointer;font-family:'Hanken Grotesk',sans-serif">
+                  <span><span style="display:block;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;color:#1B2135">{{ p.t }}</span><span style="display:block;font-size:13.5px;color:#7C8493;margin-top:2px">{{ p.d }}</span></span>
+                  <span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:16px;color:#F60F00;white-space:nowrap">{{ p.amt }}</span>
+                </button>
+              </sc-for>
+            </div>
+            <div style="display:flex;gap:12px;margin-top:24px">
+              <button onClick="{{ back3 }}" style="background:#fff;border:1.5px solid rgba(27,33,53,0.16);color:#1B2135;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;padding:15px 22px;border-radius:12px;cursor:pointer">Back</button>
+              <button onClick="{{ placeOrder }}" style="flex:1;background:{{ orderBg }};color:#fff;border:none;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;padding:15px;border-radius:12px;cursor:{{ orderCursor }}">Place order</button>
+            </div>
+          </div>
+        </sc-if>
 
-        
-        
+        <!-- DONE -->
+        <sc-if value="{{ stepDone }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:18px;padding:clamp(28px,4vw,44px);text-align:center">
+            <div style="width:72px;height:72px;border-radius:50%;background:#E9F7F0;display:flex;align-items:center;justify-content:center;margin:0 auto 22px"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0E9E63" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12.5 10 17.5 19 7"/></svg></div>
+            <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.02em;margin:0 0 12px">Order confirmed, {{ firstName }}!</h2>
+            <p style="font-size:16.5px;line-height:1.6;color:#51607A;margin:0 auto;max-width:440px">Your EV charger order is booked for installation on <strong style="color:#1B2135">{{ slotChosen }}</strong>. We've emailed your confirmation and our team will be in touch to finalise the details.</p>
+            <a href="index.html" style="display:inline-flex;margin-top:26px;align-items:center;gap:8px;background:#161C2E;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:13px 24px;border-radius:11px;text-decoration:none">Back to home</a>
+          </div>
+        </sc-if>
       </div>
 
-      
-      
+      <!-- RIGHT: ORDER SUMMARY -->
+      <sc-if value="{{ hasItems }}" hint-placeholder-val="{{ true }}">
+        <div data-r="summary" style="position:sticky;top:24px;background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:18px;padding:26px">
+          <h3 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:18px;margin:0 0 18px">Order summary</h3>
+          <sc-for list="{{ lines }}" as="l" hint-placeholder-count="2">
+            <div style="display:flex;gap:13px;padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid rgba(27,33,53,0.07)">
+              <div role="img" aria-label="{{ l.name }}" style="width:48px;height:48px;border-radius:10px;background:#EEF2F6;background-image:{{ l.imgCss }};background-size:cover;background-position:center;flex:none"></div>
+              <div style="flex:1"><div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:#1B2135;line-height:1.25">{{ l.name }}</div><div style="font-size:13px;color:#7C8493;margin-top:3px">Qty {{ l.qty }} · {{ l.priceLabel }} fitted</div></div>
+              <div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:#1B2135">{{ l.lineLabel }}</div>
+            </div>
+          </sc-for>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding-top:2px"><span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:16px">Total</span><span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.02em">{{ totalLabel }}</span></div>
+          <div style="font-size:13px;color:#0E9E63;font-weight:600;text-align:right;margin-top:3px">or from {{ totalMonthlyLabel }}/mo with finance (9.9% APR)</div>
+
+          <div style="margin-top:20px;padding-top:18px;border-top:1px solid rgba(27,33,53,0.1)">
+            <div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#0E9E63;margin-bottom:12px">Your price includes</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <sc-for list="{{ included }}" as="i" hint-placeholder-count="7">
+                <div style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.4;color:#3C4658"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E9E63" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px"><polyline points="5 12.5 10 17.5 19 7"/></svg><span><strong style="color:#1B2135">{{ i.t }}</strong> {{ i.d }}</span></div>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="margin-top:18px;padding-top:16px;border-top:1px solid rgba(27,33,53,0.07);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center">
+            <span style="font-size:11.5px;font-weight:700;color:#3C4658">★ 4.7/5 Trustpilot</span>
+            <span style="font-size:11.5px;font-weight:700;color:#3C4658">OZEV approved</span>
+            <span style="font-size:11.5px;font-weight:700;color:#3C4658">MCS certified</span>
+            <span style="font-size:11.5px;font-weight:700;color:#3C4658">NAPIT registered</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:14px;font-size:12.5px;color:#7C8493"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0E9E63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Secure checkout · no payment taken until your install is booked</div>
+        </div>
+      </sc-if>
     </div>
-  </section></div></div>
-<script src="app.js"></script>
-<script src="flows.js"></script>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{ &quot;$preview&quot;: { &quot;width&quot;: &quot;100%&quot;, &quot;height&quot;: 900 } }">
+class Component extends DCLogic {
+  state = { basket: {}, step: 1, first: '', last: '', email: '', phone: '', postcode: '', address: '', addrPicked: '', showSuggestions: false, slot: '', pay: '', err1: false };
+
+  componentDidMount() {
+    try {
+      const saved = JSON.parse(localStorage.getItem('spark_ev_basket') || '{}');
+      if (saved && typeof saved === 'object') this.setState({ basket: saved });
+    } catch (e) {}
+  }
+
+  catalogue() {
+    return [
+      { id: 'epod', name: 'Ohme ePod', price: 849, monthly: 18, img: 'assets/charger-ohme-epod.png' },
+      { id: 'ppulse', name: 'EcoFlow PowerPulse 2', price: 999, monthly: 21, img: 'assets/charger-ecoflow-powerpulse.png' },
+      { id: 'tesla', name: 'Tesla Wall Connector', price: 1299, monthly: 27, img: 'assets/charger-tesla-wall.png' },
+    ];
+  }
+
+  fmt(n) { return '£' + Math.round(n).toLocaleString('en-GB'); }
+
+  renderVals() {
+    const cat = this.catalogue();
+    const basket = this.state.basket;
+    const inBasket = cat.filter(p => basket[p.id]);
+    const count = Object.values(basket).reduce((a, b) => a + b, 0);
+    const total = cat.reduce((s, p) => s + (basket[p.id] || 0) * p.price, 0);
+    const totalMonthly = cat.reduce((s, p) => s + (basket[p.id] || 0) * p.monthly, 0);
+    const st = this.state.step;
+    const pcUp = (this.state.postcode || '').toUpperCase().trim();
+
+    const lines = inBasket.map(p => ({
+      name: p.name, img: p.img, hasImg: !!p.img, imgCss: p.img ? "url('" + p.img + "')" : 'none', qty: basket[p.id], priceLabel: this.fmt(p.price), lineLabel: this.fmt(p.price * basket[p.id]),
+    }));
+
+    const sugLabels = ['12 Beck Lane', '14 Beck Lane', '16 Beck Lane', 'Flat 1, Beck Lane'].map(s => s + (pcUp ? ', ' + pcUp : ''));
+    const suggestions = sugLabels.map(l => ({ label: l, bg: this.state.addrPicked === l ? '#FFF4F2' : '#fff', select: () => this.setState({ addrPicked: l, address: l, showSuggestions: false }) }));
+    const addrFull = (this.state.addrPicked || '').trim();
+    const mapQ = encodeURIComponent((addrFull ? addrFull + ', ' : '') + (pcUp || 'United Kingdom'));
+
+    const slotData = [
+      { day: 'Tue 30 Jun', window: 'Morning · 8am–1pm' },
+      { day: 'Thu 2 Jul', window: 'Afternoon · 1pm–5pm' },
+      { day: 'Mon 6 Jul', window: 'Morning · 8am–1pm' },
+      { day: 'Sat 11 Jul', window: 'Morning · 8am–1pm' },
+    ];
+    const slots = slotData.map(s => ({ day: s.day, window: s.window, bg: this.state.slot === s.day ? '#FFF4F2' : '#FBFAF8', border: this.state.slot === s.day ? '#F60F00' : 'rgba(27,33,53,0.12)', select: () => this.setState({ slot: s.day }) }));
+
+    const payData = [
+      { id: 'full', t: 'Pay in full', d: 'Card payment today, nothing more to pay.', amt: this.fmt(total) },
+      { id: 'interestfree', t: 'Interest-free credit', d: '0% APR spread over 24 months.', amt: this.fmt(total / 24) + '/mo' },
+      { id: 'finance', t: 'Pay monthly', d: 'Lower payments over a longer term.', amt: 'from ' + this.fmt(totalMonthly) + '/mo' },
+    ];
+    const payOptions = payData.map(p => ({ t: p.t, d: p.d, amt: p.amt, bg: this.state.pay === p.id ? '#FFF4F2' : '#FBFAF8', border: this.state.pay === p.id ? '#F60F00' : 'rgba(27,33,53,0.12)', select: () => this.setState({ pay: p.id }) }));
+
+    const next1 = () => {
+      if (!this.state.first.trim() || !this.state.phone.trim() || !pcUp) { this.setState({ err1: true }); return; }
+      this.setState({ step: 2, err1: false });
+    };
+
+    return {
+      isEmpty: count === 0,
+      hasItems: count > 0,
+      step1: count > 0 && st === 1,
+      step2: st === 2,
+      step3: st === 3,
+      stepDone: st === 4,
+      c1: st >= 1 ? '#F60F00' : '#C9CDD4',
+      c2: st >= 2 ? '#F60F00' : '#C9CDD4',
+      c3: st >= 3 ? '#F60F00' : '#C9CDD4',
+      lines, totalLabel: this.fmt(total), totalMonthlyLabel: this.fmt(totalMonthly),
+      included: [
+        { t: 'Full installation', d: 'by our OZEV-approved, MCS-certified engineers.' },
+        { t: 'Up to 10m of cabling', d: 'neatly routed from your consumer unit to the charger.' },
+        { t: 'All mounting & fixings', d: 'plus a dedicated isolator switch where needed.' },
+        { t: 'Electrical testing', d: '& your Building Regs / DNO notification handled.' },
+        { t: '3-year workmanship guarantee', d: 'on top of the manufacturer product warranty.' },
+        { t: 'App setup & handover', d: 'we get you charging before we leave.' },
+        { t: 'Free pre-install survey', d: 'no-obligation — we confirm everything first.' },
+      ],
+      firstName: (this.state.first.trim().split(/\s+/)[0]) || 'there',
+      fFirst: this.state.first, setFirst: e => this.setState({ first: e.target.value }),
+      fEmail: this.state.email, setEmail: e => this.setState({ email: e.target.value }),
+      fPhone: this.state.phone, setPhone: e => this.setState({ phone: e.target.value }),
+      fPostcode: this.state.postcode, setPostcode: e => this.setState({ postcode: e.target.value }),
+      postcodeUp: pcUp || 'you',
+      findAddress: () => this.setState({ showSuggestions: true }),
+      showSuggestions: this.state.showSuggestions, suggestions, addrPicked: this.state.addrPicked,
+      mapSrc: 'https://maps.google.com/maps?q=' + mapQ + '&t=k&z=19&output=embed',
+      err1: this.state.err1, next1,
+      slots,
+      back2: () => this.setState({ step: 1 }),
+      next2: () => { if (this.state.slot) this.setState({ step: 3 }); },
+      next2Bg: this.state.slot ? '#F60F00' : '#C9CDD4', next2Cursor: this.state.slot ? 'pointer' : 'not-allowed',
+      payOptions,
+      back3: () => this.setState({ step: 2 }),
+      placeOrder: () => { if (this.state.pay) { try { localStorage.removeItem('spark_ev_basket'); } catch (e) {} this.setState({ step: 4 }); } },
+      orderBg: this.state.pay ? '#F60F00' : '#C9CDD4', orderCursor: this.state.pay ? 'pointer' : 'not-allowed',
+      slotChosen: this.state.slot,
+    };
+  }
+}
+</script>
 </body>
 </html>

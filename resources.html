@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,12 +9,17 @@
 <meta property="og:description" content="Honest, jargon-free guides on solar panel costs, savings, battery storage, finance and EV charging for UK homeowners.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://sparkhome.co.uk/og-image.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="canonical" href="https://sparkhome.co.uk/resources.html">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin: 0; background: #F4F4F2; -webkit-font-smoothing: antialiased; }
@@ -30,189 +35,143 @@
   .has-dd { position: relative; }
   .has-dd .dd-menu { display: none; position: absolute; top: 100%; left: 0; padding-top: 8px; }
   .has-dd:hover .dd-menu { display: block; }
-
-
 </style>
+<script>
+(function(){
+  function init(){
+    if(document.getElementById('spark-mnav-btn'))return;
+    var css=document.createElement('style');
+    css.textContent='@media(min-width:881px){#spark-mnav-btn,#spark-mnav{display:none!important}}#spark-mnav-btn{position:fixed;top:13px;right:14px;z-index:200;width:44px;height:44px;border-radius:11px;background:#161C2E;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}#spark-mnav{position:fixed;inset:0;z-index:199;background:rgba(15,19,34,.6);display:none}#spark-mnav.open{display:block}#spark-mnav-p{position:absolute;top:0;right:0;bottom:0;width:80%;max-width:320px;background:#fff;padding:20px 20px 28px;display:flex;flex-direction:column;gap:2px;overflow-y:auto;box-shadow:-12px 0 40px rgba(0,0,0,.2)}#spark-mnav a{padding:14px 12px;border-radius:10px;font:600 16px/1.2 Hanken Grotesk,sans-serif;color:#1B2135;text-decoration:none;border-bottom:1px solid rgba(27,33,53,.06)}#spark-mnav a.cta{margin-top:14px;background:#F60F00;color:#fff;text-align:center;font-weight:700;border:none}#spark-mnav-x{align-self:flex-end;width:38px;height:38px;border:none;background:#F4F4F2;border-radius:9px;font-size:22px;color:#1B2135;cursor:pointer;margin-bottom:6px}';
+    document.head.appendChild(css);
+    var btn=document.createElement('button');btn.id='spark-mnav-btn';btn.setAttribute('aria-label','Open menu');
+    btn.innerHTML='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>';
+    var ov=document.createElement('div');ov.id='spark-mnav';
+    ov.innerHTML='<div id="spark-mnav-p"><button id="spark-mnav-x" aria-label="Close">&times;</button>'+
+      '<a href="solar-and-battery.html">Solar &amp; Battery</a>'+
+      '<a href="ev-chargers.html">EV Chargers</a>'+
+      '<a href="heat-pumps.html">Heat Pumps</a>'+
+      '<a href="commercial.html">Commercial</a>'+
+      '<a href="savings-and-finance.html">Savings &amp; Finance</a>'+
+      '<a href="resources.html">Guides</a>'+
+      '<a href="about.html">About</a>'+
+      '<a href="reviews.html">Reviews</a>'+
+      '<a href="locations.html">Locations</a>'+
+      '<a class="cta" href="get-a-quote.html">Get my free quote</a></div>';
+    function close(){ov.classList.remove('open');}
+    btn.addEventListener('click',function(){ov.classList.add('open');});
+    ov.addEventListener('click',function(e){if(e.target===ov||e.target.id==='spark-mnav-x'||e.target.closest('a'))close();});
+    document.body.appendChild(btn);document.body.appendChild(ov);
+  }
+  if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "Blog", "name": "Spark Solar Guides & Resources", "description": "Independent guides on solar panels, battery storage, costs, savings and finance for UK homeowners." }
+</script>
+</helmet>
 
-</head>
-<body>
-<div class="sc-host" data-sc-name="resources"><div data-dc-tpl="7" data-r="wrap" style="font-family: &quot;Hanken Grotesk&quot;, sans-serif; color: rgb(27, 33, 53); background: rgb(244, 244, 242); overflow-x: hidden;">
+<div data-r="wrap" style="font-family:'Hanken Grotesk',sans-serif;color:#1B2135;background:#F4F4F2;overflow-x:hidden">
 
-  <div data-dc-tpl="8" style="background: rgb(22, 28, 46); color: rgb(196, 203, 218); font-size: 13px;">
-    <div data-dc-tpl="9" style="max-width: 1180px; margin: 0px auto; padding: 9px 24px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between;">
-      <div data-dc-tpl="10" style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span data-dc-tpl="11" style="color: rgb(246, 15, 0); letter-spacing: 0.5px; font-weight: 700;">★ 4.7/5</span><span data-dc-tpl="12" style="opacity: 0.45;">·</span><span data-dc-tpl="13">Rated Excellent on Trustpilot from 420+ reviews</span></div>
-      <div data-dc-tpl="14" style="display: flex; align-items: center; gap: 18px; font-weight: 500;"><span data-dc-tpl="15" style="opacity: 0.8;">UK-based support · Mon–Sat</span><a data-dc-tpl="16" href="get-a-quote.html" style="color: rgb(255, 255, 255); text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.35); padding-bottom: 1px;">Request a callback</a></div>
+  <div style="background:#161C2E;color:#C4CBDA;font-size:13px">
+    <div style="max-width:1180px;margin:0 auto;padding:9px 24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:8px;font-weight:500"><span style="color:#F60F00;letter-spacing:0.5px;font-weight:700">★ 4.7/5</span><span style="opacity:.45">·</span><span>Rated Excellent on Trustpilot from 420+ reviews</span></div>
+      <div style="display:flex;align-items:center;gap:18px;font-weight:500"><span style="opacity:.8">UK-based support · Mon&ndash;Sat</span><a href="get-a-quote.html" style="color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:1px">Request a callback</a></div>
     </div>
   </div>
 
-  <header data-dc-tpl="17" style="position: sticky; top: 0px; z-index: 50; background: rgba(244, 244, 242, 0.88); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(27, 33, 53, 0.08);">
-    <div data-dc-tpl="18" style="max-width: 1180px; margin: 0px auto; padding: 15px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
-      <a data-dc-tpl="19" href="index.html" style="display: flex; align-items: center; text-decoration: none;"><img data-dc-tpl="20" src="assets/spark-logo-navy.webp" alt="Spark" style="height: 40px; width: auto; display: block;"></a>
-      <nav data-dc-tpl="21" data-r="nav" style="display: flex; align-items: center; gap: 28px;">
-        <div data-dc-tpl="22" class="has-dd"><span data-dc-tpl="23" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); cursor: pointer; display: inline-flex; align-items: center; gap: 5px;">Products <svg data-dc-tpl="24" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9098A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline data-dc-tpl="25" points="6 9 12 15 18 9"></polyline></svg></span><div data-dc-tpl="26" class="dd-menu"><div data-dc-tpl="27" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 12px; box-shadow: 0 18px 44px -14px rgba(27,33,53,0.4); padding: 8px; width: 210px;"><a data-dc-tpl="28" href="solar-and-battery.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">Solar &amp; Battery</a><a data-dc-tpl="29" href="ev-chargers.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">EV Chargers</a><a data-dc-tpl="30" href="heat-pumps.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">Heat Pumps</a><a data-dc-tpl="31" href="commercial.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">Commercial</a></div></div></div>
-        <a data-dc-tpl="32" href="savings-and-finance.html" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); text-decoration: none;">Savings &amp; Finance</a>
-        <a data-dc-tpl="33" href="about.html" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); text-decoration: none;">About</a>
-        <a data-dc-tpl="34" href="reviews.html" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); text-decoration: none;">Reviews</a>
+  <header style="position:sticky;top:0;z-index:50;background:rgba(244,244,242,0.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(27,33,53,0.08)">
+    <div style="max-width:1180px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="index.html" style="display:flex;align-items:center;text-decoration:none"><img src="assets/spark-logo-navy.png" alt="Spark" style="height:40px;width:auto;display:block"></a>
+      <nav data-r="nav" style="display:flex;align-items:center;gap:28px">
+        <div class="has-dd"><span style="font-size:15px;font-weight:600;color:#3C4658;cursor:pointer;display:inline-flex;align-items:center;gap:5px">Products <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9098A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span><div class="dd-menu"><div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:12px;box-shadow:0 18px 44px -14px rgba(27,33,53,0.4);padding:8px;width:210px"><a href="solar-and-battery.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Solar &amp; Battery</a><a href="ev-chargers.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">EV Chargers</a><a href="heat-pumps.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Heat Pumps</a><a href="commercial.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Commercial</a></div></div></div>
+        <a href="savings-and-finance.html" style="font-size:15px;font-weight:600;color:#3C4658;text-decoration:none">Savings &amp; Finance</a>
+        <a href="about.html" style="font-size:15px;font-weight:600;color:#3C4658;text-decoration:none">About</a>
+        <a href="reviews.html" style="font-size:15px;font-weight:600;color:#3C4658;text-decoration:none">Reviews</a>
       </nav>
-      <div data-dc-tpl="35" style="display: flex; align-items: center; gap: 20px;">
-        <a data-dc-tpl="36" data-r="hdr-phone" href="tel:03308187273" style="display: inline-flex; align-items: center; gap: 9px; text-decoration: none;"><span data-dc-tpl="37" style="width: 36px; height: 36px; border-radius: 9px; background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.12); display: inline-flex; align-items: center; justify-content: center;"><svg data-dc-tpl="38" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F60F00" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path data-dc-tpl="39" d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7 11.1a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"></path></svg></span><span data-dc-tpl="40" style="display: flex; flex-direction: column; line-height: 1.15;"><span data-dc-tpl="41" style="font-size: 11px; font-weight: 600; color: rgb(124, 132, 147); letter-spacing: 0.02em;">Call our team</span><span data-dc-tpl="42" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 16px; color: rgb(27, 33, 53);"><span class="sc-interp">0330 818 7273</span></span></span></a>
-        <a data-dc-tpl="43" data-r="hdr-cta" href="get-a-quote.html" style="display: inline-flex; align-items: center; gap: 8px; background: rgb(246, 15, 0); color: rgb(255, 255, 255); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; padding: 12px 22px; border-radius: 10px; text-decoration: none; white-space: nowrap; box-shadow: 0 6px 16px rgba(246,15,0,0.25);" class="scp1">Get my free quote</a>
+      <div style="display:flex;align-items:center;gap:20px">
+        <a data-r="hdr-phone" href="{{ phoneHref }}" style="display:inline-flex;align-items:center;gap:9px;text-decoration:none"><span style="width:36px;height:36px;border-radius:9px;background:#fff;border:1px solid rgba(27,33,53,0.12);display:inline-flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F60F00" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7 11.1a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg></span><span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-size:11px;font-weight:600;color:#7C8493;letter-spacing:0.02em">Call our team</span><span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:16px;color:#1B2135">{{ phone }}</span></span></a>
+        <a data-r="hdr-cta" href="get-a-quote.html" style="display:inline-flex;align-items:center;gap:8px;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:12px 22px;border-radius:10px;text-decoration:none;white-space:nowrap;box-shadow:0 6px 16px rgba(246,15,0,0.25)" style-hover="background:#D00C00">Get my free quote</a>
       </div>
     </div>
   </header>
 
-  <div data-dc-tpl="44" data-r="mobile-cta" style="display: none; position: fixed; left: 0px; right: 0px; bottom: 0px; z-index: 60; gap: 10px; padding: 10px 14px; background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(10px); border-top: 1px solid rgba(27, 33, 53, 0.12); box-shadow: 0 -6px 20px rgba(27,33,53,0.1);">
-    <a data-dc-tpl="45" href="tel:03308187273" style="flex: 1 1 0%; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: rgb(255, 255, 255); border: 1.5px solid rgba(27, 33, 53, 0.16); color: rgb(27, 33, 53); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; padding: 13px; border-radius: 11px; text-decoration: none;">Call us</a>
-    <a data-dc-tpl="46" href="get-a-quote.html" style="flex: 1.4 1 0%; display: inline-flex; align-items: center; justify-content: center; background: rgb(246, 15, 0); color: rgb(255, 255, 255); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; padding: 13px; border-radius: 11px; text-decoration: none;">Get my free quote</a>
+  <div data-r="mobile-cta" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;padding:10px 14px;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border-top:1px solid rgba(27,33,53,0.12);box-shadow:0 -6px 20px rgba(27,33,53,0.1)">
+    <a href="{{ phoneHref }}" style="flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#fff;border:1.5px solid rgba(27,33,53,0.16);color:#1B2135;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:13px;border-radius:11px;text-decoration:none">Call us</a>
+    <a href="get-a-quote.html" style="flex:1.4;display:inline-flex;align-items:center;justify-content:center;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:13px;border-radius:11px;text-decoration:none">Get my free quote</a>
   </div>
 
-  
-  <section data-dc-tpl="47" style="padding: 60px 24px 40px;">
-    <div data-dc-tpl="48" style="max-width: 760px; margin: 0px auto; text-align: center;">
-      <div data-dc-tpl="49" style="display: inline-flex; align-items: center; gap: 9px; background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); padding: 7px 14px; border-radius: 100px; font-size: 13px; font-weight: 700; color: rgb(246, 15, 0); letter-spacing: 0.04em; margin-bottom: 22px;">GUIDES &amp; RESOURCES</div>
-      <h1 data-dc-tpl="50" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; line-height: 1.03; letter-spacing: -0.03em; margin: 0px 0px 20px;">Everything you need to know about going solar</h1>
-      <p data-dc-tpl="51" style="font-size: 20px; line-height: 1.55; color: rgb(81, 96, 122); margin: 0px auto; max-width: 600px; text-wrap: pretty;">Honest, jargon-free guides on costs, savings, finance and how solar &amp; battery really works for UK homes.</p>
+  <!-- HERO -->
+  <section style="padding:60px 24px 40px">
+    <div style="max-width:760px;margin:0 auto;text-align:center">
+      <div style="display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid rgba(27,33,53,0.10);padding:7px 14px;border-radius:100px;font-size:13px;font-weight:700;color:#F60F00;letter-spacing:0.04em;margin-bottom:22px">GUIDES &amp; RESOURCES</div>
+      <h1 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(40px,5.2vw,58px);line-height:1.03;letter-spacing:-0.03em;margin:0 0 20px">Everything you need to know about going solar</h1>
+      <p style="font-size:20px;line-height:1.55;color:#51607A;margin:0 auto;max-width:600px;text-wrap:pretty">Honest, jargon-free guides on costs, savings, finance and how solar &amp; battery really works for UK homes.</p>
     </div>
   </section>
 
-  
-  <section data-dc-tpl="52" style="padding: 20px 24px 24px;">
-    <div data-dc-tpl="53" style="max-width: 1180px; margin: 0px auto;">
-      <a data-dc-tpl="54" href="solar-panel-cost-guide.html" style="text-decoration: none; display: block;">
-        <div data-dc-tpl="55" data-r="2col" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 0px; background: rgb(22, 28, 46); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px -24px rgba(27,33,53,0.5);">
-          <div data-dc-tpl="56" style="display: flex; flex-direction: column; justify-content: center; color: rgb(255, 255, 255);">
-            <span data-dc-tpl="57" style="font-size: 12.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(248, 113, 113); margin-bottom: 14px;">Featured guide</span>
-            <h2 data-dc-tpl="58" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; margin: 0px 0px 14px; color: rgb(255, 255, 255);">How much do solar panels really cost in 2026?</h2>
-            <p data-dc-tpl="59" style="font-size: 16.5px; line-height: 1.6; color: rgb(174, 183, 202); margin: 0px 0px 20px;">A clear breakdown of system prices, what drives them, the payback period, and how finance changes the picture for UK homeowners.</p>
-            <span data-dc-tpl="60" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); display: inline-flex; align-items: center; gap: 8px;">Read the guide →</span>
+  <!-- FEATURED -->
+  <section style="padding:20px 24px 24px">
+    <div style="max-width:1180px;margin:0 auto">
+      <a href="solar-panel-cost-guide.html" style="text-decoration:none;display:block">
+        <div data-r="2col" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:0;background:#161C2E;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px -24px rgba(27,33,53,0.5)">
+          <div style="padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:center;color:#fff">
+            <span style="font-size:12.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#F87171;margin-bottom:14px">Featured guide</span>
+            <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(26px,3vw,36px);line-height:1.1;letter-spacing:-0.02em;margin:0 0 14px;color:#fff">How much do solar panels really cost in 2026?</h2>
+            <p style="font-size:16.5px;line-height:1.6;color:#AEB7CA;margin:0 0 20px">A clear breakdown of system prices, what drives them, the payback period, and how finance changes the picture for UK homeowners.</p>
+            <span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;color:#fff;display:inline-flex;align-items:center;gap:8px">Read the guide &rarr;</span>
           </div>
-          <div data-dc-tpl="61" data-r="feat-img" style="min-height: 260px; background: rgb(230, 230, 226);"><img data-dc-tpl="62" src="assets/lifestyle-couple.webp" alt="A couple reviewing solar panel costs at home" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block;"></div>
+          <div data-r="feat-img" style="min-height:260px;background:#E6E6E2"><img src="assets/lifestyle-couple.png" alt="A couple reviewing solar panel costs at home" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block"></div>
         </div>
       </a>
     </div>
   </section>
 
-  
-  <section data-dc-tpl="63" style="padding: 32px 24px 72px;">
-    <div data-dc-tpl="64" style="max-width: 1180px; margin: 0px auto;">
-      <div data-dc-tpl="65" style="display: grid; grid-template-columns: repeat(auto-fill,minmax(300px,1fr)); gap: 22px;">
-        
-          <a data-dc-tpl="67" href="solar-panel-cost-guide.html" style="text-decoration: none; display: flex; flex-direction: column; background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.08); border-radius: 16px; overflow: hidden; transition: box-shadow .15s;" class="scp2">
-            <div data-dc-tpl="68" style="padding: 24px; display: flex; flex-direction: column; flex: 1 1 0%;">
-              <span data-dc-tpl="69" style="font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(246, 15, 0); margin-bottom: 12px;"><span class="sc-interp">Solar costs</span></span>
-              <h3 data-dc-tpl="70" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 19px; line-height: 1.25; letter-spacing: -0.01em; margin: 0px 0px 10px; color: rgb(27, 33, 53); text-wrap: pretty;"><span class="sc-interp">How much do solar panels cost in 2026?</span></h3>
-              <p data-dc-tpl="71" style="font-size: 14.5px; line-height: 1.55; color: rgb(124, 132, 147); margin: 0px 0px 18px;"><span class="sc-interp">A full breakdown of system and battery prices, payback periods and ways to pay.</span></p>
-              <span data-dc-tpl="72" style="margin-top: auto; font-size: 13px; color: rgb(144, 152, 166);"><span class="sc-interp">8 min read</span></span>
+  <!-- ARTICLE GRID -->
+  <section style="padding:32px 24px 72px">
+    <div style="max-width:1180px;margin:0 auto">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px">
+        <sc-for list="{{ articles }}" as="a" hint-placeholder-count="6">
+          <a href="{{ a.href }}" style="text-decoration:none;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(27,33,53,0.08);border-radius:16px;overflow:hidden;transition:box-shadow .15s" style-hover="box-shadow:0 16px 36px -20px rgba(27,33,53,0.5)">
+            <div style="padding:24px;display:flex;flex-direction:column;flex:1">
+              <span style="font-size:12px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#F60F00;margin-bottom:12px">{{ a.cat }}</span>
+              <h3 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:19px;line-height:1.25;letter-spacing:-0.01em;margin:0 0 10px;color:#1B2135;text-wrap:pretty">{{ a.title }}</h3>
+              <p style="font-size:14.5px;line-height:1.55;color:#7C8493;margin:0 0 18px">{{ a.excerpt }}</p>
+              <span style="margin-top:auto;font-size:13px;color:#9098A6">{{ a.read }}</span>
             </div>
           </a>
-        
-          <a data-dc-tpl="67" href="ev-charging-cost-guide.html" style="text-decoration: none; display: flex; flex-direction: column; background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.08); border-radius: 16px; overflow: hidden; transition: box-shadow .15s;" class="scp2">
-            <div data-dc-tpl="68" style="padding: 24px; display: flex; flex-direction: column; flex: 1 1 0%;">
-              <span data-dc-tpl="69" style="font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(246, 15, 0); margin-bottom: 12px;"><span class="sc-interp">EV charging</span></span>
-              <h3 data-dc-tpl="70" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 19px; line-height: 1.25; letter-spacing: -0.01em; margin: 0px 0px 10px; color: rgb(27, 33, 53); text-wrap: pretty;"><span class="sc-interp">EV charging cost guide: home vs public vs petrol</span></h3>
-              <p data-dc-tpl="71" style="font-size: 14.5px; line-height: 1.55; color: rgb(124, 132, 147); margin: 0px 0px 18px;"><span class="sc-interp">What it really costs to charge an electric car — and how solar makes it near-free.</span></p>
-              <span data-dc-tpl="72" style="margin-top: auto; font-size: 13px; color: rgb(144, 152, 166);"><span class="sc-interp">7 min read</span></span>
-            </div>
-          </a>
-        
-          <a data-dc-tpl="67" href="savings-and-finance.html#calculator" style="text-decoration: none; display: flex; flex-direction: column; background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.08); border-radius: 16px; overflow: hidden; transition: box-shadow .15s;" class="scp2">
-            <div data-dc-tpl="68" style="padding: 24px; display: flex; flex-direction: column; flex: 1 1 0%;">
-              <span data-dc-tpl="69" style="font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(246, 15, 0); margin-bottom: 12px;"><span class="sc-interp">Savings</span></span>
-              <h3 data-dc-tpl="70" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 19px; line-height: 1.25; letter-spacing: -0.01em; margin: 0px 0px 10px; color: rgb(27, 33, 53); text-wrap: pretty;"><span class="sc-interp">How much can solar panels save you in the UK?</span></h3>
-              <p data-dc-tpl="71" style="font-size: 14.5px; line-height: 1.55; color: rgb(124, 132, 147); margin: 0px 0px 18px;"><span class="sc-interp">What a typical home saves each year, and why savings grow as energy prices rise.</span></p>
-              <span data-dc-tpl="72" style="margin-top: auto; font-size: 13px; color: rgb(144, 152, 166);"><span class="sc-interp">6 min read</span></span>
-            </div>
-          </a>
-        
-          <a data-dc-tpl="67" href="solar-battery-storage-guide.html" style="text-decoration: none; display: flex; flex-direction: column; background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.08); border-radius: 16px; overflow: hidden; transition: box-shadow .15s;" class="scp2">
-            <div data-dc-tpl="68" style="padding: 24px; display: flex; flex-direction: column; flex: 1 1 0%;">
-              <span data-dc-tpl="69" style="font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(246, 15, 0); margin-bottom: 12px;"><span class="sc-interp">Battery</span></span>
-              <h3 data-dc-tpl="70" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 19px; line-height: 1.25; letter-spacing: -0.01em; margin: 0px 0px 10px; color: rgb(27, 33, 53); text-wrap: pretty;"><span class="sc-interp">Solar battery storage explained</span></h3>
-              <p data-dc-tpl="71" style="font-size: 14.5px; line-height: 1.55; color: rgb(124, 132, 147); margin: 0px 0px 18px;"><span class="sc-interp">How a home battery lets you use free solar after dark and through the evening peak.</span></p>
-              <span data-dc-tpl="72" style="margin-top: auto; font-size: 13px; color: rgb(144, 152, 166);"><span class="sc-interp">5 min read</span></span>
-            </div>
-          </a>
-        
-          <a data-dc-tpl="67" href="smart-export-guarantee-guide.html" style="text-decoration: none; display: flex; flex-direction: column; background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.08); border-radius: 16px; overflow: hidden; transition: box-shadow .15s;" class="scp2">
-            <div data-dc-tpl="68" style="padding: 24px; display: flex; flex-direction: column; flex: 1 1 0%;">
-              <span data-dc-tpl="69" style="font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(246, 15, 0); margin-bottom: 12px;"><span class="sc-interp">Earnings</span></span>
-              <h3 data-dc-tpl="70" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 19px; line-height: 1.25; letter-spacing: -0.01em; margin: 0px 0px 10px; color: rgb(27, 33, 53); text-wrap: pretty;"><span class="sc-interp">The Smart Export Guarantee explained</span></h3>
-              <p data-dc-tpl="71" style="font-size: 14.5px; line-height: 1.55; color: rgb(124, 132, 147); margin: 0px 0px 18px;"><span class="sc-interp">How you get paid for the surplus energy your panels send back to the grid.</span></p>
-              <span data-dc-tpl="72" style="margin-top: auto; font-size: 13px; color: rgb(144, 152, 166);"><span class="sc-interp">5 min read</span></span>
-            </div>
-          </a>
-        
-          <a data-dc-tpl="67" href="roof-suitability-guide.html" style="text-decoration: none; display: flex; flex-direction: column; background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.08); border-radius: 16px; overflow: hidden; transition: box-shadow .15s;" class="scp2">
-            <div data-dc-tpl="68" style="padding: 24px; display: flex; flex-direction: column; flex: 1 1 0%;">
-              <span data-dc-tpl="69" style="font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(246, 15, 0); margin-bottom: 12px;"><span class="sc-interp">Your home</span></span>
-              <h3 data-dc-tpl="70" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 19px; line-height: 1.25; letter-spacing: -0.01em; margin: 0px 0px 10px; color: rgb(27, 33, 53); text-wrap: pretty;"><span class="sc-interp">Is my roof suitable for solar panels?</span></h3>
-              <p data-dc-tpl="71" style="font-size: 14.5px; line-height: 1.55; color: rgb(124, 132, 147); margin: 0px 0px 18px;"><span class="sc-interp">Orientation, shading, roof type and age — what actually matters for a good install.</span></p>
-              <span data-dc-tpl="72" style="margin-top: auto; font-size: 13px; color: rgb(144, 152, 166);"><span class="sc-interp">6 min read</span></span>
-            </div>
-          </a>
-        
+        </sc-for>
       </div>
     </div>
   </section>
 
-  
-  <section data-dc-tpl="73" style="padding: 0px 24px 80px;">
-    <div data-dc-tpl="74" style="max-width: 1180px; margin: 0px auto; background: linear-gradient(160deg, rgb(246, 15, 0) 0%, rgb(194, 12, 0) 100%); border-radius: 24px; text-align: center; color: rgb(255, 255, 255);">
-      <h2 data-dc-tpl="75" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; letter-spacing: -0.02em; margin: 0px 0px 14px; color: rgb(255, 255, 255);">Ready for your own numbers?</h2>
-      <p data-dc-tpl="76" style="font-size: 18px; line-height: 1.55; color: rgb(255, 217, 214); margin: 0px auto 26px; max-width: 520px;">Skip the research — get a free, no-obligation quote with EPVS-validated savings for your home.</p>
-      <a data-dc-tpl="77" href="get-a-quote.html" style="display: inline-flex; align-items: center; gap: 9px; background: rgb(255, 255, 255); color: rgb(27, 33, 53); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 17px; padding: 16px 32px; border-radius: 12px; text-decoration: none; box-shadow: 0 12px 28px rgba(0,0,0,0.18);">Get my free quote →</a>
+  <!-- CTA -->
+  <section style="padding:0 24px 80px">
+    <div style="max-width:1180px;margin:0 auto;background:linear-gradient(160deg,#F60F00 0%,#C20C00 100%);border-radius:24px;padding:clamp(40px,6vw,64px);text-align:center;color:#fff">
+      <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(28px,4vw,42px);letter-spacing:-0.02em;margin:0 0 14px;color:#fff">Ready for your own numbers?</h2>
+      <p style="font-size:18px;line-height:1.55;color:#FFD9D6;margin:0 auto 26px;max-width:520px">Skip the research &mdash; get a free, no-obligation quote with EPVS-validated savings for your home.</p>
+      <a href="get-a-quote.html" style="display:inline-flex;align-items:center;gap:9px;background:#fff;color:#1B2135;font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:17px;padding:16px 32px;border-radius:12px;text-decoration:none;box-shadow:0 12px 28px rgba(0,0,0,0.18)">Get my free quote &rarr;</a>
     </div>
   </section>
 
-  <div class="sc-host" data-sc-name="SparkFooter" data-dc-tpl="78"><footer data-dc-tpl="0" style="background: rgb(22, 28, 46); color: rgb(174, 183, 202); padding: 64px 24px 34px; font-family: &quot;Hanken Grotesk&quot;, sans-serif;">
-    <div data-dc-tpl="1" style="max-width: 1180px; margin: 0px auto;">
-      <div data-dc-tpl="2" style="display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-        <div data-dc-tpl="3">
-          <img data-dc-tpl="4" src="assets/spark-logo-white.webp" alt="Spark" style="height: 28px; width: auto; display: block; margin-bottom: 16px;">
-          <p data-dc-tpl="5" style="font-size: 14.5px; line-height: 1.6; margin: 0px 0px 18px; max-width: 300px;">Premium solar &amp; battery installation across mainland Great Britain. Giving you the power to save.</p>
-          <div data-dc-tpl="6" style="font-size: 13.5px; line-height: 1.7; color: rgb(196, 203, 218); margin: 0px 0px 18px;"><a data-dc-tpl="7" href="tel:03308187273" style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 700;">0330 818 7273</a><br data-dc-tpl="8"><a data-dc-tpl="9" href="mailto:hello@sparkhome.co.uk" style="color: rgb(196, 203, 218); text-decoration: none;">hello@sparkhome.co.uk</a><br data-dc-tpl="10">St Pegs Mill, Thornhills Beck Lane, Brighouse HD6 4AH</div>
-          <div data-dc-tpl="11" style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <span data-dc-tpl="12" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">MCS</span>
-            <span data-dc-tpl="13" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">HIES</span>
-            <span data-dc-tpl="14" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">EPVS</span>
-            <span data-dc-tpl="15" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">Which? Trusted Trader</span>
-          </div>
-        </div>
-        <div data-dc-tpl="16">
-          <div data-dc-tpl="17" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Products</div>
-          <div data-dc-tpl="18" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
-            <a data-dc-tpl="19" href="solar-and-battery.html" style="color: rgb(174, 183, 202); text-decoration: none;">Solar &amp; Battery</a>
-            <a data-dc-tpl="20" href="ev-chargers.html" style="color: rgb(174, 183, 202); text-decoration: none;">EV Chargers</a>
-            <a data-dc-tpl="21" href="heat-pumps.html" style="color: rgb(174, 183, 202); text-decoration: none;">Heat Pumps</a>
-            <a data-dc-tpl="22" href="commercial.html" style="color: rgb(174, 183, 202); text-decoration: none;">Commercial</a>
-          </div>
-        </div>
-        <div data-dc-tpl="23">
-          <div data-dc-tpl="24" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Learn</div>
-          <div data-dc-tpl="25" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
-            <a data-dc-tpl="26" href="savings-and-finance.html#calculator" style="color: rgb(174, 183, 202); text-decoration: none;">Savings calculator</a>
-            <a data-dc-tpl="27" href="resources.html" style="color: rgb(174, 183, 202); text-decoration: none;">Guides &amp; resources</a>
-            <a data-dc-tpl="28" href="index.html#guarantee" style="color: rgb(174, 183, 202); text-decoration: none;">Our guarantees</a>
-            <a data-dc-tpl="29" href="reviews.html" style="color: rgb(174, 183, 202); text-decoration: none;">Reviews</a>
-          </div>
-        </div>
-        <div data-dc-tpl="30">
-          <div data-dc-tpl="31" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Company</div>
-          <div data-dc-tpl="32" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
-            <a data-dc-tpl="33" href="about.html" style="color: rgb(174, 183, 202); text-decoration: none;">About Spark</a>
-            <a data-dc-tpl="34" href="spark-for-schools.html" style="color: rgb(174, 183, 202); text-decoration: none;">Spark for Schools</a>
-            <a data-dc-tpl="35" href="locations.html" style="color: rgb(174, 183, 202); text-decoration: none;">Locations</a>
-            <a data-dc-tpl="36" href="get-a-quote.html" style="color: rgb(174, 183, 202); text-decoration: none;">Contact us</a>
-          </div>
-        </div>
-      </div>
-      <div data-dc-tpl="37" style="padding-top: 24px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; font-size: 12.5px; color: rgb(138, 147, 168);">
-        <div data-dc-tpl="38">© Spark 2026. All rights reserved. Spark is a trading name of Spark Energy UK Ltd (Company No. 14381786). Registered office: St Pegs Mill, Thornhills Beck Lane, Brighouse HD6 4AH.</div>
-        <div data-dc-tpl="39" style="display: flex; gap: 18px;"><a data-dc-tpl="40" href="terms.html" style="color: rgb(138, 147, 168); text-decoration: none;">Terms</a><a data-dc-tpl="41" href="privacy.html" style="color: rgb(138, 147, 168); text-decoration: none;">Privacy</a><a data-dc-tpl="42" href="complaints.html" style="color: rgb(138, 147, 168); text-decoration: none;">Complaints</a></div>
-      </div>
-    </div>
-  </footer></div></div></div>
-<script src="app.js"></script>
-<script src="flows.js"></script>
+  <dc-import name="SparkFooter" hint-size="100%,420px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{ &quot;$preview&quot;: { &quot;width&quot;: &quot;100%&quot;, &quot;height&quot;: 900 }, &quot;phoneNumber&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;0330 818 7273&quot;, &quot;tsType&quot;: &quot;string&quot; } }">
+class Component extends DCLogic {
+  renderVals() {
+    const phone = this.props.phoneNumber ?? '0330 818 7273';
+    const articles = [
+      { cat: 'Solar costs', title: 'How much do solar panels cost in 2026?', excerpt: 'A full breakdown of system and battery prices, payback periods and ways to pay.', read: '8 min read', href: 'solar-panel-cost-guide.html' },
+      { cat: 'EV charging', title: 'EV charging cost guide: home vs public vs petrol', excerpt: 'What it really costs to charge an electric car — and how solar makes it near-free.', read: '7 min read', href: 'ev-charging-cost-guide.html' },
+      { cat: 'Savings', title: 'How much can solar panels save you in the UK?', excerpt: 'What a typical home saves each year, and why savings grow as energy prices rise.', read: '6 min read', href: 'savings-and-finance.html#calculator' },
+      { cat: 'Battery', title: 'Solar battery storage explained', excerpt: 'How a home battery lets you use free solar after dark and through the evening peak.', read: '5 min read', href: 'solar-battery-storage-guide.html' },
+      { cat: 'Earnings', title: 'The Smart Export Guarantee explained', excerpt: 'How you get paid for the surplus energy your panels send back to the grid.', read: '5 min read', href: 'smart-export-guarantee-guide.html' },
+      { cat: 'Your home', title: 'Is my roof suitable for solar panels?', excerpt: 'Orientation, shading, roof type and age — what actually matters for a good install.', read: '6 min read', href: 'roof-suitability-guide.html' },
+    ];
+    return { phone, phoneHref: 'tel:' + phone.replace(/[^0-9+]/g, ''), articles };
+  }
+}
+</script>
 </body>
 </html>

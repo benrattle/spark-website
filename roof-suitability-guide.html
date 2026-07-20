@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,12 +9,20 @@
 <meta property="og:description" content="What makes a roof suitable for solar in the UK — direction, pitch, shading, roof type and space — and why most homes qualify.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://sparkhome.co.uk/og-image.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="canonical" href="https://sparkhome.co.uk/roof-suitability-guide.html">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{ "@type":"ListItem","position":1,"name":"Home","item":"https://sparkhome.co.uk/" }, { "@type":"ListItem","position":2,"name":"Guides","item":"https://sparkhome.co.uk/resources.html" }, { "@type":"ListItem","position":3,"name":"Is my roof suitable for solar panels?","item":"https://sparkhome.co.uk/roof-suitability-guide.html" }] }
+</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin: 0; background: #F4F4F2; -webkit-font-smoothing: antialiased; }
@@ -26,173 +34,163 @@
   .has-dd .dd-menu { display: none; position: absolute; top: 100%; left: 0; padding-top: 8px; }
   .has-dd:hover .dd-menu { display: block; }
   .prose p { font-size: 17px; line-height: 1.72; color: #3C4658; margin: 0 0 18px; }
-
-
 </style>
-<script type="application/ld+json">
-{ "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{ "@type":"ListItem","position":1,"name":"Home","item":"https://sparkhome.co.uk/" }, { "@type":"ListItem","position":2,"name":"Guides","item":"https://sparkhome.co.uk/resources.html" }, { "@type":"ListItem","position":3,"name":"Is my roof suitable for solar panels?","item":"https://sparkhome.co.uk/roof-suitability-guide.html" }] }
+<script>
+(function(){
+  function init(){
+    if(document.getElementById('spark-mnav-btn'))return;
+    var css=document.createElement('style');
+    css.textContent='@media(min-width:881px){#spark-mnav-btn,#spark-mnav{display:none!important}}#spark-mnav-btn{position:fixed;top:13px;right:14px;z-index:200;width:44px;height:44px;border-radius:11px;background:#161C2E;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}#spark-mnav{position:fixed;inset:0;z-index:199;background:rgba(15,19,34,.6);display:none}#spark-mnav.open{display:block}#spark-mnav-p{position:absolute;top:0;right:0;bottom:0;width:80%;max-width:320px;background:#fff;padding:20px 20px 28px;display:flex;flex-direction:column;gap:2px;overflow-y:auto;box-shadow:-12px 0 40px rgba(0,0,0,.2)}#spark-mnav a{padding:14px 12px;border-radius:10px;font:600 16px/1.2 Hanken Grotesk,sans-serif;color:#1B2135;text-decoration:none;border-bottom:1px solid rgba(27,33,53,.06)}#spark-mnav a.cta{margin-top:14px;background:#F60F00;color:#fff;text-align:center;font-weight:700;border:none}#spark-mnav-x{align-self:flex-end;width:38px;height:38px;border:none;background:#F4F4F2;border-radius:9px;font-size:22px;color:#1B2135;cursor:pointer;margin-bottom:6px}';
+    document.head.appendChild(css);
+    var btn=document.createElement('button');btn.id='spark-mnav-btn';btn.setAttribute('aria-label','Open menu');
+    btn.innerHTML='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>';
+    var ov=document.createElement('div');ov.id='spark-mnav';
+    ov.innerHTML='<div id="spark-mnav-p"><button id="spark-mnav-x" aria-label="Close">&times;</button>'+
+      '<a href="solar-and-battery.html">Solar &amp; Battery</a>'+
+      '<a href="ev-chargers.html">EV Chargers</a>'+
+      '<a href="heat-pumps.html">Heat Pumps</a>'+
+      '<a href="commercial.html">Commercial</a>'+
+      '<a href="savings-and-finance.html">Savings &amp; Finance</a>'+
+      '<a href="resources.html">Guides</a>'+
+      '<a href="about.html">About</a>'+
+      '<a href="reviews.html">Reviews</a>'+
+      '<a href="locations.html">Locations</a>'+
+      '<a class="cta" href="get-a-quote.html">Get my free quote</a></div>';
+    function close(){ov.classList.remove('open');}
+    btn.addEventListener('click',function(){ov.classList.add('open');});
+    ov.addEventListener('click',function(e){if(e.target===ov||e.target.id==='spark-mnav-x'||e.target.closest('a'))close();});
+    document.body.appendChild(btn);document.body.appendChild(ov);
+  }
+  if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
+})();
 </script>
-</head>
-<body>
-<div class="sc-host" data-sc-name="roof-suitability-guide"><div data-dc-tpl="8" data-r="wrap" style="font-family: &quot;Hanken Grotesk&quot;, sans-serif; color: rgb(27, 33, 53); background: rgb(244, 244, 242); overflow-x: hidden;">
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "Article", "headline": "Is my roof suitable for solar panels?", "description": "What makes a roof suitable for solar in the UK — direction, pitch, shading, roof type and space — and why most homes qualify.", "author": { "@type": "Organization", "name": "Spark" }, "publisher": { "@type": "Organization", "name": "Spark" }, "datePublished": "2026-04-02", "dateModified": "2026-06-01" }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+  { "@type": "Question", "name": "Which roof direction is best for solar panels?", "acceptedAnswer": { "@type": "Answer", "text": "South-facing roofs generate the most, but east and west-facing roofs still perform very well and can spread generation across the day, so most orientations are suitable." } },
+  { "@type": "Question", "name": "Do solar panels work on a north-facing roof?", "acceptedAnswer": { "@type": "Answer", "text": "North-facing slopes generate less and are usually avoided, but many homes have other roof faces that work well. A survey finds the best layout for your roof." } },
+  { "@type": "Question", "name": "Does shading stop me getting solar?", "acceptedAnswer": { "@type": "Answer", "text": "Some shading is manageable. Panel-level electronics and careful layout reduce its impact, and we design around chimneys, trees and nearby buildings." } },
+  { "@type": "Question", "name": "What types of roof can have solar panels?", "acceptedAnswer": { "@type": "Answer", "text": "Most roof types are suitable, including tile, slate and flat roofs. Our surveyors confirm your roof's condition and the right mounting method." } }
+] }
+</script>
+</helmet>
 
-  <div data-dc-tpl="9" style="background: rgb(22, 28, 46); color: rgb(196, 203, 218); font-size: 13px;">
-    <div data-dc-tpl="10" style="max-width: 1180px; margin: 0px auto; padding: 9px 24px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between;">
-      <div data-dc-tpl="11" style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span data-dc-tpl="12" style="color: rgb(246, 15, 0); letter-spacing: 0.5px; font-weight: 700;">★ 4.7/5</span><span data-dc-tpl="13" style="opacity: 0.45;">·</span><span data-dc-tpl="14">Rated Excellent on Trustpilot from 420+ reviews</span></div>
-      <div data-dc-tpl="15" style="display: flex; align-items: center; gap: 18px; font-weight: 500;"><span data-dc-tpl="16" style="opacity: 0.8;">UK-based support · Mon–Sat</span><a data-dc-tpl="17" href="get-a-quote.html" style="color: rgb(255, 255, 255); text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.35); padding-bottom: 1px;">Request a callback</a></div>
+<div data-r="wrap" style="font-family:'Hanken Grotesk',sans-serif;color:#1B2135;background:#F4F4F2;overflow-x:hidden">
+
+  <div style="background:#161C2E;color:#C4CBDA;font-size:13px">
+    <div style="max-width:1180px;margin:0 auto;padding:9px 24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:8px;font-weight:500"><span style="color:#F60F00;letter-spacing:0.5px;font-weight:700">★ 4.7/5</span><span style="opacity:.45">·</span><span>Rated Excellent on Trustpilot from 420+ reviews</span></div>
+      <div style="display:flex;align-items:center;gap:18px;font-weight:500"><span style="opacity:.8">UK-based support · Mon&ndash;Sat</span><a href="get-a-quote.html" style="color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:1px">Request a callback</a></div>
     </div>
   </div>
 
-  <header data-dc-tpl="18" style="position: sticky; top: 0px; z-index: 50; background: rgba(244, 244, 242, 0.88); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(27, 33, 53, 0.08);">
-    <div data-dc-tpl="19" style="max-width: 1180px; margin: 0px auto; padding: 15px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
-      <a data-dc-tpl="20" href="index.html" style="display: flex; align-items: center; text-decoration: none;"><img data-dc-tpl="21" src="assets/spark-logo-navy.webp" alt="Spark" style="height: 40px; width: auto; display: block;"></a>
-      <nav data-dc-tpl="22" data-r="nav" style="display: flex; align-items: center; gap: 28px;">
-        <div data-dc-tpl="23" class="has-dd"><span data-dc-tpl="24" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); cursor: pointer; display: inline-flex; align-items: center; gap: 5px;">Products <svg data-dc-tpl="25" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9098A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline data-dc-tpl="26" points="6 9 12 15 18 9"></polyline></svg></span><div data-dc-tpl="27" class="dd-menu"><div data-dc-tpl="28" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 12px; box-shadow: 0 18px 44px -14px rgba(27,33,53,0.4); padding: 8px; width: 210px;"><a data-dc-tpl="29" href="solar-and-battery.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">Solar &amp; Battery</a><a data-dc-tpl="30" href="ev-chargers.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">EV Chargers</a><a data-dc-tpl="31" href="heat-pumps.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">Heat Pumps</a><a data-dc-tpl="32" href="commercial.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">Commercial</a></div></div></div>
-        <a data-dc-tpl="33" href="savings-and-finance.html" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); text-decoration: none;">Savings &amp; Finance</a>
-        <a data-dc-tpl="34" href="resources.html" style="font-size: 15px; font-weight: 700; color: rgb(246, 15, 0); text-decoration: none;">Guides</a>
-        <a data-dc-tpl="35" href="reviews.html" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); text-decoration: none;">Reviews</a>
+  <header style="position:sticky;top:0;z-index:50;background:rgba(244,244,242,0.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(27,33,53,0.08)">
+    <div style="max-width:1180px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="index.html" style="display:flex;align-items:center;text-decoration:none"><img src="assets/spark-logo-navy.png" alt="Spark" style="height:40px;width:auto;display:block"></a>
+      <nav data-r="nav" style="display:flex;align-items:center;gap:28px">
+        <div class="has-dd"><span style="font-size:15px;font-weight:600;color:#3C4658;cursor:pointer;display:inline-flex;align-items:center;gap:5px">Products <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9098A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span><div class="dd-menu"><div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:12px;box-shadow:0 18px 44px -14px rgba(27,33,53,0.4);padding:8px;width:210px"><a href="solar-and-battery.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Solar &amp; Battery</a><a href="ev-chargers.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">EV Chargers</a><a href="heat-pumps.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Heat Pumps</a><a href="commercial.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Commercial</a></div></div></div>
+        <a href="savings-and-finance.html" style="font-size:15px;font-weight:600;color:#3C4658;text-decoration:none">Savings &amp; Finance</a>
+        <a href="resources.html" style="font-size:15px;font-weight:700;color:#F60F00;text-decoration:none">Guides</a>
+        <a href="reviews.html" style="font-size:15px;font-weight:600;color:#3C4658;text-decoration:none">Reviews</a>
       </nav>
-      <a data-dc-tpl="36" data-r="hdr-cta" href="get-a-quote.html" style="display: inline-flex; align-items: center; gap: 8px; background: rgb(246, 15, 0); color: rgb(255, 255, 255); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; padding: 12px 22px; border-radius: 10px; text-decoration: none; white-space: nowrap; box-shadow: 0 6px 16px rgba(246,15,0,0.25);" class="scp1">Get my free quote</a>
+      <a data-r="hdr-cta" href="get-a-quote.html" style="display:inline-flex;align-items:center;gap:8px;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:12px 22px;border-radius:10px;text-decoration:none;white-space:nowrap;box-shadow:0 6px 16px rgba(246,15,0,0.25)" style-hover="background:#D00C00">Get my free quote</a>
     </div>
   </header>
 
-  <section data-dc-tpl="37" style="padding: 36px 24px 16px;">
-    <div data-dc-tpl="38" style="max-width: 760px; margin: 0px auto;">
-      <div data-dc-tpl="39" style="font-size: 13px; color: rgb(144, 152, 166); margin-bottom: 18px;"><a data-dc-tpl="40" href="resources.html" style="color: rgb(144, 152, 166); text-decoration: none;">Guides</a> &nbsp;›&nbsp; Roof suitability</div>
-      <span data-dc-tpl="41" style="font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(246, 15, 0);">Your home</span>
-      <h1 data-dc-tpl="42" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; margin: 14px 0px 18px;">Is my roof suitable for solar panels?</h1>
-      <p data-dc-tpl="43" style="font-size: 20px; line-height: 1.55; color: rgb(81, 96, 122); margin: 0px 0px 22px; text-wrap: pretty;">Most UK homes are well suited to solar — but a few things make a difference to how much you'll generate. Here's what surveyors actually look at, and why direction matters less than people think.</p>
-      <div data-dc-tpl="44" style="display: flex; align-items: center; gap: 16px; font-size: 13.5px; color: rgb(124, 132, 147); border-top: 1px solid rgba(27, 33, 53, 0.1); border-bottom: 1px solid rgba(27, 33, 53, 0.1); padding: 14px 0px;">
-        <span data-dc-tpl="45">Updated June 2026</span><span data-dc-tpl="46" style="opacity: 0.4;">·</span><span data-dc-tpl="47">6 min read</span><span data-dc-tpl="48" style="opacity: 0.4;">·</span><span data-dc-tpl="49">Written by the Spark team</span>
+  <section style="padding:36px 24px 16px">
+    <div style="max-width:760px;margin:0 auto">
+      <div style="font-size:13px;color:#9098A6;margin-bottom:18px"><a href="resources.html" style="color:#9098A6;text-decoration:none">Guides</a> &nbsp;›&nbsp; Roof suitability</div>
+      <span style="font-size:12px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#F60F00">Your home</span>
+      <h1 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(32px,4.4vw,50px);line-height:1.05;letter-spacing:-0.03em;margin:14px 0 18px">Is my roof suitable for solar panels?</h1>
+      <p style="font-size:20px;line-height:1.55;color:#51607A;margin:0 0 22px;text-wrap:pretty">Most UK homes are well suited to solar &mdash; but a few things make a difference to how much you'll generate. Here's what surveyors actually look at, and why direction matters less than people think.</p>
+      <div style="display:flex;align-items:center;gap:16px;font-size:13.5px;color:#7C8493;border-top:1px solid rgba(27,33,53,0.1);border-bottom:1px solid rgba(27,33,53,0.1);padding:14px 0">
+        <span>Updated June 2026</span><span style="opacity:.4">·</span><span>6 min read</span><span style="opacity:.4">·</span><span>Written by the Spark team</span>
       </div>
     </div>
   </section>
 
-  <section data-dc-tpl="50" style="padding: 24px 24px 64px;">
-    <div data-dc-tpl="51" data-r="doc" style="max-width: 1080px; margin: 0px auto; display: grid; grid-template-columns: 220px 1fr; gap: 56px; align-items: start;">
-      <nav data-dc-tpl="52" data-r="toc" style="position: sticky; top: 96px; display: flex; flex-direction: column; gap: 11px; border-left: 2px solid rgba(27, 33, 53, 0.1); padding-left: 18px;">
-        <div data-dc-tpl="53" style="font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(144, 152, 166); margin-bottom: 2px;">On this page</div>
-        <a data-dc-tpl="54" href="#direction" style="font-size: 14px; color: rgb(81, 96, 122); text-decoration: none; line-height: 1.4;" class="scp2">Direction &amp; pitch</a>
-        <a data-dc-tpl="55" href="#shading" style="font-size: 14px; color: rgb(81, 96, 122); text-decoration: none; line-height: 1.4;" class="scp2">Shading</a>
-        <a data-dc-tpl="56" href="#type" style="font-size: 14px; color: rgb(81, 96, 122); text-decoration: none; line-height: 1.4;" class="scp2">Roof type &amp; condition</a>
-        <a data-dc-tpl="57" href="#space" style="font-size: 14px; color: rgb(81, 96, 122); text-decoration: none; line-height: 1.4;" class="scp2">Space &amp; system size</a>
-        <a data-dc-tpl="58" href="#faq" style="font-size: 14px; color: rgb(81, 96, 122); text-decoration: none; line-height: 1.4;" class="scp2">FAQs</a>
+  <section style="padding:24px 24px 64px">
+    <div data-r="doc" style="max-width:1080px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:56px;align-items:start">
+      <nav data-r="toc" style="position:sticky;top:96px;display:flex;flex-direction:column;gap:11px;border-left:2px solid rgba(27,33,53,0.1);padding-left:18px">
+        <div style="font-size:12px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#9098A6;margin-bottom:2px">On this page</div>
+        <a href="#direction" style="font-size:14px;color:#51607A;text-decoration:none;line-height:1.4" style-hover="color:#F60F00">Direction &amp; pitch</a>
+        <a href="#shading" style="font-size:14px;color:#51607A;text-decoration:none;line-height:1.4" style-hover="color:#F60F00">Shading</a>
+        <a href="#type" style="font-size:14px;color:#51607A;text-decoration:none;line-height:1.4" style-hover="color:#F60F00">Roof type &amp; condition</a>
+        <a href="#space" style="font-size:14px;color:#51607A;text-decoration:none;line-height:1.4" style-hover="color:#F60F00">Space &amp; system size</a>
+        <a href="#faq" style="font-size:14px;color:#51607A;text-decoration:none;line-height:1.4" style-hover="color:#F60F00">FAQs</a>
       </nav>
 
-      <div data-dc-tpl="59" class="prose" style="max-width: 680px;">
-        <div data-dc-tpl="60" data-tldr="" style="background: rgb(242, 250, 245); border: 1px solid rgb(191, 230, 207); border-radius: 14px; padding: 22px 24px; margin: 0px 0px 30px;"><div data-dc-tpl="61" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(14, 158, 99); margin-bottom: 12px;">Key takeaways</div><ul data-dc-tpl="62" style="list-style: none; margin: 0px; padding: 0px; font-size: 15.5px; line-height: 1.5; color: rgb(27, 33, 53);"><li data-dc-tpl="63" style="margin: 0px 0px 8px; padding-left: 26px; position: relative;"><span data-dc-tpl="64" style="position: absolute; left: 0px; top: 1px; color: rgb(14, 158, 99); font-weight: 800;">✓</span>Most UK roofs are suitable for solar.</li><li data-dc-tpl="65" style="margin: 0px 0px 8px; padding-left: 26px; position: relative;"><span data-dc-tpl="66" style="position: absolute; left: 0px; top: 1px; color: rgb(14, 158, 99); font-weight: 800;">✓</span>South is best, but east/west roofs still perform very well.</li><li data-dc-tpl="67" style="margin: 0px 0px 8px; padding-left: 26px; position: relative;"><span data-dc-tpl="68" style="position: absolute; left: 0px; top: 1px; color: rgb(14, 158, 99); font-weight: 800;">✓</span>Some shading is manageable with modern panel-level electronics.</li><li data-dc-tpl="69" style="margin: 0px 0px 8px; padding-left: 26px; position: relative;"><span data-dc-tpl="70" style="position: absolute; left: 0px; top: 1px; color: rgb(14, 158, 99); font-weight: 800;">✓</span>Tile, slate and flat roofs can all be fitted.</li></ul></div>
-        <div data-dc-tpl="71" id="direction" style="scroll-margin-top: 96px;">
-          <h2 data-dc-tpl="72" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.02em; margin: 0px 0px 16px; color: rgb(27, 33, 53);">Direction and pitch</h2>
-          <p data-dc-tpl="73">South-facing roofs generate the most over a year, but this matters far less than people assume. <strong data-dc-tpl="74">East and west-facing roofs still perform very well</strong> — often 80–90% of a south-facing roof — and they spread generation across morning and evening, which can actually suit your usage better. A pitch of roughly 30–40 degrees is ideal, but a wide range works well.</p>
+      <div class="prose" style="max-width:680px">
+        <div data-tldr style="background:#F2FAF5;border:1px solid #BFE6CF;border-radius:14px;padding:22px 24px;margin:0 0 30px"><div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.05em;text-transform:uppercase;color:#0E9E63;margin-bottom:12px">Key takeaways</div><ul style="list-style:none;margin:0;padding:0;font-size:15.5px;line-height:1.5;color:#1B2135"><li style="margin:0 0 8px;padding-left:26px;position:relative"><span style="position:absolute;left:0;top:1px;color:#0E9E63;font-weight:800">✓</span>Most UK roofs are suitable for solar.</li><li style="margin:0 0 8px;padding-left:26px;position:relative"><span style="position:absolute;left:0;top:1px;color:#0E9E63;font-weight:800">✓</span>South is best, but east/west roofs still perform very well.</li><li style="margin:0 0 8px;padding-left:26px;position:relative"><span style="position:absolute;left:0;top:1px;color:#0E9E63;font-weight:800">✓</span>Some shading is manageable with modern panel-level electronics.</li><li style="margin:0 0 8px;padding-left:26px;position:relative"><span style="position:absolute;left:0;top:1px;color:#0E9E63;font-weight:800">✓</span>Tile, slate and flat roofs can all be fitted.</li></ul></div>
+        <div id="direction" style="scroll-margin-top:96px">
+          <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.02em;margin:0 0 16px;color:#1B2135">Direction and pitch</h2>
+          <p>South-facing roofs generate the most over a year, but this matters far less than people assume. <strong>East and west-facing roofs still perform very well</strong> &mdash; often 80&ndash;90% of a south-facing roof &mdash; and they spread generation across morning and evening, which can actually suit your usage better. A pitch of roughly 30&ndash;40 degrees is ideal, but a wide range works well.</p>
         </div>
 
-        <div data-dc-tpl="75" id="shading" style="scroll-margin-top: 96px;">
-          <h2 data-dc-tpl="76" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.02em; margin: 8px 0px 16px; color: rgb(27, 33, 53);">Shading</h2>
-          <p data-dc-tpl="77">Shade from chimneys, trees, aerials or neighbouring buildings reduces output, but it rarely rules solar out. Modern systems use panel-level electronics (optimisers or microinverters) so a shaded panel doesn't drag down the rest, and a good designer arranges the layout to avoid the worst-affected areas. Our survey assesses shading across the day and seasons.</p>
+        <div id="shading" style="scroll-margin-top:96px">
+          <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.02em;margin:8px 0 16px;color:#1B2135">Shading</h2>
+          <p>Shade from chimneys, trees, aerials or neighbouring buildings reduces output, but it rarely rules solar out. Modern systems use panel-level electronics (optimisers or microinverters) so a shaded panel doesn't drag down the rest, and a good designer arranges the layout to avoid the worst-affected areas. Our survey assesses shading across the day and seasons.</p>
         </div>
 
-        <div data-dc-tpl="78" style="background: rgb(22, 28, 46); border-radius: 16px; padding: 24px 26px; margin: 30px 0px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between;">
-          <div data-dc-tpl="79" style="flex: 1 1 0%; min-width: 230px;"><div data-dc-tpl="80" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 18px; color: rgb(255, 255, 255); margin-bottom: 4px;">Not sure about your roof?</div><div data-dc-tpl="81" style="font-size: 14.5px; color: rgb(174, 183, 202);">A free survey confirms exactly what your roof can do — no obligation.</div></div>
-          <a data-dc-tpl="82" href="get-a-quote.html" style="display: inline-flex; align-items: center; gap: 8px; background: rgb(246, 15, 0); color: rgb(255, 255, 255); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; padding: 14px 22px; border-radius: 11px; text-decoration: none; white-space: nowrap;" class="scp1">Book a free survey →</a>
+        <div style="background:#161C2E;border-radius:16px;padding:24px 26px;margin:30px 0;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
+          <div style="flex:1;min-width:230px"><div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:18px;color:#fff;margin-bottom:4px">Not sure about your roof?</div><div style="font-size:14.5px;color:#AEB7CA">A free survey confirms exactly what your roof can do &mdash; no obligation.</div></div>
+          <a href="get-a-quote.html" style="display:inline-flex;align-items:center;gap:8px;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:14px 22px;border-radius:11px;text-decoration:none;white-space:nowrap" style-hover="background:#D00C00">Book a free survey &rarr;</a>
         </div>
 
-        <div data-dc-tpl="83" id="type" style="scroll-margin-top: 96px;">
-          <h2 data-dc-tpl="84" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.02em; margin: 8px 0px 16px; color: rgb(27, 33, 53);">Roof type and condition</h2>
-          <p data-dc-tpl="85">Almost every roof type is suitable — tile, slate and flat roofs are all routinely fitted with solar, each with the right mounting method. The main thing surveyors check is condition: your roof should be sound enough to carry panels for decades. If it needs minor work first, we'll flag it. Panels are lightweight and don't typically need structural changes on a healthy roof.</p>
+        <div id="type" style="scroll-margin-top:96px">
+          <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.02em;margin:8px 0 16px;color:#1B2135">Roof type and condition</h2>
+          <p>Almost every roof type is suitable &mdash; tile, slate and flat roofs are all routinely fitted with solar, each with the right mounting method. The main thing surveyors check is condition: your roof should be sound enough to carry panels for decades. If it needs minor work first, we'll flag it. Panels are lightweight and don't typically need structural changes on a healthy roof.</p>
         </div>
 
-        <div data-dc-tpl="86" id="space" style="scroll-margin-top: 96px;">
-          <h2 data-dc-tpl="87" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.02em; margin: 8px 0px 16px; color: rgb(27, 33, 53);">Space and system size</h2>
-          <p data-dc-tpl="88">The more usable roof area you have, the larger the system you can fit — but you don't need a huge roof to benefit. A typical home system uses around 9–16 panels, and even a modest roof can deliver meaningful savings. Where roof space is limited, premium high-output panels (which we fit as standard) generate more from each panel, making the most of what you have.</p>
+        <div id="space" style="scroll-margin-top:96px">
+          <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.02em;margin:8px 0 16px;color:#1B2135">Space and system size</h2>
+          <p>The more usable roof area you have, the larger the system you can fit &mdash; but you don't need a huge roof to benefit. A typical home system uses around 9&ndash;16 panels, and even a modest roof can deliver meaningful savings. Where roof space is limited, premium high-output panels (which we fit as standard) generate more from each panel, making the most of what you have.</p>
         </div>
 
-        <div data-dc-tpl="89" id="faq" style="scroll-margin-top: 96px; margin-top: 36px;">
-          <h2 data-dc-tpl="90" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.02em; margin: 0px 0px 20px; color: rgb(27, 33, 53);">Frequently asked questions</h2>
-          <div data-dc-tpl="91" style="display: flex; flex-direction: column; gap: 12px;">
-            
-              <div data-dc-tpl="93" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; overflow: hidden;">
-                <button data-dc-tpl="94" data-js="faq-toggle" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: medium; padding: 18px 20px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 16.5px; color: rgb(27, 33, 53);"><span data-dc-tpl="95"><span class="sc-interp">Which roof direction is best for solar panels?</span></span><span data-dc-tpl="96" style="font-size: 24px; color: rgb(246, 15, 0); line-height: 1; transform: rotate(45deg); transition: transform .2s;">+</span></button>
-                <div data-dc-tpl="98" data-js="faq-panel" style="max-height: 0px; overflow: hidden; transition: max-height .35s ease; padding: 0px 20px 20px; font-size: 15.5px; line-height: 1.6; color: rgb(81, 96, 122);"><span class="sc-interp">South-facing generates the most, but east and west-facing roofs still perform very well and spread generation across the day, so most orientations are suitable.</span></div>
+        <div id="faq" style="scroll-margin-top:96px;margin-top:36px">
+          <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.02em;margin:0 0 20px;color:#1B2135">Frequently asked questions</h2>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
+              <div style="background:#fff;border:1px solid rgba(27,33,53,0.10);border-radius:14px;overflow:hidden">
+                <button onClick="{{ f.toggle }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;background:none;border:none;padding:18px 20px;cursor:pointer;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16.5px;color:#1B2135"><span>{{ f.q }}</span><span style="font-size:24px;color:#F60F00;line-height:1;transform:{{ f.rot }};transition:transform .2s">+</span></button>
+                <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}"><div style="padding:0 20px 20px;font-size:15.5px;line-height:1.6;color:#51607A">{{ f.a }}</div></sc-if>
               </div>
-            
-              <div data-dc-tpl="93" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; overflow: hidden;">
-                <button data-dc-tpl="94" data-js="faq-toggle" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: medium; padding: 18px 20px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 16.5px; color: rgb(27, 33, 53);"><span data-dc-tpl="95"><span class="sc-interp">Do solar panels work on a north-facing roof?</span></span><span data-dc-tpl="96" style="font-size: 24px; color: rgb(246, 15, 0); line-height: 1; transform: rotate(0deg); transition: transform .2s;">+</span></button>
-                <div data-dc-tpl="98" data-js="faq-panel" style="max-height: 0px; overflow: hidden; transition: max-height .35s ease; padding: 0px 20px 20px; font-size: 15.5px; line-height: 1.6; color: rgb(81, 96, 122);"><span class="sc-interp">North-facing slopes generate less and are usually avoided, but many homes have other roof faces that work well. A survey finds the best layout for your roof.</span></div>
-              </div>
-            
-              <div data-dc-tpl="93" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; overflow: hidden;">
-                <button data-dc-tpl="94" data-js="faq-toggle" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: medium; padding: 18px 20px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 16.5px; color: rgb(27, 33, 53);"><span data-dc-tpl="95"><span class="sc-interp">Does shading stop me getting solar?</span></span><span data-dc-tpl="96" style="font-size: 24px; color: rgb(246, 15, 0); line-height: 1; transform: rotate(0deg); transition: transform .2s;">+</span></button>
-                <div data-dc-tpl="98" data-js="faq-panel" style="max-height: 0px; overflow: hidden; transition: max-height .35s ease; padding: 0px 20px 20px; font-size: 15.5px; line-height: 1.6; color: rgb(81, 96, 122);"><span class="sc-interp">Some shading is manageable. Panel-level electronics and careful layout reduce its impact, and we design around chimneys, trees and nearby buildings.</span></div>
-              </div>
-            
-              <div data-dc-tpl="93" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; overflow: hidden;">
-                <button data-dc-tpl="94" data-js="faq-toggle" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: medium; padding: 18px 20px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 16.5px; color: rgb(27, 33, 53);"><span data-dc-tpl="95"><span class="sc-interp">What types of roof can have solar panels?</span></span><span data-dc-tpl="96" style="font-size: 24px; color: rgb(246, 15, 0); line-height: 1; transform: rotate(0deg); transition: transform .2s;">+</span></button>
-                <div data-dc-tpl="98" data-js="faq-panel" style="max-height: 0px; overflow: hidden; transition: max-height .35s ease; padding: 0px 20px 20px; font-size: 15.5px; line-height: 1.6; color: rgb(81, 96, 122);"><span class="sc-interp">Most roof types are suitable, including tile, slate and flat roofs. Our surveyors confirm your roof's condition and the right mounting method.</span></div>
-              </div>
-            
+            </sc-for>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section data-dc-tpl="99" style="padding: 0px 24px 80px;">
-    <div data-dc-tpl="100" style="max-width: 1080px; margin: 0px auto; background: linear-gradient(160deg, rgb(246, 15, 0) 0%, rgb(194, 12, 0) 100%); border-radius: 24px; text-align: center; color: rgb(255, 255, 255);">
-      <h2 data-dc-tpl="101" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; letter-spacing: -0.02em; margin: 0px 0px 14px; color: rgb(255, 255, 255);">Find out what your roof can do</h2>
-      <p data-dc-tpl="102" style="font-size: 18px; line-height: 1.55; color: rgb(255, 217, 214); margin: 0px auto 24px; max-width: 500px;">Book a free, no-obligation survey and we'll confirm your roof's potential and your savings.</p>
-      <a data-dc-tpl="103" href="get-a-quote.html" style="display: inline-flex; align-items: center; gap: 9px; background: rgb(255, 255, 255); color: rgb(27, 33, 53); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 17px; padding: 16px 32px; border-radius: 12px; text-decoration: none; box-shadow: 0 12px 28px rgba(0,0,0,0.18);">Get my free quote →</a>
+  <section style="padding:0 24px 80px">
+    <div style="max-width:1080px;margin:0 auto;background:linear-gradient(160deg,#F60F00 0%,#C20C00 100%);border-radius:24px;padding:clamp(36px,5vw,60px);text-align:center;color:#fff">
+      <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(26px,3.6vw,40px);letter-spacing:-0.02em;margin:0 0 14px;color:#fff">Find out what your roof can do</h2>
+      <p style="font-size:18px;line-height:1.55;color:#FFD9D6;margin:0 auto 24px;max-width:500px">Book a free, no-obligation survey and we'll confirm your roof's potential and your savings.</p>
+      <a href="get-a-quote.html" style="display:inline-flex;align-items:center;gap:9px;background:#fff;color:#1B2135;font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:17px;padding:16px 32px;border-radius:12px;text-decoration:none;box-shadow:0 12px 28px rgba(0,0,0,0.18)">Get my free quote &rarr;</a>
     </div>
   </section>
 
-  <div class="sc-host" data-sc-name="SparkFooter" data-dc-tpl="104"><footer data-dc-tpl="0" style="background: rgb(22, 28, 46); color: rgb(174, 183, 202); padding: 64px 24px 34px; font-family: &quot;Hanken Grotesk&quot;, sans-serif;">
-    <div data-dc-tpl="1" style="max-width: 1180px; margin: 0px auto;">
-      <div data-dc-tpl="2" style="display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-        <div data-dc-tpl="3">
-          <img data-dc-tpl="4" src="assets/spark-logo-white.webp" alt="Spark" style="height: 28px; width: auto; display: block; margin-bottom: 16px;">
-          <p data-dc-tpl="5" style="font-size: 14.5px; line-height: 1.6; margin: 0px 0px 18px; max-width: 300px;">Premium solar &amp; battery installation across mainland Great Britain. Giving you the power to save.</p>
-          <div data-dc-tpl="6" style="font-size: 13.5px; line-height: 1.7; color: rgb(196, 203, 218); margin: 0px 0px 18px;"><a data-dc-tpl="7" href="tel:03308187273" style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 700;">0330 818 7273</a><br data-dc-tpl="8"><a data-dc-tpl="9" href="mailto:hello@sparkhome.co.uk" style="color: rgb(196, 203, 218); text-decoration: none;">hello@sparkhome.co.uk</a><br data-dc-tpl="10">St Pegs Mill, Thornhills Beck Lane, Brighouse HD6 4AH</div>
-          <div data-dc-tpl="11" style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <span data-dc-tpl="12" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">MCS</span>
-            <span data-dc-tpl="13" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">HIES</span>
-            <span data-dc-tpl="14" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">EPVS</span>
-            <span data-dc-tpl="15" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">Which? Trusted Trader</span>
-          </div>
-        </div>
-        <div data-dc-tpl="16">
-          <div data-dc-tpl="17" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Products</div>
-          <div data-dc-tpl="18" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
-            <a data-dc-tpl="19" href="solar-and-battery.html" style="color: rgb(174, 183, 202); text-decoration: none;">Solar &amp; Battery</a>
-            <a data-dc-tpl="20" href="ev-chargers.html" style="color: rgb(174, 183, 202); text-decoration: none;">EV Chargers</a>
-            <a data-dc-tpl="21" href="heat-pumps.html" style="color: rgb(174, 183, 202); text-decoration: none;">Heat Pumps</a>
-            <a data-dc-tpl="22" href="commercial.html" style="color: rgb(174, 183, 202); text-decoration: none;">Commercial</a>
-          </div>
-        </div>
-        <div data-dc-tpl="23">
-          <div data-dc-tpl="24" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Learn</div>
-          <div data-dc-tpl="25" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
-            <a data-dc-tpl="26" href="savings-and-finance.html#calculator" style="color: rgb(174, 183, 202); text-decoration: none;">Savings calculator</a>
-            <a data-dc-tpl="27" href="resources.html" style="color: rgb(174, 183, 202); text-decoration: none;">Guides &amp; resources</a>
-            <a data-dc-tpl="28" href="index.html#guarantee" style="color: rgb(174, 183, 202); text-decoration: none;">Our guarantees</a>
-            <a data-dc-tpl="29" href="reviews.html" style="color: rgb(174, 183, 202); text-decoration: none;">Reviews</a>
-          </div>
-        </div>
-        <div data-dc-tpl="30">
-          <div data-dc-tpl="31" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Company</div>
-          <div data-dc-tpl="32" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
-            <a data-dc-tpl="33" href="about.html" style="color: rgb(174, 183, 202); text-decoration: none;">About Spark</a>
-            <a data-dc-tpl="34" href="spark-for-schools.html" style="color: rgb(174, 183, 202); text-decoration: none;">Spark for Schools</a>
-            <a data-dc-tpl="35" href="locations.html" style="color: rgb(174, 183, 202); text-decoration: none;">Locations</a>
-            <a data-dc-tpl="36" href="get-a-quote.html" style="color: rgb(174, 183, 202); text-decoration: none;">Contact us</a>
-          </div>
-        </div>
-      </div>
-      <div data-dc-tpl="37" style="padding-top: 24px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; font-size: 12.5px; color: rgb(138, 147, 168);">
-        <div data-dc-tpl="38">© Spark 2026. All rights reserved. Spark is a trading name of Spark Energy UK Ltd (Company No. 14381786). Registered office: St Pegs Mill, Thornhills Beck Lane, Brighouse HD6 4AH.</div>
-        <div data-dc-tpl="39" style="display: flex; gap: 18px;"><a data-dc-tpl="40" href="terms.html" style="color: rgb(138, 147, 168); text-decoration: none;">Terms</a><a data-dc-tpl="41" href="privacy.html" style="color: rgb(138, 147, 168); text-decoration: none;">Privacy</a><a data-dc-tpl="42" href="complaints.html" style="color: rgb(138, 147, 168); text-decoration: none;">Complaints</a></div>
-      </div>
-    </div>
-  </footer></div></div></div>
-<script src="app.js"></script>
-<script src="flows.js"></script>
+  <dc-import name="SparkFooter" hint-size="100%,420px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{ &quot;$preview&quot;: { &quot;width&quot;: &quot;100%&quot;, &quot;height&quot;: 900 }, &quot;phoneNumber&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;0330 818 7273&quot;, &quot;tsType&quot;: &quot;string&quot; } }">
+class Component extends DCLogic {
+  state = { faq: 0 };
+  renderVals() {
+    const phone = this.props.phoneNumber ?? '0330 818 7273';
+    const faqData = [
+      { q: 'Which roof direction is best for solar panels?', a: "South-facing generates the most, but east and west-facing roofs still perform very well and spread generation across the day, so most orientations are suitable." },
+      { q: 'Do solar panels work on a north-facing roof?', a: "North-facing slopes generate less and are usually avoided, but many homes have other roof faces that work well. A survey finds the best layout for your roof." },
+      { q: 'Does shading stop me getting solar?', a: "Some shading is manageable. Panel-level electronics and careful layout reduce its impact, and we design around chimneys, trees and nearby buildings." },
+      { q: 'What types of roof can have solar panels?', a: "Most roof types are suitable, including tile, slate and flat roofs. Our surveyors confirm your roof's condition and the right mounting method." },
+    ];
+    const faqs = faqData.map((f, i) => ({ q: f.q, a: f.a, open: this.state.faq === i, rot: this.state.faq === i ? 'rotate(45deg)' : 'rotate(0deg)', toggle: () => this.setState(s => ({ faq: s.faq === i ? -1 : i })) }));
+    return { phone, phoneHref: 'tel:' + phone.replace(/[^0-9+]/g, ''), faqs };
+  }
+}
+</script>
 </body>
 </html>

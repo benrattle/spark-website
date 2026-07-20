@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,12 +9,17 @@
 <meta property="og:description" content="Low-carbon air source heat pumps installed by Spark. Compare running costs vs gas, claim the £7,500 Boiler Upgrade Scheme grant and pair with solar.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://sparkhome.co.uk/og-image.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="canonical" href="https://sparkhome.co.uk/heat-pumps.html">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin: 0; background: #F4F4F2; -webkit-font-smoothing: antialiased; }
@@ -26,261 +31,302 @@
   .has-dd { position: relative; }
   .has-dd .dd-menu { display: none; position: absolute; top: 100%; left: 0; padding-top: 8px; }
   .has-dd:hover .dd-menu { display: block; }
-
-
 </style>
+<script>
+(function(){
+  function init(){
+    if(document.getElementById('spark-mnav-btn'))return;
+    var css=document.createElement('style');
+    css.textContent='@media(min-width:881px){#spark-mnav-btn,#spark-mnav{display:none!important}}#spark-mnav-btn{position:fixed;top:13px;right:14px;z-index:200;width:44px;height:44px;border-radius:11px;background:#161C2E;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}#spark-mnav{position:fixed;inset:0;z-index:199;background:rgba(15,19,34,.6);display:none}#spark-mnav.open{display:block}#spark-mnav-p{position:absolute;top:0;right:0;bottom:0;width:80%;max-width:320px;background:#fff;padding:20px 20px 28px;display:flex;flex-direction:column;gap:2px;overflow-y:auto;box-shadow:-12px 0 40px rgba(0,0,0,.2)}#spark-mnav a{padding:14px 12px;border-radius:10px;font:600 16px/1.2 Hanken Grotesk,sans-serif;color:#1B2135;text-decoration:none;border-bottom:1px solid rgba(27,33,53,.06)}#spark-mnav a.cta{margin-top:14px;background:#F60F00;color:#fff;text-align:center;font-weight:700;border:none}#spark-mnav-x{align-self:flex-end;width:38px;height:38px;border:none;background:#F4F4F2;border-radius:9px;font-size:22px;color:#1B2135;cursor:pointer;margin-bottom:6px}';
+    document.head.appendChild(css);
+    var btn=document.createElement('button');btn.id='spark-mnav-btn';btn.setAttribute('aria-label','Open menu');
+    btn.innerHTML='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>';
+    var ov=document.createElement('div');ov.id='spark-mnav';
+    ov.innerHTML='<div id="spark-mnav-p"><button id="spark-mnav-x" aria-label="Close">&times;</button>'+
+      '<a href="solar-and-battery.html">Solar &amp; Battery</a>'+
+      '<a href="ev-chargers.html">EV Chargers</a>'+
+      '<a href="heat-pumps.html">Heat Pumps</a>'+
+      '<a href="commercial.html">Commercial</a>'+
+      '<a href="savings-and-finance.html">Savings &amp; Finance</a>'+
+      '<a href="resources.html">Guides</a>'+
+      '<a href="about.html">About</a>'+
+      '<a href="reviews.html">Reviews</a>'+
+      '<a href="locations.html">Locations</a>'+
+      '<a class="cta" href="get-a-quote.html">Get my free quote</a></div>';
+    function close(){ov.classList.remove('open');}
+    btn.addEventListener('click',function(){ov.classList.add('open');});
+    ov.addEventListener('click',function(e){if(e.target===ov||e.target.id==='spark-mnav-x'||e.target.closest('a'))close();});
+    document.body.appendChild(btn);document.body.appendChild(ov);
+  }
+  if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "Product", "name": "Spark Heat Pump Installation", "description": "Air source heat pump supply and installation by Spark — efficient low-carbon heating that pairs with your solar.", "brand": { "@type": "Brand", "name": "Spark" } }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+  { "@type": "Question", "name": "Will a heat pump keep my home warm in winter?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Modern air source heat pumps are designed for the UK climate and keep working efficiently well below freezing, provided the system is properly designed and sized to your home." } },
+  { "@type": "Question", "name": "Is a heat pump cheaper to run than a gas boiler?", "acceptedAnswer": { "@type": "Answer", "text": "A heat pump is 3 to 4 times more efficient than a boiler, so running costs are similar to or lower than gas on the right electricity tariff, and far cheaper when paired with solar, while cutting carbon dramatically." } },
+  { "@type": "Question", "name": "Do I need new radiators or underfloor heating for a heat pump?", "acceptedAnswer": { "@type": "Answer", "text": "Not always. Heat pumps run at lower temperatures so some homes benefit from a few larger radiators, but many keep most of their existing ones. We assess this during a free survey." } },
+  { "@type": "Question", "name": "Can I get a grant for a heat pump?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Government Boiler Upgrade Scheme offers £7,500 off an air source heat pump for homes in England and Wales, taken straight off your price. We handle the application." } },
+  { "@type": "Question", "name": "Will a heat pump work with solar panels?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A heat pump runs on electricity, so solar can power your heating directly, and a battery stores daytime solar to heat your home in the evening, lowering running costs." } },
+  { "@type": "Question", "name": "How disruptive is heat pump installation?", "acceptedAnswer": { "@type": "Answer", "text": "A typical air source heat pump installation takes two to four days. Our certified engineers handle the outdoor unit, controls and pipework and leave your home clean and tidy." } }
+] }
+</script>
+</helmet>
 
-</head>
-<body>
-<div class="sc-host" data-sc-name="heat-pumps"><div data-dc-tpl="8" data-r="wrap" style="font-family: &quot;Hanken Grotesk&quot;, sans-serif; color: rgb(27, 33, 53); background: rgb(244, 244, 242); overflow-x: hidden;">
+<div data-r="wrap" style="font-family:'Hanken Grotesk',sans-serif;color:#1B2135;background:#F4F4F2;overflow-x:hidden">
 
-  <div data-dc-tpl="9" style="background: rgb(22, 28, 46); color: rgb(196, 203, 218); font-size: 13px;">
-    <div data-dc-tpl="10" style="max-width: 1180px; margin: 0px auto; padding: 9px 24px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between;">
-      <div data-dc-tpl="11" style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span data-dc-tpl="12" style="color: rgb(246, 15, 0); letter-spacing: 0.5px; font-weight: 700;">★ 4.7/5</span><span data-dc-tpl="13" style="opacity: 0.45;">·</span><span data-dc-tpl="14">Rated Excellent on Trustpilot from 420+ reviews</span></div>
-      <div data-dc-tpl="15" style="display: flex; align-items: center; gap: 18px; font-weight: 500;"><span data-dc-tpl="16" style="opacity: 0.8;">UK-based support · Mon–Sat</span><a data-dc-tpl="17" href="get-a-quote.html" style="color: rgb(255, 255, 255); text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.35); padding-bottom: 1px;">Request a callback</a></div>
+  <div style="background:#161C2E;color:#C4CBDA;font-size:13px">
+    <div style="max-width:1180px;margin:0 auto;padding:9px 24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:8px;font-weight:500"><span style="color:#F60F00;letter-spacing:0.5px;font-weight:700">★ 4.7/5</span><span style="opacity:.45">·</span><span>Rated Excellent on Trustpilot from 420+ reviews</span></div>
+      <div style="display:flex;align-items:center;gap:18px;font-weight:500"><span style="opacity:.8">UK-based support · Mon&ndash;Sat</span><a href="get-a-quote.html" style="color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:1px">Request a callback</a></div>
     </div>
   </div>
 
-  <header data-dc-tpl="18" style="position: sticky; top: 0px; z-index: 50; background: rgba(244, 244, 242, 0.88); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(27, 33, 53, 0.08);">
-    <div data-dc-tpl="19" style="max-width: 1180px; margin: 0px auto; padding: 15px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
-      <a data-dc-tpl="20" href="index.html" style="display: flex; align-items: center; text-decoration: none;"><img data-dc-tpl="21" src="assets/spark-logo-navy.webp" alt="Spark" style="height: 40px; width: auto; display: block;"></a>
-      <nav data-dc-tpl="22" data-r="nav" style="display: flex; align-items: center; gap: 28px;">
-        <div data-dc-tpl="23" class="has-dd"><span data-dc-tpl="24" style="font-size: 15px; font-weight: 700; color: rgb(246, 15, 0); cursor: pointer; display: inline-flex; align-items: center; gap: 5px;">Products <svg data-dc-tpl="25" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9098A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline data-dc-tpl="26" points="6 9 12 15 18 9"></polyline></svg></span><div data-dc-tpl="27" class="dd-menu"><div data-dc-tpl="28" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 12px; box-shadow: 0 18px 44px -14px rgba(27,33,53,0.4); padding: 8px; width: 210px;"><a data-dc-tpl="29" href="solar-and-battery.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">Solar &amp; Battery</a><a data-dc-tpl="30" href="ev-chargers.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">EV Chargers</a><a data-dc-tpl="31" href="heat-pumps.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">Heat Pumps</a><a data-dc-tpl="32" href="commercial.html" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;" class="scp0">Commercial</a></div></div></div>
-        <a data-dc-tpl="33" href="savings-and-finance.html" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); text-decoration: none;">Savings &amp; Finance</a>
-        <a data-dc-tpl="34" href="about.html" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); text-decoration: none;">About</a>
-        <a data-dc-tpl="35" href="reviews.html" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); text-decoration: none;">Reviews</a>
+  <header style="position:sticky;top:0;z-index:50;background:rgba(244,244,242,0.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(27,33,53,0.08)">
+    <div style="max-width:1180px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="index.html" style="display:flex;align-items:center;text-decoration:none"><img src="assets/spark-logo-navy.png" alt="Spark" style="height:40px;width:auto;display:block"></a>
+      <nav data-r="nav" style="display:flex;align-items:center;gap:28px">
+        <div class="has-dd"><span style="font-size:15px;font-weight:700;color:#F60F00;cursor:pointer;display:inline-flex;align-items:center;gap:5px">Products <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9098A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span><div class="dd-menu"><div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:12px;box-shadow:0 18px 44px -14px rgba(27,33,53,0.4);padding:8px;width:210px"><a href="solar-and-battery.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Solar &amp; Battery</a><a href="ev-chargers.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">EV Chargers</a><a href="heat-pumps.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Heat Pumps</a><a href="commercial.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Commercial</a></div></div></div>
+        <a href="savings-and-finance.html" style="font-size:15px;font-weight:600;color:#3C4658;text-decoration:none">Savings &amp; Finance</a>
+        <a href="about.html" style="font-size:15px;font-weight:600;color:#3C4658;text-decoration:none">About</a>
+        <a href="reviews.html" style="font-size:15px;font-weight:600;color:#3C4658;text-decoration:none">Reviews</a>
       </nav>
-      <div data-dc-tpl="36" style="display: flex; align-items: center; gap: 20px;">
-        <a data-dc-tpl="37" data-r="hdr-phone" href="tel:03308187273" style="display: inline-flex; align-items: center; gap: 9px; text-decoration: none;"><span data-dc-tpl="38" style="width: 36px; height: 36px; border-radius: 9px; background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.12); display: inline-flex; align-items: center; justify-content: center;"><svg data-dc-tpl="39" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F60F00" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path data-dc-tpl="40" d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7 11.1a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"></path></svg></span><span data-dc-tpl="41" style="display: flex; flex-direction: column; line-height: 1.15;"><span data-dc-tpl="42" style="font-size: 11px; font-weight: 600; color: rgb(124, 132, 147); letter-spacing: 0.02em;">Call our team</span><span data-dc-tpl="43" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 16px; color: rgb(27, 33, 53);"><span class="sc-interp">0330 818 7273</span></span></span></a>
-        <a data-dc-tpl="44" data-r="hdr-cta" href="get-a-quote.html" style="display: inline-flex; align-items: center; gap: 8px; background: rgb(246, 15, 0); color: rgb(255, 255, 255); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; padding: 12px 22px; border-radius: 10px; text-decoration: none; white-space: nowrap; box-shadow: 0 6px 16px rgba(246,15,0,0.25);" class="scp1">Get my free quote</a>
+      <div style="display:flex;align-items:center;gap:20px">
+        <a data-r="hdr-phone" href="{{ phoneHref }}" style="display:inline-flex;align-items:center;gap:9px;text-decoration:none"><span style="width:36px;height:36px;border-radius:9px;background:#fff;border:1px solid rgba(27,33,53,0.12);display:inline-flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F60F00" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7 11.1a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg></span><span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-size:11px;font-weight:600;color:#7C8493;letter-spacing:0.02em">Call our team</span><span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:16px;color:#1B2135">{{ phone }}</span></span></a>
+        <a data-r="hdr-cta" href="get-a-quote.html" style="display:inline-flex;align-items:center;gap:8px;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:12px 22px;border-radius:10px;text-decoration:none;white-space:nowrap;box-shadow:0 6px 16px rgba(246,15,0,0.25)" style-hover="background:#D00C00">Get my free quote</a>
       </div>
     </div>
   </header>
 
-  <div data-dc-tpl="45" data-r="mobile-cta" style="display: none; position: fixed; left: 0px; right: 0px; bottom: 0px; z-index: 60; gap: 10px; padding: 10px 14px; background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(10px); border-top: 1px solid rgba(27, 33, 53, 0.12); box-shadow: 0 -6px 20px rgba(27,33,53,0.1);">
-    <a data-dc-tpl="46" href="tel:03308187273" style="flex: 1 1 0%; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: rgb(255, 255, 255); border: 1.5px solid rgba(27, 33, 53, 0.16); color: rgb(27, 33, 53); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; padding: 13px; border-radius: 11px; text-decoration: none;">Call us</a>
-    <a data-dc-tpl="47" href="get-a-quote.html" style="flex: 1.4 1 0%; display: inline-flex; align-items: center; justify-content: center; background: rgb(246, 15, 0); color: rgb(255, 255, 255); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; padding: 13px; border-radius: 11px; text-decoration: none;">Get my free quote</a>
+  <div data-r="mobile-cta" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;padding:10px 14px;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border-top:1px solid rgba(27,33,53,0.12);box-shadow:0 -6px 20px rgba(27,33,53,0.1)">
+    <a href="{{ phoneHref }}" style="flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#fff;border:1.5px solid rgba(27,33,53,0.16);color:#1B2135;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:13px;border-radius:11px;text-decoration:none">Call us</a>
+    <a href="get-a-quote.html" style="flex:1.4;display:inline-flex;align-items:center;justify-content:center;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:13px;border-radius:11px;text-decoration:none">Get my free quote</a>
   </div>
 
-  
-  <section data-dc-tpl="48" style="padding: 40px 24px 56px;">
-    <div data-dc-tpl="49" data-r="2col" style="max-width: 1180px; margin: 0px auto; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 52px; align-items: center;">
-      <div data-dc-tpl="50">
-        <div data-dc-tpl="51" style="display: inline-flex; align-items: center; gap: 8px; background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); padding: 7px 14px; border-radius: 100px; font-size: 13px; font-weight: 700; color: rgb(246, 15, 0); letter-spacing: 0.04em; margin-bottom: 20px;">HEAT PUMPS</div>
-        <h1 data-dc-tpl="52" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; line-height: 1.03; letter-spacing: -0.03em; margin: 0px 0px 20px;">Low-carbon heat for your home</h1>
-        <p data-dc-tpl="53" style="font-size: 19px; line-height: 1.55; color: rgb(81, 96, 122); margin: 0px 0px 26px; max-width: 520px; text-wrap: pretty;">An air source heat pump replaces your gas boiler with clean, highly efficient electric heat — and pairs perfectly with a Spark solar &amp; battery system to run on your own energy.</p>
-        <div data-dc-tpl="54" style="display: flex; flex-wrap: wrap; gap: 14px;">
-          <a data-dc-tpl="55" href="get-a-quote.html" style="display: inline-flex; align-items: center; gap: 9px; background: rgb(246, 15, 0); color: rgb(255, 255, 255); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 16px; padding: 15px 26px; border-radius: 11px; text-decoration: none; box-shadow: 0 8px 18px rgba(246,15,0,0.28);" class="scp1">Get my free quote</a>
-          <a data-dc-tpl="56" href="solar-and-battery.html" style="display: inline-flex; align-items: center; gap: 9px; background: rgb(255, 255, 255); border: 1.5px solid rgba(27, 33, 53, 0.14); color: rgb(27, 33, 53); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 16px; padding: 15px 26px; border-radius: 11px; text-decoration: none;">Add solar &amp; battery</a>
+  <!-- HERO -->
+  <section style="padding:40px 24px 56px">
+    <div data-r="2col" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.05fr 0.95fr;gap:52px;align-items:center">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(27,33,53,0.10);padding:7px 14px;border-radius:100px;font-size:13px;font-weight:700;color:#F60F00;letter-spacing:0.04em;margin-bottom:20px">HEAT PUMPS</div>
+        <h1 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(38px,4.8vw,56px);line-height:1.03;letter-spacing:-0.03em;margin:0 0 20px">Low-carbon heat for your home</h1>
+        <p style="font-size:19px;line-height:1.55;color:#51607A;margin:0 0 26px;max-width:520px;text-wrap:pretty">An air source heat pump replaces your gas boiler with clean, highly efficient electric heat &mdash; and pairs perfectly with a Spark solar &amp; battery system to run on your own energy.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px">
+          <a href="get-a-quote.html" style="display:inline-flex;align-items:center;gap:9px;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;padding:15px 26px;border-radius:11px;text-decoration:none;box-shadow:0 8px 18px rgba(246,15,0,0.28)" style-hover="background:#D00C00">Get my free quote</a>
+          <a href="solar-and-battery.html" style="display:inline-flex;align-items:center;gap:9px;background:#fff;border:1.5px solid rgba(27,33,53,0.14);color:#1B2135;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;padding:15px 26px;border-radius:11px;text-decoration:none">Add solar &amp; battery</a>
         </div>
       </div>
-      <div data-dc-tpl="57" data-r="img-first" style="aspect-ratio: 4/3.4; border-radius: 20px; overflow: hidden; border: 1px solid rgba(27, 33, 53, 0.06); background: rgb(230, 230, 226); box-shadow: 0 24px 60px rgba(27,33,53,0.16);"><img data-dc-tpl="58" src="assets/lifestyle-home.webp" alt="An air source heat pump at a UK home" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block;"></div>
+      <div data-r="img-first" style="aspect-ratio:4/3.4;border-radius:20px;overflow:hidden;border:1px solid rgba(27,33,53,0.06);background:#E6E6E2;box-shadow:0 24px 60px rgba(27,33,53,0.16)"><img src="assets/lifestyle-home.png" alt="An air source heat pump at a UK home" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block"></div>
     </div>
   </section>
 
-  
-  <section data-dc-tpl="59" style="background: rgb(255, 255, 255); border-top: 1px solid rgba(27, 33, 53, 0.07); border-bottom: 1px solid rgba(27, 33, 53, 0.07); padding: 72px 24px;">
-    <div data-dc-tpl="60" style="max-width: 1180px; margin: 0px auto;">
-      <div data-dc-tpl="61" style="max-width: 620px; margin: 0px 0px 40px;">
-        <div data-dc-tpl="62" style="font-size: 13px; font-weight: 700; color: rgb(246, 15, 0); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px;">Why heat with Spark</div>
-        <h2 data-dc-tpl="63" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; letter-spacing: -0.02em; margin: 0px;">Efficient, future-proof home heating</h2>
+  <!-- BENEFITS -->
+  <section style="background:#fff;border-top:1px solid rgba(27,33,53,0.07);border-bottom:1px solid rgba(27,33,53,0.07);padding:72px 24px">
+    <div style="max-width:1180px;margin:0 auto">
+      <div style="max-width:620px;margin:0 0 40px">
+        <div style="font-size:13px;font-weight:700;color:#F60F00;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px">Why heat with Spark</div>
+        <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,40px);letter-spacing:-0.02em;margin:0">Efficient, future-proof home heating</h2>
       </div>
-      <div data-dc-tpl="64" style="display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 18px;">
-        
-          <div data-dc-tpl="66" style="background: rgb(251, 250, 248); border: 1px solid rgba(27, 33, 53, 0.08); border-radius: 16px; padding: 26px;">
-            <div data-dc-tpl="67" style="width: 46px; height: 46px; border-radius: 12px; background: rgb(22, 28, 46); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;"><svg data-dc-tpl="68" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path data-dc-tpl="69" d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"></path></svg></div>
-            <h3 data-dc-tpl="70" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 18px; margin: 0px 0px 8px; color: rgb(27, 33, 53);"><span class="sc-interp">Up to 400% efficient</span></h3>
-            <p data-dc-tpl="71" style="font-size: 14.5px; line-height: 1.55; color: rgb(81, 96, 122); margin: 0px;"><span class="sc-interp">For every unit of electricity, a heat pump delivers three to four units of heat.</span></p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px">
+        <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="4">
+          <div style="background:#FBFAF8;border:1px solid rgba(27,33,53,0.08);border-radius:16px;padding:26px">
+            <div style="width:46px;height:46px;border-radius:12px;background:#161C2E;display:flex;align-items:center;justify-content:center;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+            <h3 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:18px;margin:0 0 8px;color:#1B2135">{{ b.t }}</h3>
+            <p style="font-size:14.5px;line-height:1.55;color:#51607A;margin:0">{{ b.d }}</p>
           </div>
-        
-          <div data-dc-tpl="66" style="background: rgb(251, 250, 248); border: 1px solid rgba(27, 33, 53, 0.08); border-radius: 16px; padding: 26px;">
-            <div data-dc-tpl="67" style="width: 46px; height: 46px; border-radius: 12px; background: rgb(22, 28, 46); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;"><svg data-dc-tpl="68" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path data-dc-tpl="69" d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"></path></svg></div>
-            <h3 data-dc-tpl="70" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 18px; margin: 0px 0px 8px; color: rgb(27, 33, 53);"><span class="sc-interp">A lower-carbon home</span></h3>
-            <p data-dc-tpl="71" style="font-size: 14.5px; line-height: 1.55; color: rgb(81, 96, 122); margin: 0px;"><span class="sc-interp">Replace fossil-fuel gas with clean electric heat you can run on solar.</span></p>
-          </div>
-        
-          <div data-dc-tpl="66" style="background: rgb(251, 250, 248); border: 1px solid rgba(27, 33, 53, 0.08); border-radius: 16px; padding: 26px;">
-            <div data-dc-tpl="67" style="width: 46px; height: 46px; border-radius: 12px; background: rgb(22, 28, 46); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;"><svg data-dc-tpl="68" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path data-dc-tpl="69" d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"></path></svg></div>
-            <h3 data-dc-tpl="70" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 18px; margin: 0px 0px 8px; color: rgb(27, 33, 53);"><span class="sc-interp">Works with solar</span></h3>
-            <p data-dc-tpl="71" style="font-size: 14.5px; line-height: 1.55; color: rgb(81, 96, 122); margin: 0px;"><span class="sc-interp">Pair with a Spark system to power your heating from your own sunshine.</span></p>
-          </div>
-        
-          <div data-dc-tpl="66" style="background: rgb(251, 250, 248); border: 1px solid rgba(27, 33, 53, 0.08); border-radius: 16px; padding: 26px;">
-            <div data-dc-tpl="67" style="width: 46px; height: 46px; border-radius: 12px; background: rgb(22, 28, 46); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;"><svg data-dc-tpl="68" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path data-dc-tpl="69" d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"></path></svg></div>
-            <h3 data-dc-tpl="70" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 18px; margin: 0px 0px 8px; color: rgb(27, 33, 53);"><span class="sc-interp">Fully certified install</span></h3>
-            <p data-dc-tpl="71" style="font-size: 14.5px; line-height: 1.55; color: rgb(81, 96, 122); margin: 0px;"><span class="sc-interp">Fitted by our own qualified engineers and backed by Spark support.</span></p>
-          </div>
-        
+        </sc-for>
       </div>
     </div>
   </section>
 
-  
-  <section data-dc-tpl="72" style="padding: 72px 24px;">
-    <div data-dc-tpl="73" data-r="2col" style="max-width: 1180px; margin: 0px auto; display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 52px; align-items: center;">
-      <div data-dc-tpl="74" data-r="img-first" style="aspect-ratio: 4/3.2; border-radius: 20px; overflow: hidden; border: 1px solid rgba(27, 33, 53, 0.06); background: rgb(230, 230, 226); box-shadow: 0 20px 50px rgba(27,33,53,0.14);"><img data-dc-tpl="75" src="assets/ecoflow-battery.webp" alt="A heat pump running alongside solar" style="width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block;"></div>
-      <div data-dc-tpl="76">
-        <div data-dc-tpl="77" style="font-size: 13px; font-weight: 700; color: rgb(246, 15, 0); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px;">Better together</div>
-        <h2 data-dc-tpl="78" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; letter-spacing: -0.02em; margin: 0px 0px 16px; text-wrap: pretty;">Run your heating on your own energy</h2>
-        <p data-dc-tpl="79" style="font-size: 17px; line-height: 1.65; color: rgb(60, 70, 88); margin: 0px 0px 16px;">On its own a heat pump dramatically cuts your heating emissions and running costs. Paired with Spark solar &amp; battery, much of that heat is powered by energy your own roof generated.</p>
-        <p data-dc-tpl="80" style="font-size: 17px; line-height: 1.65; color: rgb(60, 70, 88); margin: 0px;">Your monitoring app shows exactly how your heating, solar and battery work together, so your home runs at the lowest cost.</p>
+  <!-- PRODUCT: ECOFLOW POWERHEAT -->
+  <section style="padding:72px 24px">
+    <div style="max-width:1180px;margin:0 auto">
+      <div data-r="2col" style="display:grid;grid-template-columns:0.9fr 1.1fr;gap:52px;align-items:center">
+        <div data-r="img-first" style="position:relative;aspect-ratio:4/4.2;border-radius:20px;overflow:hidden;border:1px solid rgba(27,33,53,0.06);background:linear-gradient(150deg,#EEF2F6,#FAFBFD);box-shadow:0 20px 50px rgba(27,33,53,0.14)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="powerheat-unit" shape="rect" fit="contain" placeholder="Drop the EcoFlow PowerHeat product photo here" hint-size="100%,100%"></x-import>
+        </div>
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#F60F00;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px">The heat pump we install</div>
+          <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,40px);letter-spacing:-0.02em;margin:0 0 16px;text-wrap:pretty">Meet the EcoFlow PowerHeat</h2>
+          <p style="font-size:17px;line-height:1.65;color:#3C4658;margin:0 0 22px">One quiet outdoor unit for <strong style="color:#1B2135">heating, cooling and hot water</strong> — running on clean R290 natural refrigerant with an efficiency (COP) of up to <strong style="color:#1B2135">6.0</strong>. It keeps working down to &minus;25&deg;C, is rated <strong style="color:#1B2135">A+++</strong>, and is controlled from your phone or its 4&Prime; touchscreen.</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:24px">
+            <sc-for list="{{ phSpecs }}" as="s" hint-placeholder-count="6">
+              <div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:14px;padding:16px 18px">
+                <div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:20px;color:#1B2135;letter-spacing:-0.01em">{{ s.v }}</div>
+                <div style="font-size:13px;color:#7C8493;margin-top:3px;line-height:1.35">{{ s.l }}</div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <sc-for list="{{ phModels }}" as="m" hint-placeholder-count="2">
+              <div style="background:#FBFAF8;border:1px solid rgba(27,33,53,0.1);border-radius:14px;padding:16px 18px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap">
+                <div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:16px;color:#1B2135;min-width:96px">{{ m.name }}</div>
+                <div style="flex:1;min-width:180px;font-size:14px;color:#51607A;line-height:1.5">{{ m.desc }}</div>
+              </div>
+            </sc-for>
+          </div>
+          <p style="font-size:12px;color:#9098A6;margin:18px 0 0;line-height:1.5">Specifications from the EcoFlow PowerHeat datasheet (models EF AD-P1-9K0-S1 &amp; EF AD-P3-20K-S1). COP up to 6.0 measured at 7&deg;C ambient, 30/35&deg;C flow. We confirm the right model and heat-loss design for your home during your free survey.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  
-  <section data-dc-tpl="81" style="background: rgb(255, 255, 255); border-top: 1px solid rgba(27, 33, 53, 0.07); padding: 72px 24px;">
-    <div data-dc-tpl="82" style="max-width: 1020px; margin: 0px auto;">
-      <div data-dc-tpl="83" style="text-align: center; max-width: 660px; margin: 0px auto 36px;">
-        <div data-dc-tpl="84" style="font-size: 13px; font-weight: 700; color: rgb(246, 15, 0); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px;">Running-cost calculator</div>
-        <h2 data-dc-tpl="85" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; letter-spacing: -0.02em; margin: 0px 0px 12px;">Gas boiler vs heat pump — what you'd pay</h2>
-        <p data-dc-tpl="86" style="font-size: 17px; line-height: 1.6; color: rgb(81, 96, 122); margin: 0px;">A heat pump's running cost is similar to gas on the right tariff today — with far lower carbon, and cheaper still on solar. Drag to your current gas spend.</p>
-      </div>
-      <div data-dc-tpl="87" style="background: rgb(251, 250, 248); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 20px;">
-        <div data-dc-tpl="88" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px;">
-          <span data-dc-tpl="89" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88);">Your yearly gas heating spend</span>
-          <span data-dc-tpl="90" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 24px; color: rgb(27, 33, 53);"><span data-dc-tpl="91" data-js-out="hp-spend"><span class="sc-interp">£1,100</span></span><span data-dc-tpl="92" style="font-size: 14px; color: rgb(124, 132, 147); font-weight: 600;">/yr</span></span>
-        </div>
-        <input data-dc-tpl="93" type="range" min="400" max="3000" step="50" data-js="calc" data-calc="hp" style="width: 100%; accent-color: rgb(246, 15, 0); height: 6px; cursor: pointer; margin-bottom: 8px;" value="1100">
-        <div data-dc-tpl="94" style="display: flex; justify-content: space-between; font-size: 12.5px; color: rgb(154, 160, 172); margin-bottom: 30px;"><span data-dc-tpl="95">£400</span><span data-dc-tpl="96">£3,000</span></div>
-
-        <div data-dc-tpl="97" style="display: flex; flex-direction: column; gap: 18px;">
-          <div data-dc-tpl="98">
-            <div data-dc-tpl="99" style="display: flex; justify-content: space-between; margin-bottom: 7px;"><span data-dc-tpl="100" style="font-size: 14.5px; font-weight: 600; color: rgb(60, 70, 88);">Gas boiler</span><span data-dc-tpl="101" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 16px; color: rgb(27, 33, 53);"><span data-dc-tpl="102" data-js-out="hp-gas"><span class="sc-interp">£1,100</span></span>/yr</span></div>
-            <div data-dc-tpl="103" style="height: 14px; background: rgb(236, 234, 228); border-radius: 8px; overflow: hidden;"><div data-dc-tpl="104" style="height: 100%; width: 0px;" data-js-bar="hp-gas" data-bar-w="100%;background:#9AA0AC;border-radius:8px;transition:width .2s"></div></div>
-          </div>
-          <div data-dc-tpl="105">
-            <div data-dc-tpl="106" style="display: flex; justify-content: space-between; margin-bottom: 7px;"><span data-dc-tpl="107" style="font-size: 14.5px; font-weight: 600; color: rgb(60, 70, 88);">Heat pump</span><span data-dc-tpl="108" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 16px; color: rgb(27, 33, 53);"><span data-dc-tpl="109" data-js-out="hp-hp"><span class="sc-interp">£1,083</span></span>/yr</span></div>
-            <div data-dc-tpl="110" style="height: 14px; background: rgb(236, 234, 228); border-radius: 8px; overflow: hidden;"><div data-dc-tpl="111" style="height: 100%; width: 0px;" data-js-bar="hp-hp" data-bar-w="98%;background:#C2785A;border-radius:8px;transition:width .2s"></div></div>
-          </div>
-          <div data-dc-tpl="112">
-            <div data-dc-tpl="113" style="display: flex; justify-content: space-between; margin-bottom: 7px;"><span data-dc-tpl="114" style="font-size: 14.5px; font-weight: 700; color: rgb(27, 33, 53);">Heat pump + Spark solar</span><span data-dc-tpl="115" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 16px; color: rgb(14, 158, 99);"><span data-dc-tpl="116" data-js-out="hp-hpsolar"><span class="sc-interp">£671</span></span>/yr</span></div>
-            <div data-dc-tpl="117" style="height: 14px; background: rgb(236, 234, 228); border-radius: 8px; overflow: hidden;"><div data-dc-tpl="118" style="height: 100%; width: 0px;" data-js-bar="hp-hpsolar" data-bar-w="61%;background:#0E9E63;border-radius:8px;transition:width .2s"></div></div>
-          </div>
-        </div>
-
-        <div data-dc-tpl="119" style="margin-top: 26px; display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 12px;">
-          <div data-dc-tpl="120" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; padding: 18px 20px;">
-            <div data-dc-tpl="121" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 24px; color: rgb(14, 158, 99);"><span data-dc-tpl="122" data-js-out="hp-co2"><span class="sc-interp">2.6</span></span> t</div>
-            <div data-dc-tpl="123" style="font-size: 13.5px; color: rgb(124, 132, 147); margin-top: 3px;">CO₂ saved per year vs gas</div>
-          </div>
-          <div data-dc-tpl="124" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; padding: 18px 20px;">
-            <div data-dc-tpl="125" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 24px; color: rgb(27, 33, 53);">£7,500</div>
-            <div data-dc-tpl="126" style="font-size: 13.5px; color: rgb(124, 132, 147); margin-top: 3px;">Boiler Upgrade Scheme grant*</div>
-          </div>
-        </div>
-
-        
-        <div data-dc-tpl="127" style="margin-top: 14px; background: rgb(22, 28, 46); border-radius: 16px; padding: 22px 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;">
-          <div data-dc-tpl="128" style="flex: 1 1 0%; min-width: 240px;">
-            <div data-dc-tpl="129" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 18px; color: rgb(255, 255, 255); margin-bottom: 4px;">Heat your home on sunshine</div>
-            <div data-dc-tpl="130" style="font-size: 15px; line-height: 1.55; color: rgb(174, 183, 202);">A heat pump runs on electricity — so pairing it with Spark solar &amp; battery is the cheapest, cleanest way to heat your home. See what solar could save you.</div>
-          </div>
-          <a data-dc-tpl="131" href="savings-and-finance.html#calculator" style="display: inline-flex; align-items: center; gap: 8px; background: rgb(246, 15, 0); color: rgb(255, 255, 255); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; padding: 14px 22px; border-radius: 11px; text-decoration: none; white-space: nowrap;" class="scp1">See my solar savings →</a>
-        </div>
-        <p data-dc-tpl="132" style="font-size: 12px; color: rgb(144, 152, 166); margin: 16px 0px 0px; line-height: 1.5;">*Boiler Upgrade Scheme grant for homes in England &amp; Wales, subject to eligibility. Estimates assume a heat pump efficiency (COP) of ~3.2, typical gas and electricity rates and ~38% solar offset. For guidance only — your figures depend on your home, tariff and system design.</p>
+  <!-- SOLAR SYNERGY -->
+  <section style="padding:72px 24px">
+    <div data-r="2col" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:0.95fr 1.05fr;gap:52px;align-items:center">
+      <div data-r="img-first" style="aspect-ratio:4/3.2;border-radius:20px;overflow:hidden;border:1px solid rgba(27,33,53,0.06);background:#E6E6E2;box-shadow:0 20px 50px rgba(27,33,53,0.14)"><img src="assets/ecoflow-battery.png" alt="A heat pump running alongside solar" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block"></div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:#F60F00;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px">Better together</div>
+        <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(28px,3.4vw,38px);letter-spacing:-0.02em;margin:0 0 16px;text-wrap:pretty">Run your heating on your own energy</h2>
+        <p style="font-size:17px;line-height:1.65;color:#3C4658;margin:0 0 16px">On its own a heat pump dramatically cuts your heating emissions and running costs. Paired with Spark solar &amp; battery, much of that heat is powered by energy your own roof generated.</p>
+        <p style="font-size:17px;line-height:1.65;color:#3C4658;margin:0">Your monitoring app shows exactly how your heating, solar and battery work together, so your home runs at the lowest cost.</p>
       </div>
     </div>
   </section>
 
-  
-  <section data-dc-tpl="133" style="padding: 72px 24px;">
-    <div data-dc-tpl="134" style="max-width: 820px; margin: 0px auto;">
-      <h2 data-dc-tpl="135" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; letter-spacing: -0.02em; margin: 0px 0px 32px; text-align: center;">Heat pump questions, answered</h2>
-      <div data-dc-tpl="136" style="display: flex; flex-direction: column; gap: 12px;">
-        
-          <div data-dc-tpl="138" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; overflow: hidden;">
-            <button data-dc-tpl="139" data-js="faq-toggle" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: medium; padding: 20px 22px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 17px; color: rgb(27, 33, 53);"><span data-dc-tpl="140"><span class="sc-interp">Will a heat pump keep my home warm in winter?</span></span><span data-dc-tpl="141" style="font-size: 24px; color: rgb(246, 15, 0); line-height: 1; transform: rotate(45deg); transition: transform .2s;">+</span></button>
-            <div data-dc-tpl="143" style="padding: 0px 22px 22px; font-size: 16px; line-height: 1.6; color: rgb(81, 96, 122);"><span class="sc-interp">Yes. Modern air source heat pumps are designed for the UK climate and keep working efficiently well below freezing. The key is a properly designed system — which is exactly what our survey delivers, sizing everything to your home so it's warm all winter.</span></div>
+  <!-- RUNNING-COST CALCULATOR -->
+  <section style="background:#fff;border-top:1px solid rgba(27,33,53,0.07);padding:72px 24px">
+    <div style="max-width:1020px;margin:0 auto">
+      <div style="text-align:center;max-width:660px;margin:0 auto 36px">
+        <div style="font-size:13px;font-weight:700;color:#F60F00;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px">Running-cost calculator</div>
+        <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,40px);letter-spacing:-0.02em;margin:0 0 12px">Gas boiler vs heat pump &mdash; what you'd pay</h2>
+        <p style="font-size:17px;line-height:1.6;color:#51607A;margin:0">A heat pump's running cost is similar to gas on the right tariff today &mdash; with far lower carbon, and cheaper still on solar. Drag to your current gas spend.</p>
+      </div>
+      <div style="background:#FBFAF8;border:1px solid rgba(27,33,53,0.1);border-radius:20px;padding:clamp(24px,4vw,38px)">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
+          <span style="font-size:15px;font-weight:600;color:#3C4658">Your yearly gas heating spend</span>
+          <span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:24px;color:#1B2135">{{ spendLabel }}<span style="font-size:14px;color:#7C8493;font-weight:600">/yr</span></span>
+        </div>
+        <input type="range" min="400" max="3000" step="50" value="{{ spend }}" onInput="{{ setSpend }}" style="width:100%;accent-color:#F60F00;height:6px;cursor:pointer;margin-bottom:8px">
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;color:#9AA0AC;margin-bottom:30px"><span>£400</span><span>£3,000</span></div>
+
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:7px"><span style="font-size:14.5px;font-weight:600;color:#3C4658">Gas boiler</span><span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:16px;color:#1B2135">{{ gasLabel }}/yr</span></div>
+            <div style="height:14px;background:#ECEAE4;border-radius:8px;overflow:hidden"><div style="height:100%;width:{{ gasW }};background:#9AA0AC;border-radius:8px;transition:width .2s"></div></div>
           </div>
-        
-          <div data-dc-tpl="138" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; overflow: hidden;">
-            <button data-dc-tpl="139" data-js="faq-toggle" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: medium; padding: 20px 22px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 17px; color: rgb(27, 33, 53);"><span data-dc-tpl="140"><span class="sc-interp">Is a heat pump cheaper to run than a gas boiler?</span></span><span data-dc-tpl="141" style="font-size: 24px; color: rgb(246, 15, 0); line-height: 1; transform: rotate(0deg); transition: transform .2s;">+</span></button>
-            <div data-dc-tpl="143" style="padding: 0px 22px 22px; font-size: 16px; line-height: 1.6; color: rgb(81, 96, 122);"><span class="sc-interp">Because a heat pump is 3–4 times more efficient than a boiler, running costs are similar to or lower than gas on the right electricity tariff today — and far cheaper when paired with solar. You also dramatically cut your carbon and future-proof against gas price rises.</span></div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:7px"><span style="font-size:14.5px;font-weight:600;color:#3C4658">Heat pump</span><span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:16px;color:#1B2135">{{ hpLabel }}/yr</span></div>
+            <div style="height:14px;background:#ECEAE4;border-radius:8px;overflow:hidden"><div style="height:100%;width:{{ hpW }};background:#C2785A;border-radius:8px;transition:width .2s"></div></div>
           </div>
-        
-          <div data-dc-tpl="138" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; overflow: hidden;">
-            <button data-dc-tpl="139" data-js="faq-toggle" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: medium; padding: 20px 22px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 17px; color: rgb(27, 33, 53);"><span data-dc-tpl="140"><span class="sc-interp">Do I need new radiators or underfloor heating?</span></span><span data-dc-tpl="141" style="font-size: 24px; color: rgb(246, 15, 0); line-height: 1; transform: rotate(0deg); transition: transform .2s;">+</span></button>
-            <div data-dc-tpl="143" style="padding: 0px 22px 22px; font-size: 16px; line-height: 1.6; color: rgb(81, 96, 122);"><span class="sc-interp">Not necessarily. Heat pumps run at lower temperatures, so some homes benefit from a few larger radiators, but many keep most of their existing ones. We assess this during your free survey and include any changes in your quote.</span></div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:7px"><span style="font-size:14.5px;font-weight:700;color:#1B2135">Heat pump + Spark solar</span><span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:16px;color:#0E9E63">{{ hpSolarLabel }}/yr</span></div>
+            <div style="height:14px;background:#ECEAE4;border-radius:8px;overflow:hidden"><div style="height:100%;width:{{ hpSolarW }};background:#0E9E63;border-radius:8px;transition:width .2s"></div></div>
           </div>
-        
-          <div data-dc-tpl="138" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; overflow: hidden;">
-            <button data-dc-tpl="139" data-js="faq-toggle" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: medium; padding: 20px 22px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 17px; color: rgb(27, 33, 53);"><span data-dc-tpl="140"><span class="sc-interp">Can I get a grant for a heat pump?</span></span><span data-dc-tpl="141" style="font-size: 24px; color: rgb(246, 15, 0); line-height: 1; transform: rotate(0deg); transition: transform .2s;">+</span></button>
-            <div data-dc-tpl="143" style="padding: 0px 22px 22px; font-size: 16px; line-height: 1.6; color: rgb(81, 96, 122);"><span class="sc-interp">Yes — the Government's Boiler Upgrade Scheme offers £7,500 off the cost of an air source heat pump for homes in England and Wales. We handle the application for you, and the grant is taken straight off your price.</span></div>
+        </div>
+
+        <div style="margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+          <div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:14px;padding:18px 20px">
+            <div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:24px;color:#0E9E63">{{ co2Label }} t</div>
+            <div style="font-size:13.5px;color:#7C8493;margin-top:3px">CO₂ saved per year vs gas</div>
           </div>
-        
-          <div data-dc-tpl="138" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; overflow: hidden;">
-            <button data-dc-tpl="139" data-js="faq-toggle" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: medium; padding: 20px 22px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 17px; color: rgb(27, 33, 53);"><span data-dc-tpl="140"><span class="sc-interp">Will a heat pump work with solar panels?</span></span><span data-dc-tpl="141" style="font-size: 24px; color: rgb(246, 15, 0); line-height: 1; transform: rotate(0deg); transition: transform .2s;">+</span></button>
-            <div data-dc-tpl="143" style="padding: 0px 22px 22px; font-size: 16px; line-height: 1.6; color: rgb(81, 96, 122);"><span class="sc-interp">Perfectly. Your heat pump runs on electricity, so the energy your solar panels generate can power your heating directly — and a battery stores daytime solar to heat your home in the evening, cutting running costs further.</span></div>
+          <div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:14px;padding:18px 20px">
+            <div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:24px;color:#1B2135">£7,500</div>
+            <div style="font-size:13.5px;color:#7C8493;margin-top:3px">Boiler Upgrade Scheme grant*</div>
           </div>
-        
-          <div data-dc-tpl="138" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; overflow: hidden;">
-            <button data-dc-tpl="139" data-js="faq-toggle" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: medium; padding: 20px 22px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 17px; color: rgb(27, 33, 53);"><span data-dc-tpl="140"><span class="sc-interp">How disruptive is the installation?</span></span><span data-dc-tpl="141" style="font-size: 24px; color: rgb(246, 15, 0); line-height: 1; transform: rotate(0deg); transition: transform .2s;">+</span></button>
-            <div data-dc-tpl="143" style="padding: 0px 22px 22px; font-size: 16px; line-height: 1.6; color: rgb(81, 96, 122);"><span class="sc-interp">A typical air source heat pump installation takes two to four days. Our certified engineers handle everything — the outdoor unit, controls and any pipework — and leave your home clean and tidy.</span></div>
+        </div>
+
+        <!-- SOLAR BRIDGE -->
+        <div style="margin-top:14px;background:#161C2E;border-radius:16px;padding:22px 24px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+          <div style="flex:1;min-width:240px">
+            <div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:18px;color:#fff;margin-bottom:4px">Heat your home on sunshine</div>
+            <div style="font-size:15px;line-height:1.55;color:#AEB7CA">A heat pump runs on electricity &mdash; so pairing it with Spark solar &amp; battery is the cheapest, cleanest way to heat your home. See what solar could save you.</div>
           </div>
-        
+          <a href="savings-and-finance.html#calculator" style="display:inline-flex;align-items:center;gap:8px;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:14px 22px;border-radius:11px;text-decoration:none;white-space:nowrap" style-hover="background:#D00C00">See my solar savings &rarr;</a>
+        </div>
+        <p style="font-size:12px;color:#9098A6;margin:16px 0 0;line-height:1.5">*Boiler Upgrade Scheme grant for homes in England &amp; Wales, subject to eligibility. Estimates assume a heat pump efficiency (COP) of ~3.2, typical gas and electricity rates and ~38% solar offset. For guidance only &mdash; your figures depend on your home, tariff and system design.</p>
       </div>
     </div>
   </section>
 
-  
-  <section data-dc-tpl="144" style="padding: 0px 24px 80px;">
-    <div data-dc-tpl="145" style="max-width: 1180px; margin: 0px auto; background: linear-gradient(160deg, rgb(246, 15, 0) 0%, rgb(194, 12, 0) 100%); border-radius: 24px; text-align: center; color: rgb(255, 255, 255);">
-      <h2 data-dc-tpl="146" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; letter-spacing: -0.02em; margin: 0px 0px 14px; color: rgb(255, 255, 255);">Ready to upgrade your heating?</h2>
-      <p data-dc-tpl="147" style="font-size: 18px; line-height: 1.55; color: rgb(255, 217, 214); margin: 0px auto 26px; max-width: 520px;">Get a free, no-obligation quote for an air source heat pump — on its own or with solar &amp; battery.</p>
-      <a data-dc-tpl="148" href="get-a-quote.html" style="display: inline-flex; align-items: center; gap: 9px; background: rgb(255, 255, 255); color: rgb(27, 33, 53); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 17px; padding: 16px 32px; border-radius: 12px; text-decoration: none; box-shadow: 0 12px 28px rgba(0,0,0,0.18);">Get my free quote →</a>
+  <!-- FAQ -->
+  <section style="padding:72px 24px">
+    <div style="max-width:820px;margin:0 auto">
+      <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,40px);letter-spacing:-0.02em;margin:0 0 32px;text-align:center">Heat pump questions, answered</h2>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+          <div style="background:#fff;border:1px solid rgba(27,33,53,0.10);border-radius:14px;overflow:hidden">
+            <button onClick="{{ f.toggle }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;background:none;border:none;padding:20px 22px;cursor:pointer;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:17px;color:#1B2135"><span>{{ f.q }}</span><span style="font-size:24px;color:#F60F00;line-height:1;transform:{{ f.rot }};transition:transform .2s">+</span></button>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}"><div style="padding:0 22px 22px;font-size:16px;line-height:1.6;color:#51607A">{{ f.a }}</div></sc-if>
+          </div>
+        </sc-for>
+      </div>
     </div>
   </section>
 
-  <div class="sc-host" data-sc-name="SparkFooter" data-dc-tpl="149"><footer data-dc-tpl="0" style="background: rgb(22, 28, 46); color: rgb(174, 183, 202); padding: 64px 24px 34px; font-family: &quot;Hanken Grotesk&quot;, sans-serif;">
-    <div data-dc-tpl="1" style="max-width: 1180px; margin: 0px auto;">
-      <div data-dc-tpl="2" style="display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-        <div data-dc-tpl="3">
-          <img data-dc-tpl="4" src="assets/spark-logo-white.webp" alt="Spark" style="height: 28px; width: auto; display: block; margin-bottom: 16px;">
-          <p data-dc-tpl="5" style="font-size: 14.5px; line-height: 1.6; margin: 0px 0px 18px; max-width: 300px;">Premium solar &amp; battery installation across mainland Great Britain. Giving you the power to save.</p>
-          <div data-dc-tpl="6" style="font-size: 13.5px; line-height: 1.7; color: rgb(196, 203, 218); margin: 0px 0px 18px;"><a data-dc-tpl="7" href="tel:03308187273" style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 700;">0330 818 7273</a><br data-dc-tpl="8"><a data-dc-tpl="9" href="mailto:hello@sparkhome.co.uk" style="color: rgb(196, 203, 218); text-decoration: none;">hello@sparkhome.co.uk</a><br data-dc-tpl="10">St Pegs Mill, Thornhills Beck Lane, Brighouse HD6 4AH</div>
-          <div data-dc-tpl="11" style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <span data-dc-tpl="12" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">MCS</span>
-            <span data-dc-tpl="13" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">HIES</span>
-            <span data-dc-tpl="14" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">EPVS</span>
-            <span data-dc-tpl="15" style="font-size: 12px; font-weight: 700; background: rgba(255, 255, 255, 0.08); padding: 5px 11px; border-radius: 7px; color: rgb(196, 203, 218);">Which? Trusted Trader</span>
-          </div>
-        </div>
-        <div data-dc-tpl="16">
-          <div data-dc-tpl="17" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Products</div>
-          <div data-dc-tpl="18" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
-            <a data-dc-tpl="19" href="solar-and-battery.html" style="color: rgb(174, 183, 202); text-decoration: none;">Solar &amp; Battery</a>
-            <a data-dc-tpl="20" href="ev-chargers.html" style="color: rgb(174, 183, 202); text-decoration: none;">EV Chargers</a>
-            <a data-dc-tpl="21" href="heat-pumps.html" style="color: rgb(174, 183, 202); text-decoration: none;">Heat Pumps</a>
-            <a data-dc-tpl="22" href="commercial.html" style="color: rgb(174, 183, 202); text-decoration: none;">Commercial</a>
-          </div>
-        </div>
-        <div data-dc-tpl="23">
-          <div data-dc-tpl="24" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Learn</div>
-          <div data-dc-tpl="25" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
-            <a data-dc-tpl="26" href="savings-and-finance.html#calculator" style="color: rgb(174, 183, 202); text-decoration: none;">Savings calculator</a>
-            <a data-dc-tpl="27" href="resources.html" style="color: rgb(174, 183, 202); text-decoration: none;">Guides &amp; resources</a>
-            <a data-dc-tpl="28" href="index.html#guarantee" style="color: rgb(174, 183, 202); text-decoration: none;">Our guarantees</a>
-            <a data-dc-tpl="29" href="reviews.html" style="color: rgb(174, 183, 202); text-decoration: none;">Reviews</a>
-          </div>
-        </div>
-        <div data-dc-tpl="30">
-          <div data-dc-tpl="31" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Company</div>
-          <div data-dc-tpl="32" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
-            <a data-dc-tpl="33" href="about.html" style="color: rgb(174, 183, 202); text-decoration: none;">About Spark</a>
-            <a data-dc-tpl="34" href="spark-for-schools.html" style="color: rgb(174, 183, 202); text-decoration: none;">Spark for Schools</a>
-            <a data-dc-tpl="35" href="locations.html" style="color: rgb(174, 183, 202); text-decoration: none;">Locations</a>
-            <a data-dc-tpl="36" href="get-a-quote.html" style="color: rgb(174, 183, 202); text-decoration: none;">Contact us</a>
-          </div>
-        </div>
-      </div>
-      <div data-dc-tpl="37" style="padding-top: 24px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; font-size: 12.5px; color: rgb(138, 147, 168);">
-        <div data-dc-tpl="38">© Spark 2026. All rights reserved. Spark is a trading name of Spark Energy UK Ltd (Company No. 14381786). Registered office: St Pegs Mill, Thornhills Beck Lane, Brighouse HD6 4AH.</div>
-        <div data-dc-tpl="39" style="display: flex; gap: 18px;"><a data-dc-tpl="40" href="terms.html" style="color: rgb(138, 147, 168); text-decoration: none;">Terms</a><a data-dc-tpl="41" href="privacy.html" style="color: rgb(138, 147, 168); text-decoration: none;">Privacy</a><a data-dc-tpl="42" href="complaints.html" style="color: rgb(138, 147, 168); text-decoration: none;">Complaints</a></div>
-      </div>
+  <!-- CTA -->
+  <section style="padding:0 24px 80px">
+    <div style="max-width:1180px;margin:0 auto;background:linear-gradient(160deg,#F60F00 0%,#C20C00 100%);border-radius:24px;padding:clamp(40px,6vw,64px);text-align:center;color:#fff">
+      <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(28px,4vw,44px);letter-spacing:-0.02em;margin:0 0 14px;color:#fff">Ready to upgrade your heating?</h2>
+      <p style="font-size:18px;line-height:1.55;color:#FFD9D6;margin:0 auto 26px;max-width:520px">Get a free, no-obligation quote for an air source heat pump &mdash; on its own or with solar &amp; battery.</p>
+      <a href="get-a-quote.html" style="display:inline-flex;align-items:center;gap:9px;background:#fff;color:#1B2135;font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:17px;padding:16px 32px;border-radius:12px;text-decoration:none;box-shadow:0 12px 28px rgba(0,0,0,0.18)">Get my free quote &rarr;</a>
     </div>
-  </footer></div></div></div>
-<script src="app.js"></script>
-<script src="flows.js"></script>
+  </section>
+
+  <dc-import name="SparkFooter" hint-size="100%,420px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{ &quot;$preview&quot;: { &quot;width&quot;: &quot;100%&quot;, &quot;height&quot;: 900 }, &quot;phoneNumber&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;0330 818 7273&quot;, &quot;tsType&quot;: &quot;string&quot; } }">
+class Component extends DCLogic {
+  state = { spend: 1100, faq: 0 };
+  renderVals() {
+    const phone = this.props.phoneNumber ?? '0330 818 7273';
+    const benefits = [
+      { t: 'Up to 400% efficient', d: 'For every unit of electricity, a heat pump delivers three to four units of heat.', icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>' },
+      { t: 'A lower-carbon home', d: 'Replace fossil-fuel gas with clean electric heat you can run on solar.', icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>' },
+      { t: 'Works with solar', d: 'Pair with a Spark system to power your heating from your own sunshine.', icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>' },
+      { t: 'Fully certified install', d: 'Fitted by our own qualified engineers and backed by Spark support.', icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.4v5.6c0 4.4-3 7.4-7 8.9-4-1.5-7-4.5-7-8.9V5.4L12 3z"/><path d="M9 12l2 2 4-4.2"/></svg>' },
+    ];
+    // ---- Heat pump running-cost calculator ----
+    const spend = this.state.spend;
+    const heatKwh = (spend / 0.07) * 0.9;     // heat delivered from gas spend
+    const hpElec = heatKwh / 3.2;             // heat pump COP ~3.2
+    const gasCost = spend;
+    const hpCost = hpElec * 0.245;            // standard electricity rate
+    const hpSolarCost = hpCost * 0.62;        // ~38% offset by solar
+    const maxBar = Math.max(gasCost, hpCost, hpSolarCost, 1);
+    const co2Gas = (spend / 0.07) * 0.183;    // kg CO2 from gas
+    const co2Hp = hpElec * 0.07;              // kg CO2 from (greening) grid
+    const co2SavedT = Math.max(0, (co2Gas - co2Hp) / 1000);
+    const f0 = (n) => '£' + Math.round(n).toLocaleString('en-GB');
+
+    const faqData = [
+      { q: 'Will a heat pump keep my home warm in winter?', a: "Yes. Modern air source heat pumps are designed for the UK climate and keep working efficiently well below freezing. The key is a properly designed system — which is exactly what our survey delivers, sizing everything to your home so it's warm all winter." },
+      { q: 'Is a heat pump cheaper to run than a gas boiler?', a: "Because a heat pump is 3–4 times more efficient than a boiler, running costs are similar to or lower than gas on the right electricity tariff today — and far cheaper when paired with solar. You also dramatically cut your carbon and future-proof against gas price rises." },
+      { q: 'Do I need new radiators or underfloor heating?', a: "Not necessarily. Heat pumps run at lower temperatures, so some homes benefit from a few larger radiators, but many keep most of their existing ones. We assess this during your free survey and include any changes in your quote." },
+      { q: 'Can I get a grant for a heat pump?', a: "Yes — the Government's Boiler Upgrade Scheme offers £7,500 off the cost of an air source heat pump for homes in England and Wales. We handle the application for you, and the grant is taken straight off your price." },
+      { q: 'Will a heat pump work with solar panels?', a: "Perfectly. Your heat pump runs on electricity, so the energy your solar panels generate can power your heating directly — and a battery stores daytime solar to heat your home in the evening, cutting running costs further." },
+      { q: 'How disruptive is the installation?', a: "A typical air source heat pump installation takes two to four days. Our certified engineers handle everything — the outdoor unit, controls and any pipework — and leave your home clean and tidy." },
+    ];
+    const faqs = faqData.map((f, i) => ({ q: f.q, a: f.a, open: this.state.faq === i, rot: this.state.faq === i ? 'rotate(45deg)' : 'rotate(0deg)', toggle: () => this.setState(s => ({ faq: s.faq === i ? -1 : i })) }));
+
+    return {
+      phSpecs: [
+        { v: 'up to 6.0', l: 'COP efficiency' },
+        { v: 'A+++', l: 'ErP energy rating' },
+        { v: 'R290', l: 'Natural refrigerant' },
+        { v: '−25°C', l: 'Keeps heating in' },
+        { v: '75°C', l: 'Max flow temp' },
+        { v: 'from 38 dB', l: 'Whisper-quiet' },
+      ],
+      phModels: [
+        { name: '9kW', desc: 'Single-phase, up to 8.8kW heating — ideal for most 2–4 bedroom homes.' },
+        { name: '20kW', desc: 'Three-phase, up to 20.4kW heating — for larger or less-insulated homes.' },
+      ],
+      phone, phoneHref: 'tel:' + phone.replace(/[^0-9+]/g, ''), benefits,
+      spend, spendLabel: f0(spend),
+      setSpend: (e) => this.setState({ spend: parseInt(e.target.value, 10) }),
+      gasLabel: f0(gasCost), hpLabel: f0(hpCost), hpSolarLabel: f0(hpSolarCost),
+      gasW: Math.round(gasCost / maxBar * 100) + '%', hpW: Math.round(hpCost / maxBar * 100) + '%', hpSolarW: Math.round(hpSolarCost / maxBar * 100) + '%',
+      co2Label: co2SavedT.toFixed(1),
+      faqs,
+    };
+  }
+}
+</script>
 </body>
 </html>
