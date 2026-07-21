@@ -12,10 +12,20 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="canonical" href="https://sparkhome.co.uk/commercial.html">
 <script src="./support.js"></script>
+<script src="./image-slot.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+  { "@type": "Question", "name": "How long does commercial solar take to pay back?", "acceptedAnswer": { "@type": "Answer", "text": "It varies with your energy use, tariff and how much generation you consume on site, but well-scoped commercial systems typically pay back within their early years and then deliver decades of low-cost generation, built around your actual half-hourly consumption data." } },
+  { "@type": "Question", "name": "What is a Power Purchase Agreement (PPA)?", "acceptedAnswer": { "@type": "Answer", "text": "Under a PPA, a funder pays for and owns the system on your roof or land, and you buy the electricity it generates at an agreed rate, usually below grid prices, with no upfront capital outlay. Purchase, finance/lease and PPA routes can be scoped side by side." } },
+  { "@type": "Question", "name": "Do we need to own our premises for commercial solar?", "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. Owned sites are most straightforward, but leased premises can work too, typically with landlord consent or a lease of suitable length." } },
+  { "@type": "Question", "name": "Will installation disrupt our operations?", "acceptedAnswer": { "@type": "Answer", "text": "Work is planned around your operations, in phases and outside critical hours where needed. Most rooftop installs are completed with minimal disruption, with all commercial health-and-safety and access requirements handled." } },
+  { "@type": "Question", "name": "Can solar help our ESG and carbon reporting?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. On-site generation directly cuts Scope 2 emissions, and live monitoring provides the generation and carbon-offset figures needed for ESG, SECR and tender submissions." } }
+] }
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -52,7 +62,7 @@
       '<a href="about.html">About</a>'+
       '<a href="reviews.html">Reviews</a>'+
       '<a href="locations.html">Locations</a>'+
-      '<a class="cta" href="get-a-quote.html">Get my free quote</a></div>';
+      '<a class="cta" href="get-a-quote-commercial.html">Get my free quote</a></div>';
     function close(){ov.classList.remove('open');}
     btn.addEventListener('click',function(){ov.classList.add('open');});
     ov.addEventListener('click',function(e){if(e.target===ov||e.target.id==='spark-mnav-x'||e.target.closest('a'))close();});
@@ -71,7 +81,7 @@
   <div style="background:#161C2E;color:#C4CBDA;font-size:13px">
     <div style="max-width:1180px;margin:0 auto;padding:9px 24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
       <div style="display:flex;align-items:center;gap:8px;font-weight:500"><span style="color:#F60F00;letter-spacing:0.5px;font-weight:700">★ 4.7/5</span><span style="opacity:.45">·</span><span>Rated Excellent on Trustpilot from 420+ reviews</span></div>
-      <div style="display:flex;align-items:center;gap:18px;font-weight:500"><span style="opacity:.8">UK-based support · Mon&ndash;Sat</span><a href="get-a-quote.html" style="color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:1px">Request a callback</a></div>
+      <div style="display:flex;align-items:center;gap:18px;font-weight:500"><span style="opacity:.8">UK-based support · Mon&ndash;Sat</span><a href="#callback" style="color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:1px">Request a callback</a></div>
     </div>
   </div>
 
@@ -79,21 +89,20 @@
     <div style="max-width:1180px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px">
       <a href="index.html" style="display:flex;align-items:center;text-decoration:none"><img src="assets/spark-logo-navy.png" alt="Spark" style="height:40px;width:auto;display:block"></a>
       <nav data-r="nav" style="display:flex;align-items:center;gap:28px">
-        <div class="has-dd"><span style="font-size:15px;font-weight:700;color:#F60F00;cursor:pointer;display:inline-flex;align-items:center;gap:5px">Products <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9098A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span><div class="dd-menu"><div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:12px;box-shadow:0 18px 44px -14px rgba(27,33,53,0.4);padding:8px;width:210px"><a href="solar-and-battery.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Solar &amp; Battery</a><a href="ev-chargers.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">EV Chargers</a><a href="heat-pumps.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Heat Pumps</a><a href="commercial.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Commercial</a></div></div></div>
-        <a href="savings-and-finance.html" style="font-size:15px;font-weight:600;color:#3C4658;text-decoration:none">Savings &amp; Finance</a>
-        <a href="about.html" style="font-size:15px;font-weight:600;color:#3C4658;text-decoration:none">About</a>
-        <a href="reviews.html" style="font-size:15px;font-weight:600;color:#3C4658;text-decoration:none">Reviews</a>
+        <div class="has-dd"><span style="font-size:15px;font-weight:700;color:#F60F00;cursor:pointer;display:inline-flex;align-items:center;gap:5px">Products <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9098A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span><div class="dd-menu"><div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:12px;box-shadow:0 18px 44px -14px rgba(27,33,53,0.4);padding:8px;width:210px"><a href="solar-and-battery.html" style="display:block;border-radius:8px;font-size:14px;font-weight:700;color:#1B2135;text-decoration:none;padding:8px 12px 4px" style-hover="background:#FBFAF8">Solar &amp; Battery</a><a href="solar-panels-aiko.html" style="display:block;padding:6px 12px 6px 24px;border-radius:8px;font-size:13px;font-weight:500;color:#51607A;text-decoration:none" style-hover="background:#FBFAF8;color:#1B2135">AIKO Neostar panels</a><a href="ecoflow-powerocean.html" style="display:block;padding:6px 12px 6px 24px;border-radius:8px;font-size:13px;font-weight:500;color:#51607A;text-decoration:none" style-hover="background:#FBFAF8;color:#1B2135">EcoFlow PowerOcean</a><a href="battery-storage.html" style="display:block;padding:6px 12px 6px 24px;border-radius:8px;font-size:13px;font-weight:500;color:#51607A;text-decoration:none" style-hover="background:#FBFAF8;color:#1B2135">Battery storage</a><a href="ev-chargers.html" style="display:block;border-radius:8px;font-size:14px;font-weight:700;color:#1B2135;text-decoration:none;padding:12px 12px 4px;margin-top:4px;border-top:1px solid rgba(27,33,53,0.07)" style-hover="background:#FBFAF8">EV Chargers</a><a href="ohme-epod-charger.html" style="display:block;padding:6px 12px 6px 24px;border-radius:8px;font-size:13px;font-weight:500;color:#51607A;text-decoration:none" style-hover="background:#FBFAF8;color:#1B2135">Ohme ePod</a><a href="ohme-home-pro-charger.html" style="display:block;padding:6px 12px 6px 24px;border-radius:8px;font-size:13px;font-weight:500;color:#51607A;text-decoration:none" style-hover="background:#FBFAF8;color:#1B2135">Ohme Home Pro</a><a href="ecoflow-powerpulse-2-charger.html" style="display:block;padding:6px 12px 6px 24px;border-radius:8px;font-size:13px;font-weight:500;color:#51607A;text-decoration:none" style-hover="background:#FBFAF8;color:#1B2135">EcoFlow PowerPulse 2</a><a href="tesla-car-charger-tethered.html" style="display:block;padding:6px 12px 6px 24px;border-radius:8px;font-size:13px;font-weight:500;color:#51607A;text-decoration:none" style-hover="background:#FBFAF8;color:#1B2135">Tesla Wall Connector</a><a href="heat-pumps.html" style="display:block;border-radius:8px;font-size:14px;font-weight:700;color:#1B2135;text-decoration:none;padding:12px 12px 4px;margin-top:4px;border-top:1px solid rgba(27,33,53,0.07)" style-hover="background:#FBFAF8">Heat Pumps</a><a href="ecoflow-powerheat.html" style="display:block;padding:6px 12px 6px 24px;border-radius:8px;font-size:13px;font-weight:500;color:#51607A;text-decoration:none" style-hover="background:#FBFAF8;color:#1B2135">EcoFlow PowerHeat</a><a href="commercial.html" style="display:block;border-radius:8px;font-size:14px;font-weight:700;color:#1B2135;text-decoration:none;padding:12px 12px 4px;margin-top:4px;border-top:1px solid rgba(27,33,53,0.07)" style-hover="background:#FBFAF8">Commercial</a></div></div></div>
+        <div class="has-dd"><span style="font-size:15px;font-weight:600;color:#3C4658;cursor:pointer;display:inline-flex;align-items:center;gap:5px">Learn <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9098A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span><div class="dd-menu"><div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:12px;box-shadow:0 18px 44px -14px rgba(27,33,53,0.4);padding:8px;width:210px"><a href="savings-and-finance.html#calculator" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Savings calculator</a><a href="savings-and-finance.html#finance" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Finance options</a><a href="resources.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Guides &amp; resources</a><a href="commercial-solar-guide.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Commercial solar guide</a><a href="index.html#guarantee" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Our guarantees</a><a href="reviews.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Reviews</a></div></div></div>
+        <div class="has-dd"><span style="font-size:15px;font-weight:600;color:#3C4658;cursor:pointer;display:inline-flex;align-items:center;gap:5px">Company <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9098A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span><div class="dd-menu"><div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:12px;box-shadow:0 18px 44px -14px rgba(27,33,53,0.4);padding:8px;width:210px"><a href="about.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">About Spark</a><a href="spark-for-schools.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Spark for Schools</a><a href="locations.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Locations</a><a href="get-a-quote.html" style="display:block;padding:10px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:#1B2135;text-decoration:none" style-hover="background:#FBFAF8">Contact us</a></div></div></div>
       </nav>
       <div style="display:flex;align-items:center;gap:20px">
         <a data-r="hdr-phone" href="{{ phoneHref }}" style="display:inline-flex;align-items:center;gap:9px;text-decoration:none"><span style="width:36px;height:36px;border-radius:9px;background:#fff;border:1px solid rgba(27,33,53,0.12);display:inline-flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F60F00" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7 11.1a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg></span><span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-size:11px;font-weight:600;color:#7C8493;letter-spacing:0.02em">Call our team</span><span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:16px;color:#1B2135">{{ phone }}</span></span></a>
-        <a data-r="hdr-cta" href="get-a-quote.html" style="display:inline-flex;align-items:center;gap:8px;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:12px 22px;border-radius:10px;text-decoration:none;white-space:nowrap;box-shadow:0 6px 16px rgba(246,15,0,0.25)" style-hover="background:#D00C00">Get my free quote</a>
+        <a data-r="hdr-cta" href="get-a-quote-commercial.html" style="display:inline-flex;align-items:center;gap:8px;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:12px 22px;border-radius:10px;text-decoration:none;white-space:nowrap;box-shadow:0 6px 16px rgba(246,15,0,0.25)" style-hover="background:#D00C00">Get my free quote</a>
       </div>
     </div>
   </header>
 
   <div data-r="mobile-cta" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;padding:10px 14px;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border-top:1px solid rgba(27,33,53,0.12);box-shadow:0 -6px 20px rgba(27,33,53,0.1)">
     <a href="{{ phoneHref }}" style="flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#fff;border:1.5px solid rgba(27,33,53,0.16);color:#1B2135;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:13px;border-radius:11px;text-decoration:none">Call us</a>
-    <a href="get-a-quote.html" style="flex:1.4;display:inline-flex;align-items:center;justify-content:center;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:13px;border-radius:11px;text-decoration:none">Get my free quote</a>
+    <a href="get-a-quote-commercial.html" style="flex:1.4;display:inline-flex;align-items:center;justify-content:center;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15px;padding:13px;border-radius:11px;text-decoration:none">Get my free quote</a>
   </div>
 
   <!-- HERO -->
@@ -104,8 +113,8 @@
         <h1 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(38px,4.8vw,56px);line-height:1.03;letter-spacing:-0.03em;margin:0 0 20px">Solar that works as hard as your business</h1>
         <p style="font-size:19px;line-height:1.55;color:#51607A;margin:0 0 26px;max-width:520px;text-wrap:pretty">Commercial-scale solar and battery cuts your business energy costs, strengthens your sustainability credentials and turns unused roof or land into decades of free generation.</p>
         <div style="display:flex;flex-wrap:wrap;gap:14px">
-          <a href="get-a-quote.html" style="display:inline-flex;align-items:center;gap:9px;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;padding:15px 26px;border-radius:11px;text-decoration:none;box-shadow:0 8px 18px rgba(246,15,0,0.28)" style-hover="background:#D00C00">Get my free quote</a>
-          <a href="solar-and-battery.html" style="display:inline-flex;align-items:center;gap:9px;background:#fff;border:1.5px solid rgba(27,33,53,0.14);color:#1B2135;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;padding:15px 26px;border-radius:11px;text-decoration:none">Talk to our team</a>
+          <a href="get-a-quote-commercial.html" style="display:inline-flex;align-items:center;gap:9px;background:#F60F00;color:#fff;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;padding:15px 26px;border-radius:11px;text-decoration:none;box-shadow:0 8px 18px rgba(246,15,0,0.28)" style-hover="background:#D00C00">Get my free quote</a>
+          <a href="#callback" style="display:inline-flex;align-items:center;gap:9px;background:#fff;border:1.5px solid rgba(27,33,53,0.14);color:#1B2135;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;padding:15px 26px;border-radius:11px;text-decoration:none">Talk to our team</a>
         </div>
       </div>
       <div data-r="img-first" style="aspect-ratio:4/3.4;border-radius:20px;overflow:hidden;border:1px solid rgba(27,33,53,0.06);background:#E6E6E2;box-shadow:0 24px 60px rgba(27,33,53,0.16)"><img src="assets/aiko-panel.png" alt="Commercial solar panels on a business roof" style="width:100%;height:100%;object-fit:cover;display:block"></div>
@@ -144,12 +153,149 @@
     </div>
   </section>
 
+  <!-- TRUST / TRACK RECORD -->
+  <section style="background:#161C2E;color:#fff;padding:76px 24px">
+    <div style="max-width:1180px;margin:0 auto">
+      <div style="max-width:760px;margin:0 0 36px">
+        <div style="font-size:13px;font-weight:700;color:#F87171;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px">A track record you can trust</div>
+        <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,42px);letter-spacing:-0.02em;margin:0 0 16px;color:#fff">Trusted on demanding commercial sites</h2>
+        <p style="font-size:17.5px;line-height:1.65;color:#AEB7CA;margin:0;max-width:660px">Our commercial teams have delivered solar and battery projects for nationally recognised organisations across the UK &mdash; major brands, public-sector bodies and well-known high-street names. These are clients who can&rsquo;t take risks on a contractor, and who expect proven experience, technical capability and rigorous health-and-safety and quality standards before work begins.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin-bottom:36px">
+        <img src="assets/award-best-small-business.png" alt="Best of United Kingdom Small Business Awards 2025 — Best Small Business, Energy" style="height:92px;width:auto;display:block">
+        <img src="assets/award-best-startup.png" alt="Best of United Kingdom Small Business Awards 2025 — Best Startup, Energy" style="height:92px;width:auto;display:block">
+        <img src="assets/award-best-in-tech.png" alt="Best of United Kingdom Small Business Awards 2025 — Best in Tech, Technology of the Year" style="height:92px;width:auto;display:block">
+        <img src="assets/award-eupd-installer.png" alt="EUPD Research Awarded Installer United Kingdom 2025" style="height:92px;width:auto;display:block">
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <span style="font-size:13px;font-weight:700;background:rgba(255,255,255,0.08);padding:8px 14px;border-radius:8px;color:#C4CBDA">MCS certified</span>
+        <span style="font-size:13px;font-weight:700;background:rgba(255,255,255,0.08);padding:8px 14px;border-radius:8px;color:#C4CBDA">HIES member</span>
+        <span style="font-size:13px;font-weight:700;background:rgba(255,255,255,0.08);padding:8px 14px;border-radius:8px;color:#C4CBDA">EPVS validated</span>
+        <span style="font-size:13px;font-weight:700;background:rgba(255,255,255,0.08);padding:8px 14px;border-radius:8px;color:#C4CBDA">Which? Trusted Trader</span>
+        <span style="font-size:13px;font-weight:700;background:rgba(255,255,255,0.08);padding:8px 14px;border-radius:8px;color:#C4CBDA">★ 4.7/5 on Trustpilot</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALLBACK -->
+  <section id="callback" style="background:#fff;border-top:1px solid rgba(27,33,53,0.07);padding:72px 24px;scroll-margin-top:88px">
+    <div data-r="2col" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start">
+      <div>
+        <div style="font-size:13px;font-weight:700;color:#F60F00;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px">Prefer a chat first?</div>
+        <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(28px,3.4vw,40px);letter-spacing:-0.02em;margin:0 0 16px;text-wrap:pretty">Request a callback</h2>
+        <p style="font-size:18px;line-height:1.65;color:#3C4658;margin:0 0 22px;max-width:480px">No lengthy forms and no hard sell &mdash; just leave your company name and a contact, and one of our commercial team will call you back for a relaxed chat about the options for your business.</p>
+        <div style="display:flex;flex-direction:column;gap:13px">
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:#0E9E63;font-weight:800;font-size:16px">✓</span><span style="font-size:15.5px;line-height:1.5;color:#3C4658">A real UK-based expert &mdash; never outsourced.</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:#0E9E63;font-weight:800;font-size:16px">✓</span><span style="font-size:15.5px;line-height:1.5;color:#3C4658">A relaxed conversation, not a sales pitch.</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:#0E9E63;font-weight:800;font-size:16px">✓</span><span style="font-size:15.5px;line-height:1.5;color:#3C4658">Prefer to talk now? Call <a href="{{ phoneHref }}" style="color:#F60F00;font-weight:700;text-decoration:none">{{ phone }}</a>.</span></div>
+        </div>
+      </div>
+      <div style="background:#FBFAF8;border:1px solid rgba(27,33,53,0.10);border-radius:22px;padding:clamp(24px,3vw,34px);box-shadow:0 18px 44px rgba(27,33,53,0.06)">
+        <sc-if value="{{ cbShow }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <input value="{{ cbCompany }}" onInput="{{ setCbCompany }}" placeholder="Company name" style="font-family:'Hanken Grotesk',sans-serif;font-size:16px;padding:15px 16px;border:1.5px solid rgba(27,33,53,0.14);border-radius:11px;background:#fff;color:#1B2135">
+            <input value="{{ cbName }}" onInput="{{ setCbName }}" placeholder="Main point of contact" style="font-family:'Hanken Grotesk',sans-serif;font-size:16px;padding:15px 16px;border:1.5px solid rgba(27,33,53,0.14);border-radius:11px;background:#fff;color:#1B2135">
+            <input value="{{ cbPhone }}" onInput="{{ setCbPhone }}" type="tel" placeholder="Phone number" style="font-family:'Hanken Grotesk',sans-serif;font-size:16px;padding:15px 16px;border:1.5px solid rgba(27,33,53,0.14);border-radius:11px;background:#fff;color:#1B2135">
+            <input value="{{ cbEmail }}" onInput="{{ setCbEmail }}" type="email" placeholder="Email (optional)" style="font-family:'Hanken Grotesk',sans-serif;font-size:16px;padding:15px 16px;border:1.5px solid rgba(27,33,53,0.14);border-radius:11px;background:#fff;color:#1B2135">
+            <sc-if value="{{ cbErr }}" hint-placeholder-val="{{ false }}"><div style="font-size:13.5px;color:#D00C00;font-weight:600">Please add your company name and a phone number so we can call you back.</div></sc-if>
+            <button onClick="{{ cbSubmit }}" style="width:100%;background:#F60F00;color:#fff;border:none;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16px;padding:16px;border-radius:12px;cursor:pointer;box-shadow:0 8px 18px rgba(246,15,0,0.2)" style-hover="background:#D00C00">Request a callback</button>
+            <div style="font-size:12.5px;color:#9098A6;line-height:1.5">We&rsquo;ll only use these details to arrange your call. No obligation, ever.</div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ cbSent }}" hint-placeholder-val="{{ false }}">
+          <div style="text-align:center;padding:22px 6px">
+            <div style="width:64px;height:64px;border-radius:50%;background:#E9F7F0;display:flex;align-items:center;justify-content:center;margin:0 auto 18px"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0E9E63" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12.5 10 17.5 19 7"/></svg></div>
+            <h3 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.02em;margin:0 0 10px">Thanks {{ cbFirst }}!</h3>
+            <p style="font-size:16px;line-height:1.55;color:#51607A;margin:0 auto;max-width:340px">We&rsquo;ve got your details and one of our commercial team will call you back shortly for a no-pressure chat.</p>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS BENEFITS -->
+  <section style="background:#fff;border-top:1px solid rgba(27,33,53,0.07);padding:76px 24px">
+    <div style="max-width:1180px;margin:0 auto">
+      <div style="max-width:640px;margin:0 0 40px">
+        <div style="font-size:13px;font-weight:700;color:#F60F00;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px">More than a lower bill</div>
+        <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,40px);letter-spacing:-0.02em;margin:0">The wider business case</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
+        <div style="border:1px solid rgba(27,33,53,0.1);border-radius:16px;padding:26px">
+          <h3 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:18px;margin:0 0 8px;color:#1B2135">Capital allowances</h3>
+          <p style="font-size:14.5px;line-height:1.55;color:#51607A;margin:0">Solar assets may qualify for capital allowances, letting many businesses offset a share of the investment against taxable profits. We&rsquo;ll flag what may apply &mdash; your accountant confirms the detail.</p>
+        </div>
+        <div style="border:1px solid rgba(27,33,53,0.1);border-radius:16px;padding:26px">
+          <h3 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:18px;margin:0 0 8px;color:#1B2135">Scope 2 carbon reporting</h3>
+          <p style="font-size:14.5px;line-height:1.55;color:#51607A;margin:0">On-site generation directly reduces your Scope 2 emissions, giving you hard numbers for ESG, SECR and tender responses &mdash; backed by live generation reporting.</p>
+        </div>
+        <div style="border:1px solid rgba(27,33,53,0.1);border-radius:16px;padding:26px">
+          <h3 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:18px;margin:0 0 8px;color:#1B2135">EV fleet charging</h3>
+          <p style="font-size:14.5px;line-height:1.55;color:#51607A;margin:0">Pair solar and storage with commercial EV chargers to run your fleet or staff and visitor parking on your own daytime generation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section style="padding:76px 24px">
+    <div style="max-width:1180px;margin:0 auto">
+      <div style="max-width:640px;margin:0 0 40px">
+        <div style="font-size:13px;font-weight:700;color:#F60F00;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px">Proven on real sites</div>
+        <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,40px);letter-spacing:-0.02em;margin:0 0 12px">Commercial case studies</h2>
+        <p style="font-size:17px;line-height:1.6;color:#51607A;margin:0">A snapshot of commercial projects we&rsquo;ve delivered. Drop in your own project photos, figures and client names to make these live.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px">
+        <sc-for list="{{ caseStudies }}" as="c" hint-placeholder-count="3">
+          <div style="background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:18px;overflow:hidden;display:flex;flex-direction:column">
+            <div style="aspect-ratio:16/10;background:#E6E6E2">
+              <image-slot id="{{ c.slotId }}" shape="rect" placeholder="{{ c.slotHint }}" style="width:100%;height:100%"></image-slot>
+            </div>
+            <div style="padding:22px">
+              <div style="font-size:12.5px;font-weight:700;color:#F60F00;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:8px">{{ c.sector }}</div>
+              <h3 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:19px;margin:0 0 12px;color:#1B2135">{{ c.title }}</h3>
+              <div style="display:flex;gap:20px">
+                <div><div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:22px;color:#1B2135">{{ c.stat1 }}</div><div style="font-size:12.5px;color:#7C8493">{{ c.stat1l }}</div></div>
+                <div><div style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:22px;color:#1B2135">{{ c.stat2 }}</div><div style="font-size:12.5px;color:#7C8493">{{ c.stat2l }}</div></div>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="margin-top:36px">
+        <div style="font-size:13px;font-weight:600;color:#7C8493;text-align:center;margin-bottom:18px">Trusted by organisations across the UK</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;max-width:820px;margin:0 auto">
+          <sc-for list="{{ clientLogos }}" as="l" hint-placeholder-count="4">
+            <div style="height:72px;background:#fff;border:1px solid rgba(27,33,53,0.1);border-radius:12px">
+              <image-slot id="{{ l.slotId }}" shape="rect" placeholder="Client logo" style="width:100%;height:100%"></image-slot>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:#fff;border-top:1px solid rgba(27,33,53,0.07);padding:76px 24px">
+    <div style="max-width:820px;margin:0 auto">
+      <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,40px);letter-spacing:-0.02em;margin:0 0 10px;text-align:center">Commercial solar FAQs</h2><p style="text-align:center;font-size:16px;color:#51607A;margin:0 0 28px">Want more detail? Read our <a href="commercial-solar-guide.html" style="color:#F60F00;text-decoration:none;font-weight:600">commercial solar guide</a>.</p>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+          <div style="background:#FBFAF8;border:1px solid rgba(27,33,53,0.1);border-radius:14px;overflow:hidden">
+            <button onClick="{{ f.toggle }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;background:none;border:none;padding:20px 22px;cursor:pointer;font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:17px;color:#1B2135"><span>{{ f.q }}</span><span style="font-size:24px;color:#F60F00;line-height:1;transform:{{ f.rot }};transition:transform .2s">+</span></button>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}"><div style="padding:0 22px 22px;font-size:16px;line-height:1.6;color:#51607A">{{ f.a }}</div></sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
-  <section style="padding:0 24px 80px">
+  <section style="padding:64px 24px 80px">
     <div style="max-width:1180px;margin:0 auto;background:linear-gradient(160deg,#F60F00 0%,#C20C00 100%);border-radius:24px;padding:clamp(40px,6vw,64px);text-align:center;color:#fff">
       <h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:clamp(28px,4vw,44px);letter-spacing:-0.02em;margin:0 0 14px;color:#fff">Ready to cut your business costs?</h2>
       <p style="font-size:18px;line-height:1.55;color:#FFD9D6;margin:0 auto 26px;max-width:520px">Book a no-obligation commercial site assessment with our team.</p>
-      <a href="get-a-quote.html" style="display:inline-flex;align-items:center;gap:9px;background:#fff;color:#1B2135;font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:17px;padding:16px 32px;border-radius:12px;text-decoration:none;box-shadow:0 12px 28px rgba(0,0,0,0.18)">Get my free quote &rarr;</a>
+      <a href="get-a-quote-commercial.html" style="display:inline-flex;align-items:center;gap:9px;background:#fff;color:#1B2135;font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:17px;padding:16px 32px;border-radius:12px;text-decoration:none;box-shadow:0 12px 28px rgba(0,0,0,0.18)">Get my free quote &rarr;</a>
     </div>
   </section>
 
@@ -159,15 +305,39 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{ &quot;$preview&quot;: { &quot;width&quot;: &quot;100%&quot;, &quot;height&quot;: 900 }, &quot;phoneNumber&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;0330 818 7273&quot;, &quot;tsType&quot;: &quot;string&quot; } }">
 class Component extends DCLogic {
+  state = { cbCompany: '', cbName: '', cbPhone: '', cbEmail: '', cbSent: false, cbErr: false, faq: 0 };
   renderVals() {
     const phone = this.props.phoneNumber ?? '0330 818 7273';
+    const caseStudies = [
+      { slotId: 'cs-warehouse', slotHint: 'Warehouse rooftop install photo', sector: 'Logistics', title: 'Distribution warehouse rooftop array', stat1: '—', stat1l: 'kWp installed', stat2: '—', stat2l: 'annual saving' },
+      { slotId: 'cs-manufacturing', slotHint: 'Factory / manufacturing site photo', sector: 'Manufacturing', title: 'Manufacturing site solar & storage', stat1: '—', stat1l: 'kWp installed', stat2: '—', stat2l: 'CO\u2082 saved/yr' },
+      { slotId: 'cs-retail', slotHint: 'Retail / office site photo', sector: 'Retail', title: 'Multi-site retail solar rollout', stat1: '—', stat1l: 'sites', stat2: '—', stat2l: 'payback' },
+    ];
+    const clientLogos = [
+      { slotId: 'logo-1' }, { slotId: 'logo-2' }, { slotId: 'logo-3' }, { slotId: 'logo-4' },
+    ];
+    const faqData = [
+      { q: 'How long does commercial solar take to pay back?', a: 'It varies with your energy use, tariff and how much generation you consume on site, but well-scoped commercial systems typically pay back within their early years and then deliver decades of low-cost generation. We build the payback around your actual half-hourly consumption data.' },
+      { q: 'What is a Power Purchase Agreement (PPA)?', a: 'Under a PPA, a funder pays for and owns the system on your roof or land, and you buy the electricity it generates at an agreed rate \u2014 usually below grid prices \u2014 with no upfront capital outlay. We can scope purchase, finance/lease and PPA routes side by side.' },
+      { q: 'Do we need to own our premises?', a: 'Not necessarily. Owned sites are most straightforward, but we regularly work with leased premises \u2014 typically with landlord consent or a lease of suitable length. Tell us your situation and we\u2019ll advise on the options.' },
+      { q: 'Will installation disrupt our operations?', a: 'We plan around your operations, working in phases and outside critical hours where needed. Most rooftop installs are completed with minimal disruption, and we handle all health-and-safety and access requirements for commercial sites.' },
+      { q: 'Can solar help our ESG and carbon reporting?', a: 'Yes. On-site generation directly cuts your Scope 2 emissions, and our live monitoring gives you the generation and carbon-offset figures you need for ESG, SECR and tender submissions.' },
+    ];
+    const faqs = faqData.map((f, i) => ({ q: f.q, a: f.a, open: this.state.faq === i, rot: this.state.faq === i ? 'rotate(45deg)' : 'rotate(0deg)', toggle: () => this.setState(s => ({ faq: s.faq === i ? -1 : i })) }));
+    const cbSubmit = () => { if (!this.state.cbCompany.trim() || !this.state.cbPhone.trim()) { this.setState({ cbErr: true }); return; } this.setState({ cbSent: true, cbErr: false }); };
     const benefits = [
       { t: 'Cut operating costs', d: 'Slash business electricity bills with commercial-scale solar generation.', icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>' },
       { t: 'Hit your ESG targets', d: 'Demonstrable carbon reduction to support your sustainability reporting.', icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>' },
       { t: 'Strong return on investment', d: 'Attractive payback and decades of generation from your roof or land.', icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>' },
       { t: 'End-to-end delivery', d: 'Survey, design, installation and maintenance from one UK team.', icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.4v5.6c0 4.4-3 7.4-7 8.9-4-1.5-7-4.5-7-8.9V5.4L12 3z"/><path d="M9 12l2 2 4-4.2"/></svg>' },
     ];
-    return { phone, phoneHref: 'tel:' + phone.replace(/[^0-9+]/g, ''), benefits };
+    return { phone, phoneHref: 'tel:' + phone.replace(/[^0-9+]/g, ''), benefits, caseStudies, clientLogos, faqs,
+      cbCompany: this.state.cbCompany, setCbCompany: (e)=>this.setState({cbCompany:e.target.value}),
+      cbName: this.state.cbName, setCbName: (e)=>this.setState({cbName:e.target.value}),
+      cbPhone: this.state.cbPhone, setCbPhone: (e)=>this.setState({cbPhone:e.target.value}),
+      cbEmail: this.state.cbEmail, setCbEmail: (e)=>this.setState({cbEmail:e.target.value}),
+      cbSubmit, cbErr: this.state.cbErr, cbSent: this.state.cbSent, cbShow: !this.state.cbSent,
+      cbFirst: this.state.cbName.trim().split(/\s+/)[0] || 'there' };
   }
 }
 </script>

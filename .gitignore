@@ -1,0 +1,5 @@
+scraps/
+.thumbnail
+_spark_deploy.tgz
+.DS_Store
+Thumbs.db

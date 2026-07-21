@@ -1,8 +1,0 @@
-/* Spark — global base. Per-page layout styles are inlined (recreated from the
-   original design); this file holds shared resets & font fallbacks. */
-html { scroll-behavior: smooth; }
-body { margin: 0; -webkit-font-smoothing: antialiased; font-family: 'Hanken Grotesk', system-ui, sans-serif; }
-* { box-sizing: border-box; }
-img { max-width: 100%; }
-::selection { background: #F60F00; color: #fff; }
-.sc-interp { unicode-bidi: isolate; }
