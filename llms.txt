@@ -1,0 +1,41 @@
+# Spark
+
+> Spark is a UK residential solar panel and battery storage installer covering mainland England, Wales and Scotland. Spark installs AIKO Neostar solar panels with EcoFlow PowerOcean battery storage, plus EV chargers and air-source heat pumps, and backs every install with a Triple Guarantee: a lifetime workmanship guarantee, a price match guarantee, and an EPVS-validated savings guarantee.
+
+Key facts:
+- Customers can cut energy bills by up to 90% with a full solar and battery system.
+- Panels: AIKO Neostar 3S (485W), 30-year performance guarantee.
+- Battery: EcoFlow PowerOcean, 15-year warranty, 5–20kWh storage options.
+- Accreditations: Which? Trusted Trader, MCS Certified, TrustMark, NAPIT, HIES, EPVS.
+- Rated 4.7/5 on Trustpilot from 420+ reviews.
+- Head office: St Pegs Mill, Thornhills Beck Lane, Brighouse HD6 4AH, United Kingdom.
+- Phone: 0330 818 7273. Email: hello@sparkhome.co.uk. Hours: Mon–Sat 09:00–18:00.
+- For every install, Spark donates a solar panel to a UK school (Spark for Schools).
+- Customers can sell surplus energy back to the grid via the Smart Export Guarantee (SEG).
+
+## Main pages
+
+- [Home](https://sparkhome.co.uk/): overview, savings calculator, guarantees, FAQs
+- [Solar & Battery](https://sparkhome.co.uk/solar-and-battery.html): the complete home power station, specs and pricing approach
+- [AIKO Solar Panels](https://sparkhome.co.uk/solar-panels-aiko.html): panel specification
+- [EcoFlow PowerOcean Battery](https://sparkhome.co.uk/ecoflow-powerocean.html): battery specification
+- [Battery Storage](https://sparkhome.co.uk/battery-storage.html): retrofit battery storage
+- [EV Chargers](https://sparkhome.co.uk/ev-chargers.html): Ohme, EcoFlow and Tesla home chargers
+- [Heat Pumps](https://sparkhome.co.uk/heat-pumps.html): EcoFlow PowerHeat air-source heat pumps
+- [Commercial](https://sparkhome.co.uk/commercial.html): commercial solar installation
+- [Savings & Finance](https://sparkhome.co.uk/savings-and-finance.html): savings calculator and finance options
+- [Reviews](https://sparkhome.co.uk/reviews.html): customer reviews, 4.7/5 Trustpilot
+- [Locations](https://sparkhome.co.uk/locations.html): 60+ local installation pages across Great Britain
+- [Guides](https://sparkhome.co.uk/resources.html): solar cost, grants, how panels work, SEG and more
+- [Get a Quote](https://sparkhome.co.uk/get-a-quote.html): free, no-obligation quote
+
+## Guides
+
+- [Are solar panels worth it?](https://sparkhome.co.uk/are-solar-panels-worth-it.html)
+- [Solar panel cost guide](https://sparkhome.co.uk/solar-panel-cost-guide.html)
+- [Solar panel grants UK](https://sparkhome.co.uk/solar-panel-grants-uk.html)
+- [How solar panels work](https://sparkhome.co.uk/how-solar-panels-work.html)
+- [Solar battery storage guide](https://sparkhome.co.uk/solar-battery-storage-guide.html)
+- [Smart Export Guarantee guide](https://sparkhome.co.uk/smart-export-guarantee-guide.html)
+- [Roof suitability guide](https://sparkhome.co.uk/roof-suitability-guide.html)
+- [EV charging cost guide](https://sparkhome.co.uk/ev-charging-cost-guide.html)
