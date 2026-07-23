@@ -20,6 +20,82 @@
 { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{ "@type":"ListItem","position":1,"name":"Home","item":"https://sparkhome.co.uk/" }, { "@type":"ListItem","position":2,"name":"Solar & Battery","item":"https://sparkhome.co.uk/solar-and-battery.html" }, { "@type":"ListItem","position":3,"name":"Bird barrier","item":"https://sparkhome.co.uk/bird-barrier.html" }] }
 </script>
 <script src="./support.js"></script>
+<style id="dc-ssr-style">
+    .sc-placeholder{background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:rgba(0,0,0,.7);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:rgba(0,0,0,.5);background:rgba(0,0,0,.05);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  
+x-dc{display:none!important}
+@media(min-width:881px){#spark-mnav-btn,#spark-mnav{display:none!important}}#spark-mnav-btn{position:fixed;top:13px;right:14px;z-index:200;width:44px;height:44px;border-radius:11px;background:#161C2E;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}#spark-mnav{position:fixed;inset:0;z-index:199;background:rgba(15,19,34,.6);display:none}#spark-mnav.open{display:block}#spark-mnav-p{position:absolute;top:0;right:0;bottom:0;width:80%;max-width:320px;background:#fff;padding:20px 20px 28px;display:flex;flex-direction:column;gap:2px;overflow-y:auto;box-shadow:-12px 0 40px rgba(0,0,0,.2)}#spark-mnav a{padding:14px 12px;border-radius:10px;font:600 16px/1.2 Hanken Grotesk,sans-serif;color:#1B2135;text-decoration:none;border-bottom:1px solid rgba(27,33,53,.06)}#spark-mnav a.cta{margin-top:14px;background:#F60F00;color:#fff;text-align:center;font-weight:700;border:none}#spark-mnav-x{align-self:flex-end;width:38px;height:38px;border:none;background:#F4F4F2;border-radius:9px;font-size:22px;color:#1B2135;cursor:pointer;margin-bottom:6px}
+
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F4F4F2; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #F60F00; color: #fff; }
+  @media (max-width: 880px) { [data-r="nav"] { display: none !important; } }
+  @media (max-width: 820px) {
+    [data-r="2col"] { grid-template-columns: 1fr !important; gap: 34px !important; }
+    [data-r="2col-rev"] { grid-template-columns: 1fr !important; gap: 34px !important; }
+    [data-r="img-first"] { order: -1; }
+    section { padding-top: 60px !important; padding-bottom: 60px !important; }
+  }
+  @media (max-width: 720px) {
+    [data-r="mobile-cta"] { display: flex !important; }
+    [data-r="hdr-phone"] { display: none !important; }
+    [data-r="wrap"] { padding-bottom: 78px !important; }
+  }
+  @media (max-width: 600px) {
+    section, header > div { padding-left: 18px !important; padding-right: 18px !important; }
+    h1 { font-size: 36px !important; }
+    header a[data-r="hdr-cta"] { padding: 10px 16px !important; font-size: 14px !important; }
+  }
+  .has-dd { position: relative; }
+  .has-dd .dd-menu { display: none; position: absolute; top: 100%; left: 0; padding-top: 8px; }
+  .has-dd:hover .dd-menu { display: block; }
+</style>
+<style id="dc-ssr-swap">/* hide static fallback once the app has rendered */
+#dc-root:not(:empty)+#dc-ssr{display:none!important}
+body:has(#dc-root:not(:empty)) #dc-ssr{display:none!important}</style>
 </head>
 <body>
 <x-dc>
@@ -324,6 +400,282 @@
 
 </div>
 </x-dc>
+<div id="dc-ssr">
+<div class="sc-host" data-sc-name="bird-barrier"><div data-dc-tpl="8" data-r="wrap" style="font-family: &quot;Hanken Grotesk&quot;, sans-serif; color: rgb(27, 33, 53); background: rgb(244, 244, 242); overflow-x: hidden;">
+
+  
+  <div data-dc-tpl="9" style="background: rgb(22, 28, 46); color: rgb(196, 203, 218); font-size: 13px;">
+    <div data-dc-tpl="10" style="max-width: 1180px; margin: 0px auto; padding: 9px 24px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between;">
+      <div data-dc-tpl="11" style="display: flex; align-items: center; gap: 8px; font-weight: 500;">
+        <span data-dc-tpl="12" style="color: rgb(246, 15, 0); letter-spacing: 0.5px; font-weight: 700;">★ 4.7/5</span>
+        <span data-dc-tpl="13" style="opacity: 0.45;">·</span>
+        <span data-dc-tpl="14">Rated Excellent on Trustpilot from 420+ reviews</span>
+      </div>
+      <div data-dc-tpl="15" style="display: flex; align-items: center; gap: 18px; font-weight: 500;">
+        <span data-dc-tpl="16" style="opacity: 0.8;">UK-based support · Mon–Sat</span>
+        <a data-dc-tpl="17" href="index.html#quote" style="color: rgb(255, 255, 255); text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.35); padding-bottom: 1px;">Request a callback</a>
+      </div>
+    </div>
+  </div>
+
+  
+  <header data-dc-tpl="18" style="position: sticky; top: 0px; z-index: 50; background: rgba(244, 244, 242, 0.88); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(27, 33, 53, 0.08);">
+    <div data-dc-tpl="19" style="max-width: 1180px; margin: 0px auto; padding: 15px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <a data-dc-tpl="20" href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+        <img data-dc-tpl="21" src="assets/spark-logo-navy.png" alt="Spark" style="height: 40px; width: auto; display: block;">
+      </a>
+      <nav data-dc-tpl="22" data-r="nav" style="display: flex; align-items: center; gap: 28px;">
+        <div data-dc-tpl="23" class="has-dd"><span data-dc-tpl="24" style="font-size: 15px; font-weight: 700; color: rgb(246, 15, 0); cursor: pointer; display: inline-flex; align-items: center; gap: 5px;">Products <svg data-dc-tpl="25" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#F60F00" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline data-dc-tpl="26" points="6 9 12 15 18 9"></polyline></svg></span><div data-dc-tpl="27" class="dd-menu"><div data-dc-tpl="28" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 12px; box-shadow: rgba(27, 33, 53, 0.4) 0px 18px 44px -14px; padding: 8px; width: 210px;"><a data-dc-tpl="29" href="solar-and-battery.html" class="scp0" style="display: block; border-radius: 8px; font-size: 14px; font-weight: 700; color: rgb(27, 33, 53); text-decoration: none; padding: 8px 12px 4px;">Solar &amp; Battery</a><a data-dc-tpl="30" href="solar-panels-aiko.html" class="scp1" style="display: block; padding: 6px 12px 6px 24px; border-radius: 8px; font-size: 13px; font-weight: 500; color: rgb(81, 96, 122); text-decoration: none;">AIKO Neostar panels</a><a data-dc-tpl="31" href="ecoflow-powerocean.html" class="scp1" style="display: block; padding: 6px 12px 6px 24px; border-radius: 8px; font-size: 13px; font-weight: 500; color: rgb(81, 96, 122); text-decoration: none;">EcoFlow PowerOcean</a><a data-dc-tpl="32" href="battery-storage.html" class="scp1" style="display: block; padding: 6px 12px 6px 24px; border-radius: 8px; font-size: 13px; font-weight: 500; color: rgb(81, 96, 122); text-decoration: none;">Battery storage</a><a data-dc-tpl="33" href="bird-barrier.html" class="scp1" style="display: block; padding: 6px 12px 6px 24px; border-radius: 8px; font-size: 13px; font-weight: 500; color: rgb(81, 96, 122); text-decoration: none;">Bird barrier</a><a data-dc-tpl="34" href="spark-care-plus.html" class="scp1" style="display: block; padding: 6px 12px 6px 24px; border-radius: 8px; font-size: 13px; font-weight: 500; color: rgb(81, 96, 122); text-decoration: none;">Spark Care+</a><a data-dc-tpl="35" href="ev-chargers.html" class="scp0" style="display: block; border-radius: 8px; font-size: 14px; font-weight: 700; color: rgb(27, 33, 53); text-decoration: none; padding: 12px 12px 4px; margin-top: 4px; border-top: 1px solid rgba(27, 33, 53, 0.07);">EV Chargers</a><a data-dc-tpl="36" href="ohme-epod-charger.html" class="scp1" style="display: block; padding: 6px 12px 6px 24px; border-radius: 8px; font-size: 13px; font-weight: 500; color: rgb(81, 96, 122); text-decoration: none;">Ohme ePod</a><a data-dc-tpl="37" href="ohme-home-pro-charger.html" class="scp1" style="display: block; padding: 6px 12px 6px 24px; border-radius: 8px; font-size: 13px; font-weight: 500; color: rgb(81, 96, 122); text-decoration: none;">Ohme Home Pro</a><a data-dc-tpl="38" href="ecoflow-powerpulse-2-charger.html" class="scp1" style="display: block; padding: 6px 12px 6px 24px; border-radius: 8px; font-size: 13px; font-weight: 500; color: rgb(81, 96, 122); text-decoration: none;">EcoFlow PowerPulse 2</a><a data-dc-tpl="39" href="tesla-car-charger-tethered.html" class="scp1" style="display: block; padding: 6px 12px 6px 24px; border-radius: 8px; font-size: 13px; font-weight: 500; color: rgb(81, 96, 122); text-decoration: none;">Tesla Wall Connector</a><a data-dc-tpl="40" href="heat-pumps.html" class="scp0" style="display: block; border-radius: 8px; font-size: 14px; font-weight: 700; color: rgb(27, 33, 53); text-decoration: none; padding: 12px 12px 4px; margin-top: 4px; border-top: 1px solid rgba(27, 33, 53, 0.07);">Heat Pumps</a><a data-dc-tpl="41" href="ecoflow-powerheat.html" class="scp1" style="display: block; padding: 6px 12px 6px 24px; border-radius: 8px; font-size: 13px; font-weight: 500; color: rgb(81, 96, 122); text-decoration: none;">EcoFlow PowerHeat</a><a data-dc-tpl="42" href="commercial.html" class="scp0" style="display: block; border-radius: 8px; font-size: 14px; font-weight: 700; color: rgb(27, 33, 53); text-decoration: none; padding: 12px 12px 4px; margin-top: 4px; border-top: 1px solid rgba(27, 33, 53, 0.07);">Commercial</a></div></div></div>
+        <div data-dc-tpl="43" class="has-dd"><span data-dc-tpl="44" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); cursor: pointer; display: inline-flex; align-items: center; gap: 5px;">Learn <svg data-dc-tpl="45" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9098A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline data-dc-tpl="46" points="6 9 12 15 18 9"></polyline></svg></span><div data-dc-tpl="47" class="dd-menu"><div data-dc-tpl="48" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 12px; box-shadow: rgba(27, 33, 53, 0.4) 0px 18px 44px -14px; padding: 8px; width: 210px;"><a data-dc-tpl="49" href="savings-and-finance.html#calculator" class="scp0" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;">Savings calculator</a><a data-dc-tpl="50" href="savings-and-finance.html#finance" class="scp0" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;">Finance options</a><a data-dc-tpl="51" href="resources.html" class="scp0" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;">Guides &amp; resources</a><a data-dc-tpl="52" href="commercial-solar-guide.html" class="scp0" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;">Commercial solar guide</a><a data-dc-tpl="53" href="index.html#guarantee" class="scp0" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;">Our guarantees</a><a data-dc-tpl="54" href="reviews.html" class="scp0" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;">Reviews</a></div></div></div>
+        <div data-dc-tpl="55" class="has-dd"><span data-dc-tpl="56" style="font-size: 15px; font-weight: 600; color: rgb(60, 70, 88); cursor: pointer; display: inline-flex; align-items: center; gap: 5px;">Company <svg data-dc-tpl="57" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9098A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline data-dc-tpl="58" points="6 9 12 15 18 9"></polyline></svg></span><div data-dc-tpl="59" class="dd-menu"><div data-dc-tpl="60" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 12px; box-shadow: rgba(27, 33, 53, 0.4) 0px 18px 44px -14px; padding: 8px; width: 210px;"><a data-dc-tpl="61" href="about.html" class="scp0" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;">About Spark</a><a data-dc-tpl="62" href="spark-for-schools.html" class="scp0" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;">Spark for Schools</a><a data-dc-tpl="63" href="locations.html" class="scp0" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;">Locations</a><a data-dc-tpl="64" href="get-a-quote.html" class="scp0" style="display: block; padding: 10px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: rgb(27, 33, 53); text-decoration: none;">Contact us</a></div></div></div>
+      </nav>
+      <div data-dc-tpl="65" style="display: flex; align-items: center; gap: 20px;">
+        <a data-dc-tpl="66" data-r="hdr-phone" href="tel:03308187273" style="display: inline-flex; align-items: center; gap: 9px; text-decoration: none;">
+          <span data-dc-tpl="67" style="width: 36px; height: 36px; border-radius: 9px; background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.12); display: inline-flex; align-items: center; justify-content: center;"><svg data-dc-tpl="68" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F60F00" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path data-dc-tpl="69" d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7 11.1a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"></path></svg></span>
+          <span data-dc-tpl="70" style="display: flex; flex-direction: column; line-height: 1.15;">
+            <span data-dc-tpl="71" style="font-size: 11px; font-weight: 600; color: rgb(124, 132, 147); letter-spacing: 0.02em;">Call our team</span>
+            <span data-dc-tpl="72" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 16px; color: rgb(27, 33, 53);"><span class="sc-interp">0330 818 7273</span></span>
+          </span>
+        </a>
+        <a data-dc-tpl="73" data-r="hdr-cta" href="get-a-quote.html" class="scp2" style="display: inline-flex; align-items: center; gap: 8px; background: rgb(246, 15, 0); color: rgb(255, 255, 255); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; padding: 12px 22px; border-radius: 10px; text-decoration: none; white-space: nowrap; box-shadow: rgba(246, 15, 0, 0.25) 0px 6px 16px;">Get my free quote</a>
+      </div>
+    </div>
+  </header>
+
+  
+  <div data-dc-tpl="74" data-r="mobile-cta" style="display: none; position: fixed; left: 0px; right: 0px; bottom: 0px; z-index: 60; gap: 10px; padding: 10px 14px; background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(10px); border-top: 1px solid rgba(27, 33, 53, 0.12); box-shadow: rgba(27, 33, 53, 0.1) 0px -6px 20px;">
+    <a data-dc-tpl="75" href="tel:03308187273" style="flex: 1 1 0%; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: rgb(255, 255, 255); border: 1.5px solid rgba(27, 33, 53, 0.16); color: rgb(27, 33, 53); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; padding: 13px; border-radius: 11px; text-decoration: none;">Call us</a>
+    <a data-dc-tpl="76" href="get-a-quote.html" style="flex: 1.4 1 0%; display: inline-flex; align-items: center; justify-content: center; background: rgb(246, 15, 0); color: rgb(255, 255, 255); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; padding: 13px; border-radius: 11px; text-decoration: none;">Get my free quote</a>
+  </div>
+
+  
+  
+  <section data-dc-tpl="77" style="padding: 52px 24px 64px;">
+    <div data-dc-tpl="78" data-r="2col" style="max-width: 1180px; margin: 0px auto; display: grid; grid-template-columns: 1.02fr 0.98fr; gap: 52px; align-items: center;">
+      <div data-dc-tpl="79">
+        <div data-dc-tpl="80" style="font-size: 13px; color: rgb(144, 152, 166); margin-bottom: 16px;"><a data-dc-tpl="81" href="solar-and-battery.html" style="color: rgb(144, 152, 166); text-decoration: none;">Solar &amp; Battery</a> &nbsp;›&nbsp; Bird barrier</div>
+        <div data-dc-tpl="82" style="display: inline-flex; align-items: center; gap: 9px; background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); padding: 7px 14px; border-radius: 100px; font-size: 13px; font-weight: 700; color: rgb(246, 15, 0); letter-spacing: 0.04em; margin-bottom: 22px;">BIRD &amp; PEST PROTECTION</div>
+        <h1 data-dc-tpl="83" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: clamp(38px, 5vw, 56px); line-height: 1.03; letter-spacing: -0.03em; margin: 0px 0px 20px;">Keep birds out from under your panels.</h1>
+        <p data-dc-tpl="84" style="font-size: 20px; line-height: 1.55; color: rgb(81, 96, 122); margin: 0px 0px 28px; max-width: 540px; text-wrap: pretty;">The sheltered gap beneath solar panels is a magnet for nesting pigeons — and their mess, debris and pecking can foul your roof, block airflow and damage cabling. We seal the perimeter of every array with a discreet mesh, so nothing gets in. Fitted as standard on every Spark install.</p>
+        <div data-dc-tpl="85" style="display: flex; flex-wrap: wrap; gap: 14px;">
+          <a data-dc-tpl="86" href="get-a-quote.html" class="scp2" style="display: inline-flex; align-items: center; gap: 9px; background: rgb(246, 15, 0); color: rgb(255, 255, 255); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 16px; padding: 15px 26px; border-radius: 11px; text-decoration: none; box-shadow: rgba(246, 15, 0, 0.28) 0px 8px 18px;">Get my free quote</a>
+          <a data-dc-tpl="87" href="tel:03308187273" class="scp3" style="display: inline-flex; align-items: center; gap: 9px; background: rgb(255, 255, 255); border: 1.5px solid rgba(27, 33, 53, 0.14); color: rgb(27, 33, 53); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 16px; padding: 15px 26px; border-radius: 11px; text-decoration: none;">Talk to our team</a>
+        </div>
+      </div>
+      <div data-dc-tpl="88" style="aspect-ratio: 4 / 4.1; border-radius: 20px; overflow: hidden; border: 1px solid rgba(27, 33, 53, 0.06); background: rgb(230, 230, 226); box-shadow: rgba(27, 33, 53, 0.16) 0px 24px 60px;"><img data-dc-tpl="89" src="assets/install-birdbarrier-05.jpg" alt="Bird barrier mesh fitted along the edge of a Spark solar array" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;"></div>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="90" style="background: rgb(22, 28, 46); color: rgb(255, 255, 255); padding: 72px 24px;">
+    <div data-dc-tpl="91" style="max-width: 1180px; margin: 0px auto;">
+      <div data-dc-tpl="92" style="max-width: 680px; margin: 0px 0px 44px;">
+        <div data-dc-tpl="93" style="font-size: 13px; font-weight: 700; color: rgb(248, 113, 113); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px;">Why it matters</div>
+        <h2 data-dc-tpl="94" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: clamp(28px, 3.6vw, 42px); letter-spacing: -0.02em; margin: 0px 0px 14px; color: rgb(255, 255, 255);">An open array is an open invitation</h2>
+        <p data-dc-tpl="95" style="font-size: 18px; line-height: 1.6; color: rgb(174, 183, 202); margin: 0px; max-width: 620px;">Left unprotected, the void under your panels quickly becomes a nesting site — and the damage adds up long after the birds move in.</p>
+      </div>
+      <div data-dc-tpl="96" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px;">
+        <div data-dc-tpl="97" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 26px;"><div data-dc-tpl="98" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 18px; margin-bottom: 7px;">Pigeons nest underneath</div><p data-dc-tpl="99" style="font-size: 14.5px; line-height: 1.55; color: rgb(174, 183, 202); margin: 0px;">The warm, sheltered space under panels is prime nesting territory — especially in towns and cities.</p></div>
+        <div data-dc-tpl="100" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 26px;"><div data-dc-tpl="101" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 18px; margin-bottom: 7px;">Mess &amp; corrosion</div><p data-dc-tpl="102" style="font-size: 14.5px; line-height: 1.55; color: rgb(174, 183, 202); margin: 0px;">Droppings and nesting debris foul your roof and gutters, and acidic mess can corrode fixings over time.</p></div>
+        <div data-dc-tpl="103" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 26px;"><div data-dc-tpl="104" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 18px; margin-bottom: 7px;">Chewed cabling</div><p data-dc-tpl="105" style="font-size: 14.5px; line-height: 1.55; color: rgb(174, 183, 202); margin: 0px;">Birds and pests peck and gnaw at the DC cabling under the array, risking faults and lost generation.</p></div>
+        <div data-dc-tpl="106" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 26px;"><div data-dc-tpl="107" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 18px; margin-bottom: 7px;">Blocked airflow</div><p data-dc-tpl="108" style="font-size: 14.5px; line-height: 1.55; color: rgb(174, 183, 202); margin: 0px;">Nests trapped beneath panels restrict the ventilation they need to run at their best.</p></div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="109" style="background: rgb(255, 255, 255); border-top: 1px solid rgba(27, 33, 53, 0.07); border-bottom: 1px solid rgba(27, 33, 53, 0.07); padding: 80px 24px;">
+    <div data-dc-tpl="110" data-r="2col" style="max-width: 1180px; margin: 0px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;">
+      <div data-dc-tpl="111" data-r="img-first" style="aspect-ratio: 4 / 3.3; border-radius: 20px; overflow: hidden; border: 1px solid rgba(27, 33, 53, 0.06); background: rgb(230, 230, 226); box-shadow: rgba(27, 33, 53, 0.14) 0px 20px 50px;"><img data-dc-tpl="112" src="assets/install-birdbarrier-02.jpg" alt="Close-up of clip-fixed bird barrier mesh around a solar array" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;"></div>
+      <div data-dc-tpl="113">
+        <div data-dc-tpl="114" style="font-size: 13px; font-weight: 700; color: rgb(246, 15, 0); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px;">What we fit</div>
+        <h2 data-dc-tpl="115" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -0.02em; margin: 0px 0px 16px; text-wrap: pretty;">A discreet mesh, clipped — not drilled — to your panels</h2>
+        <p data-dc-tpl="116" style="font-size: 18px; line-height: 1.6; color: rgb(81, 96, 122); margin: 0px 0px 24px;">We run a UV-stable galvanised mesh around the exposed edges of your array and secure it with purpose-made clips that grip the panel frame. No holes in your panels, no damage to your roof — and it's barely visible from the ground.</p>
+        <div data-dc-tpl="117" style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+          <div data-dc-tpl="118" style="border-left: 3px solid rgb(246, 15, 0); padding-left: 16px;"><div data-dc-tpl="119" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 30px; color: rgb(27, 33, 53); letter-spacing: -0.02em;">Full</div><div data-dc-tpl="120" style="font-size: 14px; color: rgb(124, 132, 147); margin-top: 2px;">perimeter coverage</div></div>
+          <div data-dc-tpl="121" style="border-left: 3px solid rgb(246, 15, 0); padding-left: 16px;"><div data-dc-tpl="122" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 30px; color: rgb(27, 33, 53); letter-spacing: -0.02em;">Clip-fixed</div><div data-dc-tpl="123" style="font-size: 14px; color: rgb(124, 132, 147); margin-top: 2px;">no drilling into panels</div></div>
+          <div data-dc-tpl="124" style="border-left: 3px solid rgb(246, 15, 0); padding-left: 16px;"><div data-dc-tpl="125" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 30px; color: rgb(27, 33, 53); letter-spacing: -0.02em;">UV-stable</div><div data-dc-tpl="126" style="font-size: 14px; color: rgb(124, 132, 147); margin-top: 2px;">mesh &amp; fixings</div></div>
+          <div data-dc-tpl="127" style="border-left: 3px solid rgb(246, 15, 0); padding-left: 16px;"><div data-dc-tpl="128" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 30px; color: rgb(27, 33, 53); letter-spacing: -0.02em;">Included</div><div data-dc-tpl="129" style="font-size: 14px; color: rgb(124, 132, 147); margin-top: 2px;">as standard, no extra cost</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="130" style="padding: 80px 24px;">
+    <div data-dc-tpl="131" style="max-width: 1180px; margin: 0px auto;">
+      <div data-dc-tpl="132" style="max-width: 680px; margin: 0px 0px 34px;">
+        <div data-dc-tpl="133" style="font-size: 13px; font-weight: 700; color: rgb(246, 15, 0); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px;">On real Spark roofs</div>
+        <h2 data-dc-tpl="134" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: clamp(28px, 3.6vw, 42px); letter-spacing: -0.02em; margin: 0px; color: rgb(27, 33, 53); text-wrap: pretty;">Neat, thorough, and built to last</h2>
+      </div>
+      <div data-dc-tpl="135" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+        <div data-dc-tpl="136" style="aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; border: 1px solid rgba(27, 33, 53, 0.06); background: rgb(230, 230, 226); box-shadow: rgba(27, 33, 53, 0.4) 0px 14px 34px -18px;"><img data-dc-tpl="137" src="assets/install-birdbarrier-01.jpg" alt="Bird barrier mesh fitted along a solar array edge" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <div data-dc-tpl="138" style="aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; border: 1px solid rgba(27, 33, 53, 0.06); background: rgb(230, 230, 226); box-shadow: rgba(27, 33, 53, 0.4) 0px 14px 34px -18px;"><img data-dc-tpl="139" src="assets/install-birdbarrier-03.jpg" alt="Long run of bird barrier mesh protecting a Spark installation" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <div data-dc-tpl="140" style="aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; border: 1px solid rgba(27, 33, 53, 0.06); background: rgb(230, 230, 226); box-shadow: rgba(27, 33, 53, 0.4) 0px 14px 34px -18px;"><img data-dc-tpl="141" src="assets/install-birdbarrier-04.jpg" alt="Bird barrier mesh clipped to the edge of solar panels" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section data-dc-tpl="142" id="specs" style="padding: 80px 24px;">
+    <div data-dc-tpl="143" style="max-width: 920px; margin: 0px auto;">
+      <div data-dc-tpl="144" style="text-align: center; max-width: 640px; margin: 0px auto 40px;">
+        <h2 data-dc-tpl="145" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: clamp(28px, 3.6vw, 42px); letter-spacing: -0.02em; margin: 0px 0px 14px;">At a glance</h2>
+        <p data-dc-tpl="146" style="font-size: 18px; line-height: 1.6; color: rgb(81, 96, 122); margin: 0px;">What's fitted on a typical Spark bird barrier — adjusted to suit your roof and array.</p>
+      </div>
+      <div data-dc-tpl="147" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 18px; overflow: hidden;">
+        
+          <div data-dc-tpl="149" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 26px; border-bottom: 1px solid rgba(27, 33, 53, 0.07); background: rgb(251, 250, 248);">
+            <span data-dc-tpl="150" style="font-size: 15.5px; font-weight: 600; color: rgb(60, 70, 88);"><span class="sc-interp">Mesh material</span></span>
+            <span data-dc-tpl="151" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15.5px; color: rgb(27, 33, 53); text-align: right;"><span class="sc-interp">UV-stable galvanised steel</span></span>
+          </div>
+        
+          <div data-dc-tpl="149" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 26px; border-bottom: 1px solid rgba(27, 33, 53, 0.07); background: rgb(255, 255, 255);">
+            <span data-dc-tpl="150" style="font-size: 15.5px; font-weight: 600; color: rgb(60, 70, 88);"><span class="sc-interp">Fixing</span></span>
+            <span data-dc-tpl="151" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15.5px; color: rgb(27, 33, 53); text-align: right;"><span class="sc-interp">Clip-on to panel frame — no drilling</span></span>
+          </div>
+        
+          <div data-dc-tpl="149" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 26px; border-bottom: 1px solid rgba(27, 33, 53, 0.07); background: rgb(251, 250, 248);">
+            <span data-dc-tpl="150" style="font-size: 15.5px; font-weight: 600; color: rgb(60, 70, 88);"><span class="sc-interp">Coverage</span></span>
+            <span data-dc-tpl="151" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15.5px; color: rgb(27, 33, 53); text-align: right;"><span class="sc-interp">Full array perimeter</span></span>
+          </div>
+        
+          <div data-dc-tpl="149" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 26px; border-bottom: 1px solid rgba(27, 33, 53, 0.07); background: rgb(255, 255, 255);">
+            <span data-dc-tpl="150" style="font-size: 15.5px; font-weight: 600; color: rgb(60, 70, 88);"><span class="sc-interp">Aperture</span></span>
+            <span data-dc-tpl="151" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15.5px; color: rgb(27, 33, 53); text-align: right;"><span class="sc-interp">Fine mesh — blocks birds &amp; debris</span></span>
+          </div>
+        
+          <div data-dc-tpl="149" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 26px; border-bottom: 1px solid rgba(27, 33, 53, 0.07); background: rgb(251, 250, 248);">
+            <span data-dc-tpl="150" style="font-size: 15.5px; font-weight: 600; color: rgb(60, 70, 88);"><span class="sc-interp">Visibility</span></span>
+            <span data-dc-tpl="151" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15.5px; color: rgb(27, 33, 53); text-align: right;"><span class="sc-interp">Discreet — hidden from ground level</span></span>
+          </div>
+        
+          <div data-dc-tpl="149" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 26px; border-bottom: 1px solid rgba(27, 33, 53, 0.07); background: rgb(255, 255, 255);">
+            <span data-dc-tpl="150" style="font-size: 15.5px; font-weight: 600; color: rgb(60, 70, 88);"><span class="sc-interp">Retrofit</span></span>
+            <span data-dc-tpl="151" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15.5px; color: rgb(27, 33, 53); text-align: right;"><span class="sc-interp">Yes — fits existing installations</span></span>
+          </div>
+        
+          <div data-dc-tpl="149" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 26px; border-bottom: 1px solid rgba(27, 33, 53, 0.07); background: rgb(251, 250, 248);">
+            <span data-dc-tpl="150" style="font-size: 15.5px; font-weight: 600; color: rgb(60, 70, 88);"><span class="sc-interp">Fitted</span></span>
+            <span data-dc-tpl="151" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15.5px; color: rgb(27, 33, 53); text-align: right;"><span class="sc-interp">As standard on every Spark install</span></span>
+          </div>
+        
+          <div data-dc-tpl="149" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 26px; border-bottom: 1px solid rgba(27, 33, 53, 0.07); background: rgb(255, 255, 255);">
+            <span data-dc-tpl="150" style="font-size: 15.5px; font-weight: 600; color: rgb(60, 70, 88);"><span class="sc-interp">Guarantee</span></span>
+            <span data-dc-tpl="151" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15.5px; color: rgb(27, 33, 53); text-align: right;"><span class="sc-interp">Covered by our workmanship guarantee</span></span>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section data-dc-tpl="152" style="padding: 24px 24px 72px;">
+    <div data-dc-tpl="153" style="max-width: 820px; margin: 0px auto;">
+      <h2 data-dc-tpl="154" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: clamp(28px, 3.6vw, 40px); letter-spacing: -0.02em; margin: 0px 0px 28px; text-align: center;">Frequently asked questions</h2>
+      <div data-dc-tpl="155" style="display: flex; flex-direction: column; gap: 12px;">
+        
+          <div data-dc-tpl="157" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; overflow: hidden;">
+            <button data-dc-tpl="158" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: none; padding: 20px 22px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 17px; color: rgb(27, 33, 53);"><span data-dc-tpl="159"><span class="sc-interp">Why do I need a bird barrier on solar panels?</span></span><span data-dc-tpl="160" style="font-size: 24px; color: rgb(246, 15, 0); line-height: 1; transform: rotate(45deg); transition: transform 0.2s;">+</span></button>
+            <div data-dc-tpl="162" style="padding: 0px 22px 22px; font-size: 16px; line-height: 1.6; color: rgb(81, 96, 122);"><span class="sc-interp">The sheltered gap beneath solar panels is a favourite nesting spot for pigeons. Nests, droppings and debris foul your roof and gutters, can damage DC cabling and block the airflow panels need — a barrier seals the perimeter so nothing gets in.</span></div>
+          </div>
+        
+          <div data-dc-tpl="157" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; overflow: hidden;">
+            <button data-dc-tpl="158" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: none; padding: 20px 22px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 17px; color: rgb(27, 33, 53);"><span data-dc-tpl="159"><span class="sc-interp">Does the bird barrier damage my panels or roof?</span></span><span data-dc-tpl="160" style="font-size: 24px; color: rgb(246, 15, 0); line-height: 1; transform: rotate(0deg); transition: transform 0.2s;">+</span></button>
+            
+          </div>
+        
+          <div data-dc-tpl="157" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; overflow: hidden;">
+            <button data-dc-tpl="158" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: none; padding: 20px 22px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 17px; color: rgb(27, 33, 53);"><span data-dc-tpl="159"><span class="sc-interp">Is bird proofing included with a Spark installation?</span></span><span data-dc-tpl="160" style="font-size: 24px; color: rgb(246, 15, 0); line-height: 1; transform: rotate(0deg); transition: transform 0.2s;">+</span></button>
+            
+          </div>
+        
+          <div data-dc-tpl="157" style="background: rgb(255, 255, 255); border: 1px solid rgba(27, 33, 53, 0.1); border-radius: 14px; overflow: hidden;">
+            <button data-dc-tpl="158" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: none; padding: 20px 22px; cursor: pointer; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 17px; color: rgb(27, 33, 53);"><span data-dc-tpl="159"><span class="sc-interp">Can you add a bird barrier to existing solar panels?</span></span><span data-dc-tpl="160" style="font-size: 24px; color: rgb(246, 15, 0); line-height: 1; transform: rotate(0deg); transition: transform 0.2s;">+</span></button>
+            
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="163" style="background: rgb(255, 255, 255); border-top: 1px solid rgba(27, 33, 53, 0.07); padding: 72px 24px;">
+    <div data-dc-tpl="164" style="max-width: 1180px; margin: 0px auto;">
+      <div data-dc-tpl="165" style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between; margin-bottom: 30px;">
+        <div data-dc-tpl="166" style="max-width: 640px;">
+          <div data-dc-tpl="167" style="font-size: 13px; font-weight: 700; color: rgb(246, 15, 0); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px;">Rated 4.7/5 on Trustpilot</div>
+          <h2 data-dc-tpl="168" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 38px); letter-spacing: -0.02em; margin: 0px;">What Spark customers say</h2>
+        </div>
+        <a data-dc-tpl="169" href="reviews.html" style="display: inline-flex; align-items: center; gap: 6px; color: rgb(246, 15, 0); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; text-decoration: none; white-space: nowrap;">Read all 420+ reviews →</a>
+      </div>
+      <div data-dc-tpl="170" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <div data-dc-tpl="171" style="break-inside: avoid; background: rgb(251, 250, 248); border: 1px solid rgba(27, 33, 53, 0.08); border-radius: 16px; padding: 24px;"><div data-dc-tpl="172" style="color: rgb(246, 15, 0); font-size: 14px; letter-spacing: 2px; margin-bottom: 12px;">★★★★★</div><p data-dc-tpl="173" style="font-size: 15px; line-height: 1.6; color: rgb(60, 70, 88); margin: 0px 0px 16px;">“The install team turned up on the coldest, wettest day in months and just cracked on, all in good humour, then took me through the monitoring app. Brilliant.”</p><div data-dc-tpl="174" style="display: flex; align-items: center; gap: 11px;"><span data-dc-tpl="175" style="width: 38px; height: 38px; border-radius: 50%; background: rgb(22, 28, 46); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 15px;">R</span><div data-dc-tpl="176"><div data-dc-tpl="177" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 14.5px; color: rgb(27, 33, 53);">Rich T.</div><div data-dc-tpl="178" style="font-size: 12.5px; color: rgb(124, 132, 147);">Verified · Trustpilot</div></div></div></div>
+        <div data-dc-tpl="179" style="break-inside: avoid; background: rgb(251, 250, 248); border: 1px solid rgba(27, 33, 53, 0.08); border-radius: 16px; padding: 24px;"><div data-dc-tpl="180" style="color: rgb(246, 15, 0); font-size: 14px; letter-spacing: 2px; margin-bottom: 12px;">★★★★★</div><p data-dc-tpl="181" style="font-size: 15px; line-height: 1.6; color: rgb(60, 70, 88); margin: 0px 0px 16px;">“Professional from start to finish. We knew nothing about solar two weeks ago and now we have panels on the roof producing electricity.”</p><div data-dc-tpl="182" style="display: flex; align-items: center; gap: 11px;"><span data-dc-tpl="183" style="width: 38px; height: 38px; border-radius: 50%; background: rgb(22, 28, 46); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 15px;">D</span><div data-dc-tpl="184"><div data-dc-tpl="185" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 14.5px; color: rgb(27, 33, 53);">David M.</div><div data-dc-tpl="186" style="font-size: 12.5px; color: rgb(124, 132, 147);">Verified · Trustpilot</div></div></div></div>
+        <div data-dc-tpl="187" style="break-inside: avoid; background: rgb(251, 250, 248); border: 1px solid rgba(27, 33, 53, 0.08); border-radius: 16px; padding: 24px;"><div data-dc-tpl="188" style="color: rgb(246, 15, 0); font-size: 14px; letter-spacing: 2px; margin-bottom: 12px;">★★★★★</div><p data-dc-tpl="189" style="font-size: 15px; line-height: 1.6; color: rgb(60, 70, 88); margin: 0px 0px 16px;">“Red who sold us the panels was brilliant and never pushy, and Josh in operations has been so helpful since. We're already saving and earning from exports.”</p><div data-dc-tpl="190" style="display: flex; align-items: center; gap: 11px;"><span data-dc-tpl="191" style="width: 38px; height: 38px; border-radius: 50%; background: rgb(22, 28, 46); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 15px;">A</span><div data-dc-tpl="192"><div data-dc-tpl="193" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 14.5px; color: rgb(27, 33, 53);">Amy R.</div><div data-dc-tpl="194" style="font-size: 12.5px; color: rgb(124, 132, 147);">Verified · Trustpilot</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section data-dc-tpl="195" style="padding: 0px 24px 80px;">
+    <div data-dc-tpl="196" style="max-width: 1180px; margin: 0px auto; background: linear-gradient(160deg, rgb(246, 15, 0) 0%, rgb(194, 12, 0) 100%); border-radius: 24px; padding: clamp(40px, 6vw, 72px); text-align: center; color: rgb(255, 255, 255);">
+      <h2 data-dc-tpl="197" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 46px); letter-spacing: -0.02em; margin: 0px 0px 16px; color: rgb(255, 255, 255);">Protect your solar investment</h2>
+      <p data-dc-tpl="198" style="font-size: 19px; line-height: 1.55; color: rgb(255, 217, 214); margin: 0px auto 28px; max-width: 560px;">Get a free, no-obligation quote — every Spark install includes bird &amp; pest protection and EPVS-validated savings as standard.</p>
+      <a data-dc-tpl="199" href="get-a-quote.html" style="display: inline-flex; align-items: center; gap: 9px; background: rgb(255, 255, 255); color: rgb(27, 33, 53); font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 17px; padding: 17px 34px; border-radius: 12px; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.18) 0px 12px 28px;">Get my free quote →</a>
+    </div>
+  </section>
+  <footer data-dc-tpl="200" style="background: rgb(22, 28, 46); color: rgb(174, 183, 202); padding: 64px 24px 34px;">
+    <div data-dc-tpl="201" style="max-width: 1180px; margin: 0px auto;">
+      <div data-dc-tpl="202" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+        <div data-dc-tpl="203">
+          <img data-dc-tpl="204" src="assets/spark-logo-white.png" alt="Spark" style="height: 28px; width: auto; display: block; margin-bottom: 16px;">
+          <p data-dc-tpl="205" style="font-size: 14.5px; line-height: 1.6; margin: 0px 0px 18px; max-width: 300px;">Premium solar &amp; battery installation across mainland Great Britain. Giving you the power to save.</p>
+          <div data-dc-tpl="206" style="font-size: 13.5px; line-height: 1.7; color: rgb(196, 203, 218); margin: 0px 0px 18px;"><a data-dc-tpl="207" href="tel:03308187273" style="color: rgb(255, 255, 255); text-decoration: none; font-weight: 700;">0330 818 7273</a><br data-dc-tpl="208"><a data-dc-tpl="209" href="mailto:hello@sparkhome.co.uk" style="color: rgb(196, 203, 218); text-decoration: none;">hello@sparkhome.co.uk</a><br data-dc-tpl="210">St Pegs Mill, Thornhills Beck Lane, Brighouse HD6 4AH</div>
+          <div data-dc-tpl="211" style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+            <img data-dc-tpl="212" src="assets/accred-mcs-white.png" alt="MCS certified" style="height: 38px; width: auto; display: block;">
+            <img data-dc-tpl="213" src="assets/accred-trustmark-white.png" alt="TrustMark Government Endorsed Quality" style="height: 22px; width: auto; display: block;">
+            <img data-dc-tpl="214" src="assets/accred-napit-white.png" alt="NAPIT registered" style="height: 40px; width: auto; display: block;">
+            <img data-dc-tpl="215" src="assets/accred-hies-white.png" alt="HIES accredited member" style="height: 40px; width: auto; display: block;">
+            <img data-dc-tpl="216" src="assets/accred-epvs-white.png" alt="EPVS certified member" style="height: 26px; width: auto; display: block;">
+          </div>
+        </div>
+        <div data-dc-tpl="217">
+          <div data-dc-tpl="218" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Products</div>
+          <div data-dc-tpl="219" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
+            <a data-dc-tpl="220" href="solar-and-battery.html" style="color: rgb(174, 183, 202); text-decoration: none;">Solar &amp; Battery</a>
+            <a data-dc-tpl="221" href="ev-chargers.html" style="color: rgb(174, 183, 202); text-decoration: none;">EV Chargers</a>
+            <a data-dc-tpl="222" href="heat-pumps.html" style="color: rgb(174, 183, 202); text-decoration: none;">Heat Pumps</a>
+            <a data-dc-tpl="223" href="commercial.html" style="color: rgb(174, 183, 202); text-decoration: none;">Commercial</a>
+          </div>
+        </div>
+        <div data-dc-tpl="224">
+          <div data-dc-tpl="225" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Learn</div>
+          <div data-dc-tpl="226" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
+            <a data-dc-tpl="227" href="savings-and-finance.html#calculator" style="color: rgb(174, 183, 202); text-decoration: none;">Savings calculator</a>
+            <a data-dc-tpl="228" href="savings-and-finance.html#finance" style="color: rgb(174, 183, 202); text-decoration: none;">Finance options</a>
+            <a data-dc-tpl="229" href="resources.html" style="color: rgb(174, 183, 202); text-decoration: none;">Guides &amp; resources</a>
+            <a data-dc-tpl="230" href="index.html#guarantee" style="color: rgb(174, 183, 202); text-decoration: none;">Our guarantees</a>
+            <a data-dc-tpl="231" href="index.html#reviews" style="color: rgb(174, 183, 202); text-decoration: none;">Reviews</a>
+          </div>
+        </div>
+        <div data-dc-tpl="232">
+          <div data-dc-tpl="233" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 15px; color: rgb(255, 255, 255); margin-bottom: 16px;">Company</div>
+          <div data-dc-tpl="234" style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px;">
+            <a data-dc-tpl="235" href="about.html" style="color: rgb(174, 183, 202); text-decoration: none;">About Spark</a>
+            <a data-dc-tpl="236" href="spark-for-schools.html" style="color: rgb(174, 183, 202); text-decoration: none;">Spark for Schools</a>
+            <a data-dc-tpl="237" href="locations.html" style="color: rgb(174, 183, 202); text-decoration: none;">Locations</a>
+            <a data-dc-tpl="238" href="referral-portal.html" style="color: rgb(174, 183, 202); text-decoration: none;">Refer a friend</a>
+            <a data-dc-tpl="239" href="referral-quote.html" style="color: rgb(174, 183, 202); text-decoration: none;">Referral quote</a>
+            <a data-dc-tpl="240" href="quote-comparison.html" style="color: rgb(174, 183, 202); text-decoration: none;">Quote comparison</a>
+            <a data-dc-tpl="241" href="index.html#quote" style="color: rgb(174, 183, 202); text-decoration: none;">Contact us</a>
+          </div>
+        </div>
+      </div>
+      <div data-dc-tpl="242" style="padding-top: 24px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; font-size: 12.5px; color: rgb(138, 147, 168);">
+        <div data-dc-tpl="243">© Spark 2026. All rights reserved. Spark is a trading name of Spark Energy UK Ltd (Company No. 14381786). Registered office: St Pegs Mill, Thornhills Beck Lane, Brighouse HD6 4AH.</div>
+        <div data-dc-tpl="244" style="display: flex; gap: 18px;"><a data-dc-tpl="245" href="terms.html" style="color: rgb(138, 147, 168); text-decoration: none;">Terms</a><a data-dc-tpl="246" href="privacy.html" style="color: rgb(138, 147, 168); text-decoration: none;">Privacy</a><a data-dc-tpl="247" href="complaints.html" style="color: rgb(138, 147, 168); text-decoration: none;">Complaints</a></div>
+      </div>
+    </div>
+  </footer></div></div>
+</div>
 <script type="text/x-dc" data-dc-script data-props="{ &quot;$preview&quot;: { &quot;width&quot;: &quot;100%&quot;, &quot;height&quot;: 900 }, &quot;phoneNumber&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;0330 818 7273&quot;, &quot;tsType&quot;: &quot;string&quot; } }">
 class Component extends DCLogic {
   state = { faq: 0 };
