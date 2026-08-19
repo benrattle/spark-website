@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /aircon-cart.html
+Disallow: /ev-checkout.html
 
 Sitemap: https://sparkhome.co.uk/sitemap.xml
